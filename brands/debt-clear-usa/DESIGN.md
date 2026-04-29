@@ -452,7 +452,7 @@ The human-action color. This is the brand's only warm note and it's deliberately
 
 ### Secondary & Accent (Semantic)
 
-Standardized across all Paravel Labs brands. Use these for system feedback, never derive custom variants.
+Standardized across all Golden Hippo brands. Use these for system feedback, never derive custom variants.
 
 #### Error / Danger (Tailwind Red)
 
@@ -608,7 +608,7 @@ No three-color gradients. No rainbow gradients. No mid-stop pinks or purples —
 
 ### Spacing System
 
-DebtClear USA uses the standardized Paravel Labs spacing scale:
+DebtClear USA uses the standardized Golden Hippo spacing scale:
 
 `0px, 2px, 4px, 6px, 8px, 12px, 16px, 20px, 24px, 32px, 40px, 48px, 64px, 80px, 96px, 128px, 160px, 192px, 224px, 256px, 320px, 384px, 480px, 560px, 640px, 720px, 768px, 1024px, 1280px, 1440px, 1600px, 1920px`
 
