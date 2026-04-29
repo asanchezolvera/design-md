@@ -4,18 +4,18 @@ Comprehensive design system documentation for all Golden Hippo brands. Each bran
 
 ## Brands
 
-| Brand | Slug | Status | Headline Font | Body Font | Primary Color | Signature Shape |
-| --- | --- | --- | --- | --- | --- | --- |
-| Beverly Hills MD | `bhmd` | Complete | Playfair Display | Libre Franklin | Surgeon's Navy `#233354` | 2px radius (sharp) |
-| Gundry MD | `gundry` | Complete | Lora | Red Hat Text | Gundry Blue `#2945b8` | Pill (9999px) |
-| Terra Mare | `terra-mare` | Complete | Crimson Text | Poppins | Sienna Bloom `#B7500B` | 8–16px (soft round) |
-| Brand 4 | — | Pending | — | — | — | — |
-| Brand 5 | — | Pending | — | — | — | — |
-| Brand 6 | — | Pending | — | — | — | — |
-| Brand 7 | — | Pending | — | — | — | — |
-| Brand 8 | — | Pending | — | — | — | — |
-| Brand 9 | — | Pending | — | — | — | — |
-| Brand 10 | — | Pending | — | — | — | — |
+| Brand                 | Slug                    | Status   | Headline Font    | Body Font      | Primary Color            | Signature Shape     |
+| --------------------- | ----------------------- | -------- | ---------------- | -------------- | ------------------------ | ------------------- |
+| Beverly Hills MD      | `bhmd`                  | Complete | Playfair Display | Libre Franklin | Surgeon's Navy `#233354` | 2px radius (sharp)  |
+| Gundry MD             | `gundry-md`             | Complete | Lora             | Red Hat Text   | Gundry Blue `#2945b8`    | Pill (9999px)       |
+| Terra Mare            | `terra-mare`            | Complete | Crimson Text     | Poppins        | Sienna Bloom `#B7500B`   | 8–16px (soft round) |
+| ActivatedYou          | `activated-you`         | Pending  | —                | —              | —                        | —                   |
+| Driven Entrepreneur   | `driven-entrepreneur`   | Pending  | —                | —              | —                        | —                   |
+| Debt Clear USA        | `debt-clear-usa`        | Pending  | —                | —              | —                        | —                   |
+| Roundhouse Provisions | `roundhouse-provisions` | Pending  | —                | —              | —                        | —                   |
+| Power Life Nutrition  | `power-life`            | Pending  | —                | —              | —                        | —                   |
+| Brand 9               | —                       | Pending  | —                | —              | —                        | —                   |
+| Brand 10              | —                       | Pending  | —                | —              | —                        | —                   |
 
 ## Directory Structure
 
