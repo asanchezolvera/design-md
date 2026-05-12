@@ -478,7 +478,7 @@ A muted earthen taupe that bridges the brand colors and the Taupe neutrals. Used
 
 ### Secondary & Accent (Semantic — Standardized)
 
-These palettes are standardized across all Paravel Labs brands. They handle system-level feedback and should never be replaced by brand colors for error, success, warning, or info states.
+These palettes are standardized across all Golden Hippo brands. They handle system-level feedback and should never be replaced by brand colors for error, success, warning, or info states.
 
 #### Error / Danger (Tailwind Red)
 
@@ -563,14 +563,14 @@ Taupe is Tailwind's warmest neutral — distinctly earthy with a sandy, clay-lik
 
 ### Neutrals & Text
 
-| Role                              | Token                  | Hex       | Notes                                              |
-| --------------------------------- | ---------------------- | --------- | -------------------------------------------------- |
+| Role                              | Token                  | Hex       | Notes                                                        |
+| --------------------------------- | ---------------------- | --------- | ------------------------------------------------------------ |
 | Primary text                      | `{colors.neutral-900}` | `#1D1816` | Body and headline color on light surfaces — never pure black |
-| Secondary text                    | `{colors.neutral-700}` | `#473C39` | Subheadings, supporting paragraphs                 |
-| Tertiary / muted text             | `{colors.neutral-500}` | `#7C6D67` | Captions, timestamps, supporting metadata          |
-| Disabled text                     | `{colors.neutral-400}` | `#ABA09C` | Muted enough to recede but still legible           |
-| Text on dark surfaces (primary)   | `{colors.neutral-50}`  | `#FBFAF9` | Body copy on neutral-800/900 backgrounds           |
-| Text on dark surfaces (secondary) | `{colors.neutral-300}` | `#D8D2D0` | Subdued copy on dark surfaces                      |
+| Secondary text                    | `{colors.neutral-700}` | `#473C39` | Subheadings, supporting paragraphs                           |
+| Tertiary / muted text             | `{colors.neutral-500}` | `#7C6D67` | Captions, timestamps, supporting metadata                    |
+| Disabled text                     | `{colors.neutral-400}` | `#ABA09C` | Muted enough to recede but still legible                     |
+| Text on dark surfaces (primary)   | `{colors.neutral-50}`  | `#FBFAF9` | Body copy on neutral-800/900 backgrounds                     |
+| Text on dark surfaces (secondary) | `{colors.neutral-300}` | `#D8D2D0` | Subdued copy on dark surfaces                                |
 
 ### Borders & Dividers
 
@@ -595,11 +595,11 @@ The serif/sans pairing is the system's most defining choice. Crimson Text owns h
 
 ### Font Families
 
-| Role             | Family       | Fallback Stack                                                  |
-| ---------------- | ------------ | --------------------------------------------------------------- |
-| Headline (serif) | Crimson Text | `Georgia, 'Times New Roman', serif`                             |
-| Body / UI (sans) | Poppins      | `-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`     |
-| Code (mono)      | System Mono  | `ui-monospace, Menlo, Consolas, 'Courier New', monospace`       |
+| Role             | Family       | Fallback Stack                                              |
+| ---------------- | ------------ | ----------------------------------------------------------- |
+| Headline (serif) | Crimson Text | `Georgia, 'Times New Roman', serif`                         |
+| Body / UI (sans) | Poppins      | `-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif` |
+| Code (mono)      | System Mono  | `ui-monospace, Menlo, Consolas, 'Courier New', monospace`   |
 
 Both Crimson Text and Poppins are available via Google Fonts and should be loaded with `font-display: swap` to prevent invisible text during webfont load.
 
@@ -638,32 +638,32 @@ Terra Mare treats whitespace as a luxury material. Sections breathe. Cards have 
 
 ### Spacing System
 
-The standardized Paravel Labs scale, used for all padding, margin, gap, and size values:
+The standardized Golden Hippo scale, used for all padding, margin, gap, and size values:
 
 `0px, 2px, 4px, 6px, 8px, 12px, 16px, 20px, 24px, 32px, 40px, 48px, 64px, 80px, 96px, 128px, 160px, 192px, 224px, 256px, 320px, 384px, 480px, 560px, 640px, 720px, 768px, 1024px, 1280px, 1440px, 1600px, 1920px`
 
 **Common usage patterns for Terra Mare:**
 
-| Use case                            | Value                                              |
-| ----------------------------------- | -------------------------------------------------- |
-| Component internal padding          | 8px–24px                                           |
-| Button padding                      | 12px vertical / 24px horizontal                    |
-| Card padding                        | 24px (standard), 32px (editorial)                  |
-| Input padding                       | 12px vertical / 16px horizontal                    |
-| Section vertical spacing            | 96px–128px — Terra Mare leans generous             |
-| Stack gaps (small)                  | 4px–8px (label-to-input, icon-to-text)             |
-| Stack gaps (medium)                 | 16px–24px (paragraph rhythm, list items)           |
-| Stack gaps (large)                  | 48px–64px (sub-section separation)                 |
-| Page max-widths                     | 1280px (default), 1440px (hero/wide), 768px (long-form editorial) |
+| Use case                   | Value                                                             |
+| -------------------------- | ----------------------------------------------------------------- |
+| Component internal padding | 8px–24px                                                          |
+| Button padding             | 12px vertical / 24px horizontal                                   |
+| Card padding               | 24px (standard), 32px (editorial)                                 |
+| Input padding              | 12px vertical / 16px horizontal                                   |
+| Section vertical spacing   | 96px–128px — Terra Mare leans generous                            |
+| Stack gaps (small)         | 4px–8px (label-to-input, icon-to-text)                            |
+| Stack gaps (medium)        | 16px–24px (paragraph rhythm, list items)                          |
+| Stack gaps (large)         | 48px–64px (sub-section separation)                                |
+| Page max-widths            | 1280px (default), 1440px (hero/wide), 768px (long-form editorial) |
 
 ### Grid & Container
 
-| Property        | Value                                                       |
-| --------------- | ----------------------------------------------------------- |
+| Property        | Value                                                                   |
+| --------------- | ----------------------------------------------------------------------- |
 | Max width       | 1280px (default), 768px (editorial long-form), 1440px (hero/full-bleed) |
-| Section padding | 96px vertical on desktop, scaling to 48px on mobile         |
-| Grid            | 12-column with 24px gutters at desktop                      |
-| Product grid    | 4 columns (`xl`), 3 (`lg`), 2 (`md`), 1 (base)              |
+| Section padding | 96px vertical on desktop, scaling to 48px on mobile                     |
+| Grid            | 12-column with 24px gutters at desktop                                  |
+| Product grid    | 4 columns (`xl`), 3 (`lg`), 2 (`md`), 1 (base)                          |
 
 ### Whitespace Philosophy
 
@@ -691,15 +691,15 @@ Terra Mare is a **soft shadow** brand. The luxury-organic aesthetic depends on a
 
 ### Border Radius Scale
 
-| Token          | Value    | Use Case                                                  |
-| -------------- | -------- | --------------------------------------------------------- |
-| `rounded.none` | `0px`    | Editorial image edges (rare), data tables                 |
-| `rounded.sm`   | `4px`    | Tight UI — inline tags, very small badges                 |
-| `rounded.md`   | `8px`    | **Default — buttons, inputs, small cards**                |
-| `rounded.lg`   | `12px`   | Standard cards, image containers                          |
-| `rounded.xl`   | `16px`   | Editorial cards, product cards, hero images               |
-| `rounded.2xl`  | `24px`   | Premium feature panels, modal dialogs                     |
-| `rounded.full` | `9999px` | Badges, account pricing tags, avatars, circular icons     |
+| Token          | Value    | Use Case                                              |
+| -------------- | -------- | ----------------------------------------------------- |
+| `rounded.none` | `0px`    | Editorial image edges (rare), data tables             |
+| `rounded.sm`   | `4px`    | Tight UI — inline tags, very small badges             |
+| `rounded.md`   | `8px`    | **Default — buttons, inputs, small cards**            |
+| `rounded.lg`   | `12px`   | Standard cards, image containers                      |
+| `rounded.xl`   | `16px`   | Editorial cards, product cards, hero images           |
+| `rounded.2xl`  | `24px`   | Premium feature panels, modal dialogs                 |
+| `rounded.full` | `9999px` | Badges, account pricing tags, avatars, circular icons |
 
 ### Application Rules
 
@@ -720,13 +720,13 @@ Every component below is mirrored in the front matter `components` block using t
 
 All buttons share `rounded.md` (8px), `button-label` typography (Poppins 15px / weight 500 / +0.01em tracking, **title case**, not uppercase), 44px height, and 12px × 24px padding.
 
-| Variant            | Background                         | Text                               | Hover                                                  | Active                                                 | Personality                                                                  |
-| ------------------ | ---------------------------------- | ---------------------------------- | ------------------------------------------------------ | ------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| `button-primary`   | `{colors.primary-500}` `#B7500B`   | `{colors.white}` `#FFFFFF`         | bg `{colors.primary-600}` `#933D00`                    | bg `{colors.primary-700}` `#722D00`                    | The brand's default CTA — confident, warm, unambiguous.                      |
-| `button-accent`    | `{colors.secondary-400}` `#F58C1C` | `{colors.secondary-800}` `#4E2700` | bg `{colors.secondary-300}` `#F9A45C`                  | bg `{colors.secondary-600}` `#874800` (white text)     | For sun-forward moments — subscription banners, "Save" CTAs, promotional flags. |
-| `button-secondary` | `{colors.neutral-200}` `#E8E4E3`   | `{colors.neutral-800}` `#2B2422`   | bg `{colors.neutral-300}` `#D8D2D0`                    | bg `{colors.neutral-400}` `#ABA09C`                    | For supporting actions — "Learn more," "Add to comparison."                  |
-| `button-outline`   | `{colors.white}` `#FFFFFF` (1px solid `{colors.neutral-300}`) | `{colors.primary-500}` `#B7500B`   | bg `{colors.primary-50}` `#FFF4EF`, text `{colors.primary-600}` | bg `{colors.primary-100}` `#FFE3D6`, text `{colors.primary-700}` | Lowest visual weight — text links upgraded to button shape.                  |
-| `button-inverse`   | `{colors.white}` `#FFFFFF`         | `{colors.primary-500}` `#B7500B`   | bg `{colors.primary-50}` `#FFF4EF`                     | —                                                      | For CTAs sitting on dark hero backgrounds.                                   |
+| Variant            | Background                                                    | Text                               | Hover                                                           | Active                                                           | Personality                                                                     |
+| ------------------ | ------------------------------------------------------------- | ---------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `button-primary`   | `{colors.primary-500}` `#B7500B`                              | `{colors.white}` `#FFFFFF`         | bg `{colors.primary-600}` `#933D00`                             | bg `{colors.primary-700}` `#722D00`                              | The brand's default CTA — confident, warm, unambiguous.                         |
+| `button-accent`    | `{colors.secondary-400}` `#F58C1C`                            | `{colors.secondary-800}` `#4E2700` | bg `{colors.secondary-300}` `#F9A45C`                           | bg `{colors.secondary-600}` `#874800` (white text)               | For sun-forward moments — subscription banners, "Save" CTAs, promotional flags. |
+| `button-secondary` | `{colors.neutral-200}` `#E8E4E3`                              | `{colors.neutral-800}` `#2B2422`   | bg `{colors.neutral-300}` `#D8D2D0`                             | bg `{colors.neutral-400}` `#ABA09C`                              | For supporting actions — "Learn more," "Add to comparison."                     |
+| `button-outline`   | `{colors.white}` `#FFFFFF` (1px solid `{colors.neutral-300}`) | `{colors.primary-500}` `#B7500B`   | bg `{colors.primary-50}` `#FFF4EF`, text `{colors.primary-600}` | bg `{colors.primary-100}` `#FFE3D6`, text `{colors.primary-700}` | Lowest visual weight — text links upgraded to button shape.                     |
+| `button-inverse`   | `{colors.white}` `#FFFFFF`                                    | `{colors.primary-500}` `#B7500B`   | bg `{colors.primary-50}` `#FFF4EF`                              | —                                                                | For CTAs sitting on dark hero backgrounds.                                      |
 
 **Note on the primary hover/active progression.** Hover and active states both deepen the sienna (500 → 600 → 700) — counter-intuitive for "lift on hover," but white text on Sienna-400 (`#DE7944`) fails WCAG AA contrast (3.06:1). Going darker keeps the press-feedback direction consistent and the text legible at every state. The accent button can hover lighter because its dark text on light marigold maintains contrast naturally.
 
@@ -734,56 +734,56 @@ Resting shadow `xs`; hover shadow `sm` on the primary. Disabled state: `button-p
 
 ### Cards & Containers
 
-| Variant         | Background                         | Text                             | Padding | Radius          | Border / Shadow                                                                  |
-| --------------- | ---------------------------------- | -------------------------------- | ------- | --------------- | -------------------------------------------------------------------------------- |
-| `card`          | `{colors.white}` `#FFFFFF`         | `{colors.neutral-900}` `#1D1816` | 24px    | `rounded.lg`    | `1px solid {colors.neutral-200}` + shadow `xs`; hover: `sm` + border `neutral-300` |
-| `card-editorial`| `{colors.tertiary-50}` `#FAF6F3`   | `{colors.neutral-900}` `#1D1816` | 32px    | `rounded.xl`    | None — tonal separation from the page                                            |
-| `card-product`  | `{colors.white}` `#FFFFFF`         | `{colors.neutral-900}` `#1D1816` | 24px    | `rounded.xl`    | Shadow `sm`; hover: `md`, image scales 1.02. Image area uses `rounded.lg` and a `Sunrise Wash` background. |
-| `card-dark`     | `{colors.neutral-800}` `#2B2422`   | `{colors.neutral-50}` `#FBFAF9`  | 24px    | `rounded.lg`    | `1px solid {colors.neutral-700}` (`#473C39`)                                     |
+| Variant          | Background                       | Text                             | Padding | Radius       | Border / Shadow                                                                                            |
+| ---------------- | -------------------------------- | -------------------------------- | ------- | ------------ | ---------------------------------------------------------------------------------------------------------- |
+| `card`           | `{colors.white}` `#FFFFFF`       | `{colors.neutral-900}` `#1D1816` | 24px    | `rounded.lg` | `1px solid {colors.neutral-200}` + shadow `xs`; hover: `sm` + border `neutral-300`                         |
+| `card-editorial` | `{colors.tertiary-50}` `#FAF6F3` | `{colors.neutral-900}` `#1D1816` | 32px    | `rounded.xl` | None — tonal separation from the page                                                                      |
+| `card-product`   | `{colors.white}` `#FFFFFF`       | `{colors.neutral-900}` `#1D1816` | 24px    | `rounded.xl` | Shadow `sm`; hover: `md`, image scales 1.02. Image area uses `rounded.lg` and a `Sunrise Wash` background. |
+| `card-dark`      | `{colors.neutral-800}` `#2B2422` | `{colors.neutral-50}` `#FBFAF9`  | 24px    | `rounded.lg` | `1px solid {colors.neutral-700}` (`#473C39`)                                                               |
 
 ### Inputs & Forms
 
-| Spec           | Value                                                  |
-| -------------- | ------------------------------------------------------ |
-| Background     | `{colors.white}` `#FFFFFF`                             |
-| Text           | `{colors.neutral-900}` `#1D1816`                       |
-| Placeholder    | `{colors.neutral-500}` `#7C6D67`                       |
-| Border         | `1px solid {colors.neutral-300}` (`#D8D2D0`)           |
-| Border (focus) | `{colors.primary-500}` (`#B7500B`)                     |
-| Focus ring     | `0 0 0 3px rgba(183, 80, 11, 0.15)`                    |
-| Radius         | `rounded.md` (8px) — matches buttons                   |
-| Padding        | 12px × 16px                                            |
-| Height         | 48px (prevents iOS zoom)                               |
-| Typography     | `body-md` (Poppins 16px)                               |
+| Spec           | Value                                        |
+| -------------- | -------------------------------------------- |
+| Background     | `{colors.white}` `#FFFFFF`                   |
+| Text           | `{colors.neutral-900}` `#1D1816`             |
+| Placeholder    | `{colors.neutral-500}` `#7C6D67`             |
+| Border         | `1px solid {colors.neutral-300}` (`#D8D2D0`) |
+| Border (focus) | `{colors.primary-500}` (`#B7500B`)           |
+| Focus ring     | `0 0 0 3px rgba(183, 80, 11, 0.15)`          |
+| Radius         | `rounded.md` (8px) — matches buttons         |
+| Padding        | 12px × 16px                                  |
+| Height         | 48px (prevents iOS zoom)                     |
+| Typography     | `body-md` (Poppins 16px)                     |
 
 Disabled inputs use `neutral-100` background with `neutral-600` text. Error inputs use `2px solid {colors.error-600}` border with `error-600` helper text below. Labels use `label-md` (Poppins 13px / 500 / +0.01em) and sit above inputs with 6px bottom margin.
 
 ### Navigation
 
-| Property       | Value                                                                                    |
-| -------------- | ---------------------------------------------------------------------------------------- |
-| Background     | `rgba(255, 255, 255, 0.95)` with `backdrop-filter: blur(12px)`                           |
-| Border bottom  | `1px solid {colors.neutral-200}` (`#E8E4E3`)                                             |
-| Height         | 80px                                                                                     |
-| Padding        | 0 32px, max-width 1280px centered                                                        |
-| Logo placement | Left-aligned (Crimson Text wordmark)                                                     |
-| Nav links      | `button-label` typography (Poppins 15px / 500), color `{colors.neutral-700}`             |
-| Hover          | Color shifts to `{colors.primary-500}` (`#B7500B`)                                       |
-| Active link    | Color `{colors.primary-500}` with 2px underline in `{colors.secondary-400}` (`#F58C1C`)  |
-| Primary nav CTA | `button-accent` ("Sign Up" / "Subscribe"), right-aligned                                |
-| Mobile         | Hamburger drawer slides from right at `<lg` (1024px), full-height, `neutral-50` background |
+| Property        | Value                                                                                      |
+| --------------- | ------------------------------------------------------------------------------------------ |
+| Background      | `rgba(255, 255, 255, 0.95)` with `backdrop-filter: blur(12px)`                             |
+| Border bottom   | `1px solid {colors.neutral-200}` (`#E8E4E3`)                                               |
+| Height          | 80px                                                                                       |
+| Padding         | 0 32px, max-width 1280px centered                                                          |
+| Logo placement  | Left-aligned (Crimson Text wordmark)                                                       |
+| Nav links       | `button-label` typography (Poppins 15px / 500), color `{colors.neutral-700}`               |
+| Hover           | Color shifts to `{colors.primary-500}` (`#B7500B`)                                         |
+| Active link     | Color `{colors.primary-500}` with 2px underline in `{colors.secondary-400}` (`#F58C1C`)    |
+| Primary nav CTA | `button-accent` ("Sign Up" / "Subscribe"), right-aligned                                   |
+| Mobile          | Hamburger drawer slides from right at `<lg` (1024px), full-height, `neutral-50` background |
 
 Sticky on scroll. The backdrop blur is the brand's signature nav treatment — never replace with a solid white sticky.
 
 ### Image Treatment
 
-| Property          | Value                                                                                   |
-| ----------------- | --------------------------------------------------------------------------------------- |
-| Default radius    | `rounded.lg` (12px)                                                                     |
-| Hero / feature    | `rounded.xl` (16px), optional shadow `2xl` for premium product shots                    |
-| Product images    | Sit on `Sunrise Wash` gradient or `tertiary-50` — never on pure white inside cards      |
-| Aspect ratios     | 4:5 (portrait) for product photography, 16:9 for editorial banners, 1:1 for lifestyle  |
-| Tone              | Warm-graded — golden hour, natural light, never cool/clinical                           |
+| Property       | Value                                                                                 |
+| -------------- | ------------------------------------------------------------------------------------- |
+| Default radius | `rounded.lg` (12px)                                                                   |
+| Hero / feature | `rounded.xl` (16px), optional shadow `2xl` for premium product shots                  |
+| Product images | Sit on `Sunrise Wash` gradient or `tertiary-50` — never on pure white inside cards    |
+| Aspect ratios  | 4:5 (portrait) for product photography, 16:9 for editorial banners, 1:1 for lifestyle |
+| Tone           | Warm-graded — golden hour, natural light, never cool/clinical                         |
 
 ### Distinctive Components
 
@@ -794,6 +794,7 @@ Sticky on scroll. The backdrop blur is the brand's signature nav treatment — n
 **Daggered Disclaimer.** `micro` typography (Poppins 11px) in `{colors.neutral-500}` (`#7C6D67`), prefixed with `†` for FDA-required statements. Always lives at the bottom of product blocks.
 
 **Badge** variants:
+
 - `badge` — `{colors.secondary-100}` bg, `{colors.secondary-800}` text. Default; "Save," promotional flags.
 - `badge-primary` — `{colors.primary-100}` bg, `{colors.primary-800}` text. "Bestseller," "New."
 - `badge-neutral` — `{colors.neutral-100}` bg, `{colors.neutral-700}` text. Metadata pills, category tags.
@@ -831,14 +832,14 @@ Sticky on scroll. The backdrop blur is the brand's signature nav treatment — n
 
 ### Breakpoints
 
-| Token  | Min Width | Terra Mare Behavior                                                                        |
-| ------ | --------- | ------------------------------------------------------------------------------------------ |
-| (base) | 0px       | Single-column, hamburger nav, 24px horizontal padding, headlines scale down to 32px H1     |
-| `sm`   | 640px     | Larger phones — 32px horizontal padding, slight type bump for body (15px → 16px)           |
-| `md`   | 768px     | Tablet — product grid goes 2-column, secondary CTAs sit inline rather than stacked         |
+| Token  | Min Width | Terra Mare Behavior                                                                          |
+| ------ | --------- | -------------------------------------------------------------------------------------------- |
+| (base) | 0px       | Single-column, hamburger nav, 24px horizontal padding, headlines scale down to 32px H1       |
+| `sm`   | 640px     | Larger phones — 32px horizontal padding, slight type bump for body (15px → 16px)             |
+| `md`   | 768px     | Tablet — product grid goes 2-column, secondary CTAs sit inline rather than stacked           |
 | `lg`   | 1024px    | Full nav appears, product grid goes 3-column, hero serif headlines use full `display` sizing |
-| `xl`   | 1280px    | Standard desktop — content max-width caps at 1280px, product grid goes 4-column            |
-| `2xl`  | 1536px    | Wide desktop — hero sections expand to 1440px, increased generous whitespace               |
+| `xl`   | 1280px    | Standard desktop — content max-width caps at 1280px, product grid goes 4-column              |
+| `2xl`  | 1536px    | Wide desktop — hero sections expand to 1440px, increased generous whitespace                 |
 
 ### Touch Targets
 
@@ -869,29 +870,29 @@ This section equips AI coding tools (Claude, Cursor, GitHub Copilot, etc.) to im
 
 ### Quick Color Reference
 
-| Token             | Hex       | Note                                                          |
-| ----------------- | --------- | ------------------------------------------------------------- |
-| `primary-50`      | `#FFF4EF` | Light brand tint background                                   |
-| `primary-100`     | `#FFE3D6` | Brand badge fill                                              |
-| `primary-500` ★   | `#B7500B` | **Anchor — primary CTAs, brand logo**                         |
-| `primary-600`     | `#933D00` | Primary button hover state                                    |
-| `primary-700`     | `#722D00` | Primary button active / pressed                               |
-| `primary-800`     | `#562000` | Brand text on tinted bg                                       |
-| `secondary-100`   | `#FFE4CF` | Account pricing tag background                                |
-| `secondary-300`   | `#F9A45C` | Accent button hover state                                     |
-| `secondary-400` ★ | `#F58C1C` | **Anchor — accent / "save" callouts**                         |
-| `secondary-600`   | `#874800` | Accent button active / pressed                                |
-| `secondary-800`   | `#4E2700` | Text on Marigold tints                                        |
-| `tertiary-50`     | `#FAF6F3` | Editorial section background                                  |
-| `tertiary-100`    | `#F1E7E2` | Editorial card surface                                        |
-| `tertiary-500` ★  | `#9C7B66` | **Anchor — tertiary / muted brand**                           |
-| `white`           | `#FFFFFF` | Card surface, inverse buttons                                 |
-| `neutral-50`      | `#FBFAF9` | Page background                                               |
-| `neutral-100`     | `#F3F1F1` | Alt section background                                        |
-| `neutral-200`     | `#E8E4E3` | Light border / secondary button bg                            |
-| `neutral-700`     | `#473C39` | Secondary text                                                |
-| `neutral-900`     | `#1D1816` | Primary text (never use `#000`)                               |
-| `info-500`        | `#3B82F6` | Focus ring (always)                                           |
+| Token             | Hex       | Note                                  |
+| ----------------- | --------- | ------------------------------------- |
+| `primary-50`      | `#FFF4EF` | Light brand tint background           |
+| `primary-100`     | `#FFE3D6` | Brand badge fill                      |
+| `primary-500` ★   | `#B7500B` | **Anchor — primary CTAs, brand logo** |
+| `primary-600`     | `#933D00` | Primary button hover state            |
+| `primary-700`     | `#722D00` | Primary button active / pressed       |
+| `primary-800`     | `#562000` | Brand text on tinted bg               |
+| `secondary-100`   | `#FFE4CF` | Account pricing tag background        |
+| `secondary-300`   | `#F9A45C` | Accent button hover state             |
+| `secondary-400` ★ | `#F58C1C` | **Anchor — accent / "save" callouts** |
+| `secondary-600`   | `#874800` | Accent button active / pressed        |
+| `secondary-800`   | `#4E2700` | Text on Marigold tints                |
+| `tertiary-50`     | `#FAF6F3` | Editorial section background          |
+| `tertiary-100`    | `#F1E7E2` | Editorial card surface                |
+| `tertiary-500` ★  | `#9C7B66` | **Anchor — tertiary / muted brand**   |
+| `white`           | `#FFFFFF` | Card surface, inverse buttons         |
+| `neutral-50`      | `#FBFAF9` | Page background                       |
+| `neutral-100`     | `#F3F1F1` | Alt section background                |
+| `neutral-200`     | `#E8E4E3` | Light border / secondary button bg    |
+| `neutral-700`     | `#473C39` | Secondary text                        |
+| `neutral-900`     | `#1D1816` | Primary text (never use `#000`)       |
+| `info-500`        | `#3B82F6` | Focus ring (always)                   |
 
 ### Token Reference Cheat Sheet
 

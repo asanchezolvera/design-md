@@ -523,7 +523,7 @@ The exclamation point. Spark Orange is the most reserved color in the system —
 
 ### Secondary & Accent (Semantic) — Standardized
 
-These four palettes are identical across every Paravel Labs brand. The brand does not customize semantic color.
+These four palettes are identical across every Golden Hippo brand. The brand does not customize semantic color.
 
 #### Error / Danger (Tailwind Red)
 
@@ -689,9 +689,9 @@ Montserrat is a geometric sans designed in 2010 by Julieta Ulanovsky, available 
 
 ## 4. Layout Principles
 
-### Spacing System (standardized Paravel scale)
+### Spacing System (standardized Golden Hippo scale)
 
-Power Life uses the full Paravel Labs spacing scale — no brand-specific values. Numeric keys refer to the YAML scale:
+Power Life uses the full Golden Hippo spacing scale — no brand-specific values. Numeric keys refer to the YAML scale:
 
 | Token | Value | Typical Use |
 |-------|-------|-------------|
@@ -734,7 +734,7 @@ Power Life's whitespace is generous but not precious. Sections should breathe �
 
 ## 5. Depth & Elevation
 
-Power Life uses the standardized Paravel shadow scale, but applies it sparingly. This is a brand that prefers **flat color + bold type** over shadow-based hierarchy. Most product surfaces are flat-on-flat with borders or color shifts doing the elevation work; shadows appear at the floating-UI layer (modals, dropdowns, sticky banners).
+Power Life uses the standardized Golden Hippo shadow scale, but applies it sparingly. This is a brand that prefers **flat color + bold type** over shadow-based hierarchy. Most product surfaces are flat-on-flat with borders or color shifts doing the elevation work; shadows appear at the floating-UI layer (modals, dropdowns, sticky banners).
 
 | Token | CSS | Typical Use in Power Life |
 |-------|-----|---------------------------|

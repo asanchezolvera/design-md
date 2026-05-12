@@ -467,7 +467,7 @@ The warm accent. Tertiary actions, illustrative elements, testimonial highlights
 
 ### Secondary & Accent (Semantic — Standardized)
 
-These semantic palettes are standardized across all Paravel Labs brands. They handle system-level feedback and should never be replaced by brand colors for error, success, warning, or info states.
+These semantic palettes are standardized across all Golden Hippo brands. They handle system-level feedback and should never be replaced by brand colors for error, success, warning, or info states.
 
 #### Error / Danger (Tailwind Red)
 
@@ -595,23 +595,23 @@ The serif/sans pairing is the system's most defining choice. Lora carries every 
 
 ### Hierarchy
 
-| Token           | Font         | Size (px / rem)  | Weight | Line-height | Letter-spacing | Notes                                                          |
-| --------------- | ------------ | ---------------- | ------ | ----------- | -------------- | -------------------------------------------------------------- |
-| `display`       | Lora         | 56 / 3.5rem      | 600    | 1.1         | -0.02em        | Homepage hero, landing page headlines. Maximum impact.         |
-| `headline-lg`   | Lora         | 40 / 2.5rem      | 600    | 1.2         | -0.015em       | Major page sections, collection headers.                       |
-| `headline-md`   | Lora         | 32 / 2rem        | 600    | 1.25        | -0.01em        | Product feature blocks, editorial section intros.              |
-| `headline-sm`   | Lora         | 24 / 1.5rem      | 600    | 1.3         | -0.005em       | Card titles, sidebar headers.                                  |
-| `headline-xs`   | Lora         | 20 / 1.25rem     | 600    | 1.35        | —              | Sub-section headers, FAQ questions.                            |
-| `feature-title` | Red Hat Text | 18 / 1.125rem    | 600    | 1.4         | —              | Feature callouts, benefit lists, tab labels.                   |
-| `body-lg`       | Red Hat Text | 18 / 1.125rem    | 400    | 1.65        | —              | Long-form editorial, Dr. Gundry's articles.                    |
-| `body-md`       | Red Hat Text | 16 / 1rem        | 400    | 1.6         | —              | Default paragraph text, product descriptions.                  |
-| `body-sm`       | Red Hat Text | 14 / 0.875rem    | 400    | 1.55        | —              | Secondary descriptions, supplementary info.                    |
-| `caption`       | Red Hat Text | 13 / 0.8125rem   | 400    | 1.45        | 0.01em         | Image captions, timestamps, meta info.                         |
-| `label-md`      | Red Hat Text | 13 / 0.8125rem   | 600    | 1.3         | 0.04em         | Form labels, badge text, navigation items.                     |
-| `button-label`  | Red Hat Text | 15 / 0.9375rem   | 600    | 1.2         | 0.06em         | All button text. Always uppercase via `text-transform`.        |
-| `overline`      | Red Hat Text | 11 / 0.6875rem   | 700    | 1.2         | 0.1em          | Category tags, section identifiers. Always uppercase.          |
-| `micro`         | Red Hat Text | 10 / 0.625rem    | 500    | 1.2         | 0.05em         | Legal text, footnotes, smallest disclaimers.                   |
-| `code`          | System Mono  | 14 / 0.875rem    | 400    | 1.6         | —              | Ingredient codes, supplement facts, technical specs.           |
+| Token           | Font         | Size (px / rem) | Weight | Line-height | Letter-spacing | Notes                                                   |
+| --------------- | ------------ | --------------- | ------ | ----------- | -------------- | ------------------------------------------------------- |
+| `display`       | Lora         | 56 / 3.5rem     | 600    | 1.1         | -0.02em        | Homepage hero, landing page headlines. Maximum impact.  |
+| `headline-lg`   | Lora         | 40 / 2.5rem     | 600    | 1.2         | -0.015em       | Major page sections, collection headers.                |
+| `headline-md`   | Lora         | 32 / 2rem       | 600    | 1.25        | -0.01em        | Product feature blocks, editorial section intros.       |
+| `headline-sm`   | Lora         | 24 / 1.5rem     | 600    | 1.3         | -0.005em       | Card titles, sidebar headers.                           |
+| `headline-xs`   | Lora         | 20 / 1.25rem    | 600    | 1.35        | —              | Sub-section headers, FAQ questions.                     |
+| `feature-title` | Red Hat Text | 18 / 1.125rem   | 600    | 1.4         | —              | Feature callouts, benefit lists, tab labels.            |
+| `body-lg`       | Red Hat Text | 18 / 1.125rem   | 400    | 1.65        | —              | Long-form editorial, Dr. Gundry's articles.             |
+| `body-md`       | Red Hat Text | 16 / 1rem       | 400    | 1.6         | —              | Default paragraph text, product descriptions.           |
+| `body-sm`       | Red Hat Text | 14 / 0.875rem   | 400    | 1.55        | —              | Secondary descriptions, supplementary info.             |
+| `caption`       | Red Hat Text | 13 / 0.8125rem  | 400    | 1.45        | 0.01em         | Image captions, timestamps, meta info.                  |
+| `label-md`      | Red Hat Text | 13 / 0.8125rem  | 600    | 1.3         | 0.04em         | Form labels, badge text, navigation items.              |
+| `button-label`  | Red Hat Text | 15 / 0.9375rem  | 600    | 1.2         | 0.06em         | All button text. Always uppercase via `text-transform`. |
+| `overline`      | Red Hat Text | 11 / 0.6875rem  | 700    | 1.2         | 0.1em          | Category tags, section identifiers. Always uppercase.   |
+| `micro`         | Red Hat Text | 10 / 0.625rem   | 500    | 1.2         | 0.05em         | Legal text, footnotes, smallest disclaimers.            |
+| `code`          | System Mono  | 14 / 0.875rem   | 400    | 1.6         | —              | Ingredient codes, supplement facts, technical specs.    |
 
 ### Principles
 
@@ -631,23 +631,23 @@ Gundry MD leans generous with whitespace — the brand sells premium health prod
 
 ### Spacing System
 
-The standardized Paravel Labs scale, used for all padding, margin, gap, and size values:
+The standardized Golden Hippo scale, used for all padding, margin, gap, and size values:
 
 `0px, 2px, 4px, 6px, 8px, 12px, 16px, 20px, 24px, 32px, 40px, 48px, 64px, 80px, 96px, 128px, 160px, 192px, 224px, 256px, 320px, 384px, 480px, 560px, 640px, 720px, 768px, 1024px, 1280px, 1440px, 1600px, 1920px`
 
 **Common usage patterns for this brand:**
 
-| Use case                            | Value                          |
-| ----------------------------------- | ------------------------------ |
-| Button padding                      | 12px vertical / 28px horizontal |
+| Use case                            | Value                            |
+| ----------------------------------- | -------------------------------- |
+| Button padding                      | 12px vertical / 28px horizontal  |
 | Card padding                        | 24px (standard), 32px (featured) |
-| Input padding                       | 12px vertical / 20px horizontal |
-| Stack gaps (tight — icon + label)   | 6px–8px                        |
-| Stack gaps (standard — form fields) | 16px                           |
-| Stack gaps (loose — card grids)     | 24px–32px                      |
-| Section vertical spacing            | 80px–128px                     |
-| Page max-width (content)            | 1280px                         |
-| Page max-width (narrow / editorial) | 768px                          |
+| Input padding                       | 12px vertical / 20px horizontal  |
+| Stack gaps (tight — icon + label)   | 6px–8px                          |
+| Stack gaps (standard — form fields) | 16px                             |
+| Stack gaps (loose — card grids)     | 24px–32px                        |
+| Section vertical spacing            | 80px–128px                       |
+| Page max-width (content)            | 1280px                           |
+| Page max-width (narrow / editorial) | 768px                            |
 
 ### Grid & Container
 
@@ -665,7 +665,7 @@ Sections are separated by 80px–128px of vertical space, giving each content bl
 
 ## 5. Depth & Elevation
 
-The standardized Paravel Labs shadow scale, with brand-specific application guidance. Gundry MD uses shadow conservatively — the brand's clean, minimal aesthetic means most surfaces sit flat or at the `sm` level, just enough depth to define boundaries without creating visual noise.
+The standardized Golden Hippo shadow scale, with brand-specific application guidance. Gundry MD uses shadow conservatively — the brand's clean, minimal aesthetic means most surfaces sit flat or at the `sm` level, just enough depth to define boundaries without creating visual noise.
 
 | Token | Value                                                                 | Gundry MD Usage                                                                        |
 | ----- | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
@@ -685,14 +685,14 @@ The standardized Paravel Labs shadow scale, with brand-specific application guid
 
 ### Border Radius Scale
 
-| Token          | Value    | Use Case                                                                          |
-| -------------- | -------- | --------------------------------------------------------------------------------- |
-| `rounded.none` | `0px`    | Divider lines, full-bleed sections.                                               |
-| `rounded.sm`   | `4px`    | Badges (when not pill-shaped), small tags, inline code.                           |
-| `rounded.md`   | `8px`    | Product images, thumbnails, small containers.                                     |
-| `rounded.lg`   | `12px`   | Cards, textareas, modals, dropdowns.                                              |
-| `rounded.xl`   | `16px`   | Hero images (contained), featured sections.                                       |
-| `rounded.full` | `9999px` | **All buttons, inputs, search bars, badges, avatars, circular icon buttons.**     |
+| Token          | Value    | Use Case                                                                      |
+| -------------- | -------- | ----------------------------------------------------------------------------- |
+| `rounded.none` | `0px`    | Divider lines, full-bleed sections.                                           |
+| `rounded.sm`   | `4px`    | Badges (when not pill-shaped), small tags, inline code.                       |
+| `rounded.md`   | `8px`    | Product images, thumbnails, small containers.                                 |
+| `rounded.lg`   | `12px`   | Cards, textareas, modals, dropdowns.                                          |
+| `rounded.xl`   | `16px`   | Hero images (contained), featured sections.                                   |
+| `rounded.full` | `9999px` | **All buttons, inputs, search bars, badges, avatars, circular icon buttons.** |
 
 ### Application Rules
 
@@ -713,13 +713,13 @@ Every component below is mirrored in the front matter `components` block using t
 
 Five variants. All share `rounded.full` (pill) corners, `button-label` typography (Red Hat Text 15px / weight 600 / 0.06em tracking / **uppercase via `text-transform: uppercase`**), 44px height, and 12px × 28px padding. The pill shape is non-negotiable.
 
-| Variant            | Background                         | Text                             | Hover Background                | Active Background                | Personality                                                                  |
-| ------------------ | ---------------------------------- | -------------------------------- | ------------------------------- | -------------------------------- | ---------------------------------------------------------------------------- |
-| `button-primary`   | `{colors.primary-600}` `#2945B8`   | `{colors.white}` `#FFFFFF`       | `{colors.primary-500}` `#4569DF` | `{colors.primary-700}` `#233B92` | The confident CTA — "Add to Cart," "Subscribe," "Shop Now."                  |
-| `button-secondary` | `{colors.secondary-400}` `#C2E329` | `{colors.neutral-900}` `#111827` | `{colors.secondary-300}` `#AEC947` | `{colors.secondary-600}` `#536300` (white text) | The energetic push — "Learn More," "See Results," promotional actions.       |
-| `button-light`     | `{colors.white}` `#FFFFFF`         | `{colors.primary-600}` `#2945B8` | `{colors.primary-50}` `#F3F7FF` | —                                | For use on dark or colored backgrounds. Border: 1px solid `{colors.neutral-200}`. |
-| `button-dark`      | `{colors.neutral-900}` `#111827`   | `{colors.white}` `#FFFFFF`       | `{colors.neutral-800}` `#1F2937` | —                                | Footer CTAs, dark-section actions.                                           |
-| `button-outline`   | `transparent`                      | `{colors.primary-600}` `#2945B8` | `{colors.primary-50}` `#F3F7FF` | —                                | Minimal emphasis — filters, toggles, secondary navigation. Border: 1.5px solid `{colors.primary-600}`. |
+| Variant            | Background                         | Text                             | Hover Background                   | Active Background                               | Personality                                                                                            |
+| ------------------ | ---------------------------------- | -------------------------------- | ---------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `button-primary`   | `{colors.primary-600}` `#2945B8`   | `{colors.white}` `#FFFFFF`       | `{colors.primary-500}` `#4569DF`   | `{colors.primary-700}` `#233B92`                | The confident CTA — "Add to Cart," "Subscribe," "Shop Now."                                            |
+| `button-secondary` | `{colors.secondary-400}` `#C2E329` | `{colors.neutral-900}` `#111827` | `{colors.secondary-300}` `#AEC947` | `{colors.secondary-600}` `#536300` (white text) | The energetic push — "Learn More," "See Results," promotional actions.                                 |
+| `button-light`     | `{colors.white}` `#FFFFFF`         | `{colors.primary-600}` `#2945B8` | `{colors.primary-50}` `#F3F7FF`    | —                                               | For use on dark or colored backgrounds. Border: 1px solid `{colors.neutral-200}`.                      |
+| `button-dark`      | `{colors.neutral-900}` `#111827`   | `{colors.white}` `#FFFFFF`       | `{colors.neutral-800}` `#1F2937`   | —                                               | Footer CTAs, dark-section actions.                                                                     |
+| `button-outline`   | `transparent`                      | `{colors.primary-600}` `#2945B8` | `{colors.primary-50}` `#F3F7FF`    | —                                               | Minimal emphasis — filters, toggles, secondary navigation. Border: 1.5px solid `{colors.primary-600}`. |
 
 Disabled state: `button-primary-disabled` uses `primary-200` background with `primary-800` text — readable but unmistakably inactive.
 
@@ -727,11 +727,11 @@ Disabled state: `button-primary-disabled` uses `primary-200` background with `pr
 
 ### Cards & Containers
 
-| Variant         | Background                         | Text                             | Padding | Radius          | Border / Shadow                                       |
-| --------------- | ---------------------------------- | -------------------------------- | ------- | --------------- | ----------------------------------------------------- |
-| `card`          | `{colors.white}` `#FFFFFF`         | `{colors.neutral-900}` `#111827` | 24px    | `rounded.lg`    | `1px solid {colors.neutral-200}` + shadow `sm`        |
-| `card-feature`  | `{colors.white}` `#FFFFFF`         | `{colors.neutral-900}` `#111827` | 32px    | `rounded.lg`    | `1px solid {colors.neutral-200}` + shadow `sm`        |
-| `card-dark`     | `{colors.primary-600}` `#2945B8`   | `{colors.white}` `#FFFFFF`       | 32px    | `rounded.lg`    | None — tonal separation from the page background      |
+| Variant        | Background                       | Text                             | Padding | Radius       | Border / Shadow                                  |
+| -------------- | -------------------------------- | -------------------------------- | ------- | ------------ | ------------------------------------------------ |
+| `card`         | `{colors.white}` `#FFFFFF`       | `{colors.neutral-900}` `#111827` | 24px    | `rounded.lg` | `1px solid {colors.neutral-200}` + shadow `sm`   |
+| `card-feature` | `{colors.white}` `#FFFFFF`       | `{colors.neutral-900}` `#111827` | 32px    | `rounded.lg` | `1px solid {colors.neutral-200}` + shadow `sm`   |
+| `card-dark`    | `{colors.primary-600}` `#2945B8` | `{colors.white}` `#FFFFFF`       | 32px    | `rounded.lg` | None — tonal separation from the page background |
 
 Cards in dark contexts (`bg: {colors.neutral-800}`) swap their border to `{colors.neutral-700}` (`#374151`).
 
@@ -739,46 +739,46 @@ Cards in dark contexts (`bg: {colors.neutral-800}`) swap their border to `{color
 
 ### Inputs & Forms
 
-| Spec           | Value                                          |
-| -------------- | ---------------------------------------------- |
-| Background     | `{colors.white}` `#FFFFFF`                     |
-| Text           | `{colors.neutral-900}` `#111827`               |
-| Placeholder    | `{colors.neutral-400}` `#9CA3AF`               |
-| Border         | `1px solid {colors.neutral-300}` (`#D1D5DB`)   |
-| Border (focus) | `2px solid {colors.primary-600}` (`#2945B8`)   |
-| Focus ring     | `0 0 0 3px rgba(41, 69, 184, 0.15)`            |
+| Spec           | Value                                           |
+| -------------- | ----------------------------------------------- |
+| Background     | `{colors.white}` `#FFFFFF`                      |
+| Text           | `{colors.neutral-900}` `#111827`                |
+| Placeholder    | `{colors.neutral-400}` `#9CA3AF`                |
+| Border         | `1px solid {colors.neutral-300}` (`#D1D5DB`)    |
+| Border (focus) | `2px solid {colors.primary-600}` (`#2945B8`)    |
+| Focus ring     | `0 0 0 3px rgba(41, 69, 184, 0.15)`             |
 | Radius         | `rounded.full` (9999px) — pill, matches buttons |
-| Padding        | 12px × 20px                                    |
-| Height         | 48px                                           |
-| Typography     | `body-md` (Red Hat Text 16px)                  |
+| Padding        | 12px × 20px                                     |
+| Height         | 48px                                            |
+| Typography     | `body-md` (Red Hat Text 16px)                   |
 
 Pill-shaped inputs match the button system for visual consistency. For textareas (which can't be pill-shaped), use `rounded.lg` (12px) to match card radius. Disabled inputs use `neutral-100` background with `neutral-600` text. Error inputs add a `2px solid {colors.error-600}` border with `error-600` helper text below.
 
 ### Navigation
 
-| Property       | Value                                                              |
-| -------------- | ------------------------------------------------------------------ |
-| Background     | `{colors.white}` `#FFFFFF`                                         |
-| Border bottom  | `1px solid {colors.neutral-200}` (`#E5E7EB`)                       |
-| Height         | 64px (desktop), 56px (mobile)                                      |
-| Logo placement | Left-aligned                                                       |
+| Property       | Value                                                                                     |
+| -------------- | ----------------------------------------------------------------------------------------- |
+| Background     | `{colors.white}` `#FFFFFF`                                                                |
+| Border bottom  | `1px solid {colors.neutral-200}` (`#E5E7EB`)                                              |
+| Height         | 64px (desktop), 56px (mobile)                                                             |
+| Logo placement | Left-aligned                                                                              |
 | Nav links      | `label-md` typography (Red Hat Text 13px / 600 / +0.04em), `{colors.neutral-700}` resting |
-| Active link    | `{colors.primary-600}` (`#2945B8`)                                 |
-| Hover          | `{colors.primary-600}` (`#2945B8`)                                 |
-| CTA button     | `button-primary`, right-aligned                                    |
-| Mobile         | Hamburger menu, full-screen overlay on `{colors.neutral-900}` bg   |
+| Active link    | `{colors.primary-600}` (`#2945B8`)                                                        |
+| Hover          | `{colors.primary-600}` (`#2945B8`)                                                        |
+| CTA button     | `button-primary`, right-aligned                                                           |
+| Mobile         | Hamburger menu, full-screen overlay on `{colors.neutral-900}` bg                          |
 
 Sticky on scroll. On scroll past 8px, apply shadow `sm` to the nav bar for subtle depth.
 
 ### Image Treatment
 
-| Property            | Value                                                                                                   |
-| ------------------- | ------------------------------------------------------------------------------------------------------- |
-| Product images      | `rounded.md` (8px), no shadow, contained within card                                                    |
-| Hero images         | Full-bleed or `rounded.xl` (16px) for contained heroes                                                  |
-| Thumbnails          | `rounded.md` (8px), `1px solid {colors.neutral-200}` border                                             |
-| Dr. Gundry portrait | `rounded.full` (50% / circle) for testimonial/authority contexts, `rounded.lg` (12px) for editorial    |
-| Aspect ratios       | Product: 1:1 or 4:5. Hero: 16:9 or 3:1. Editorial: 3:2.                                                 |
+| Property            | Value                                                                                               |
+| ------------------- | --------------------------------------------------------------------------------------------------- |
+| Product images      | `rounded.md` (8px), no shadow, contained within card                                                |
+| Hero images         | Full-bleed or `rounded.xl` (16px) for contained heroes                                              |
+| Thumbnails          | `rounded.md` (8px), `1px solid {colors.neutral-200}` border                                         |
+| Dr. Gundry portrait | `rounded.full` (50% / circle) for testimonial/authority contexts, `rounded.lg` (12px) for editorial |
+| Aspect ratios       | Product: 1:1 or 4:5. Hero: 16:9 or 3:1. Editorial: 3:2.                                             |
 
 ### Distinctive Components
 
@@ -789,6 +789,7 @@ Sticky on scroll. On scroll past 8px, apply shadow `sm` to the nav bar for subtl
 **Dr. Gundry Quote Block.** A blockquote with a 4px left border in `{colors.tertiary-300}` (`#FFA082`), Lora italic at 20px / weight 600 for the quote text, and `body-sm` weight 500 for the attribution. Background: transparent or `{colors.neutral-50}`.
 
 **Badge** variants:
+
 - `badge` — `{colors.secondary-100}` bg with `{colors.secondary-700}` text. "Promo," "Save."
 - `badge-primary` — `{colors.primary-100}` bg with `{colors.primary-800}` text. "Bestseller," "New."
 - `badge-coral` — `{colors.tertiary-100}` bg with `{colors.tertiary-700}` text. "Limited," "Featured."
@@ -826,23 +827,23 @@ All badge variants use `rounded.full` and `overline` typography.
 
 ### Breakpoints
 
-| Token | Min Width | Gundry MD Behavior                                                                                                                                         |
-| ----- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sm`  | 640px     | Product grid shifts from 1 to 2 columns. Hero headline drops from `display` to `headline-lg`. Side padding increases to 24px.                              |
-| `md`  | 768px     | Two-column layouts activate for product + description. Navigation shows full link set. Editorial content centered at 768px max-width.                      |
+| Token | Min Width | Gundry MD Behavior                                                                                                                                           |
+| ----- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `sm`  | 640px     | Product grid shifts from 1 to 2 columns. Hero headline drops from `display` to `headline-lg`. Side padding increases to 24px.                                |
+| `md`  | 768px     | Two-column layouts activate for product + description. Navigation shows full link set. Editorial content centered at 768px max-width.                        |
 | `lg`  | 1024px    | Full desktop nav with CTA button. Product grid goes to 3–4 columns. Hero sections use full `display` typography. Trust Badge Bar goes single-row horizontal. |
-| `xl`  | 1280px    | Maximum content width reached. Product grid locks at 4 columns with 24px gaps. Section spacing reaches full 128px.                                         |
-| `2xl` | 1536px    | Content remains at 1280px max-width, centered. Extra space becomes margin. Hero images may expand beyond content width for cinematic effect.               |
+| `xl`  | 1280px    | Maximum content width reached. Product grid locks at 4 columns with 24px gaps. Section spacing reaches full 128px.                                           |
+| `2xl` | 1536px    | Content remains at 1280px max-width, centered. Extra space becomes margin. Hero images may expand beyond content width for cinematic effect.                 |
 
 ### Touch Targets
 
-| Element            | Minimum Size                                                                                   |
-| ------------------ | ---------------------------------------------------------------------------------------------- |
-| Buttons            | 44px height minimum (pill shape with 12px vertical padding + 15px text comfortably exceeds)   |
-| Nav links (mobile) | 48px tap target height                                                                         |
-| Form inputs        | 48px height                                                                                    |
-| Icon buttons       | 44px × 44px                                                                                    |
-| Checkbox / radio   | 24px visual, 44px tap area                                                                     |
+| Element            | Minimum Size                                                                                |
+| ------------------ | ------------------------------------------------------------------------------------------- |
+| Buttons            | 44px height minimum (pill shape with 12px vertical padding + 15px text comfortably exceeds) |
+| Nav links (mobile) | 48px tap target height                                                                      |
+| Form inputs        | 48px height                                                                                 |
+| Icon buttons       | 44px × 44px                                                                                 |
+| Checkbox / radio   | 24px visual, 44px tap area                                                                  |
 
 ### Collapsing Strategy
 
@@ -871,27 +872,27 @@ This section equips AI coding tools (Claude, Cursor, GitHub Copilot, etc.) to im
 
 ### Quick Color Reference
 
-| Token             | Hex       | Note                                                          |
-| ----------------- | --------- | ------------------------------------------------------------- |
-| `primary-50`      | `#F3F7FF` | Blue-tinted backgrounds, selected states                      |
-| `primary-100`     | `#E0E9FF` | Light card tints, tag backgrounds                             |
-| `primary-500`     | `#4569DF` | Primary button hover state                                    |
-| `primary-600` ★   | `#2945B8` | **Anchor — primary CTAs, nav, hero backgrounds, links**       |
-| `primary-700`     | `#233B92` | Primary button pressed/active state                           |
-| `primary-800`     | `#1A2C6A` | Text on blue-tinted backgrounds                               |
-| `secondary-100`   | `#E5EFCB` | Badge/callout backgrounds, sale banners                       |
-| `secondary-300`   | `#AEC947` | Lime button hover state                                       |
-| `secondary-400` ★ | `#C2E329` | **Anchor — secondary CTAs, badges, promotions, icons**        |
+| Token             | Hex       | Note                                                            |
+| ----------------- | --------- | --------------------------------------------------------------- |
+| `primary-50`      | `#F3F7FF` | Blue-tinted backgrounds, selected states                        |
+| `primary-100`     | `#E0E9FF` | Light card tints, tag backgrounds                               |
+| `primary-500`     | `#4569DF` | Primary button hover state                                      |
+| `primary-600` ★   | `#2945B8` | **Anchor — primary CTAs, nav, hero backgrounds, links**         |
+| `primary-700`     | `#233B92` | Primary button pressed/active state                             |
+| `primary-800`     | `#1A2C6A` | Text on blue-tinted backgrounds                                 |
+| `secondary-100`   | `#E5EFCB` | Badge/callout backgrounds, sale banners                         |
+| `secondary-300`   | `#AEC947` | Lime button hover state                                         |
+| `secondary-400` ★ | `#C2E329` | **Anchor — secondary CTAs, badges, promotions, icons**          |
 | `secondary-600`   | `#536300` | Pressed state for lime buttons (white text); lime text on white |
-| `tertiary-50`     | `#FFF4F1` | Warm section backgrounds, testimonial tints                   |
+| `tertiary-50`     | `#FFF4F1` | Warm section backgrounds, testimonial tints                     |
 | `tertiary-300` ★  | `#FFA082` | **Anchor — quote borders, accent illustrations, tertiary CTAs** |
-| `tertiary-500`    | `#AF583C` | Coral text on white backgrounds                               |
-| `white`           | `#FFFFFF` | Page background, card surface                                 |
-| `neutral-200`     | `#E5E7EB` | Default border / hairline                                     |
-| `neutral-500`     | `#6B7280` | Tertiary / muted text, placeholders                           |
-| `neutral-600`     | `#4B5563` | Secondary text                                                |
-| `neutral-900`     | `#111827` | Primary text on light surfaces; dark surface bg              |
-| `info-500`        | `#3B82F6` | Focus ring (always)                                           |
+| `tertiary-500`    | `#AF583C` | Coral text on white backgrounds                                 |
+| `white`           | `#FFFFFF` | Page background, card surface                                   |
+| `neutral-200`     | `#E5E7EB` | Default border / hairline                                       |
+| `neutral-500`     | `#6B7280` | Tertiary / muted text, placeholders                             |
+| `neutral-600`     | `#4B5563` | Secondary text                                                  |
+| `neutral-900`     | `#111827` | Primary text on light surfaces; dark surface bg                 |
+| `info-500`        | `#3B82F6` | Focus ring (always)                                             |
 
 ### Token Reference Cheat Sheet
 
