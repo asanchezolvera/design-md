@@ -1,0 +1,50 @@
+{
+  "activated-you": {
+    "slug": "activated-you",
+    "name": "ActivatedYou",
+    "skillPath": "brands/activated-you/SKILL.md",
+    "designPath": "brands/activated-you/DESIGN.md"
+  },
+  "bhmd": {
+    "slug": "bhmd",
+    "name": "Beverly Hills MD",
+    "skillPath": "brands/bhmd/SKILL.md",
+    "designPath": "brands/bhmd/DESIGN.md"
+  },
+  "debt-clear-usa": {
+    "slug": "debt-clear-usa",
+    "name": "Debt Clear USA",
+    "skillPath": "brands/debt-clear-usa/SKILL.md",
+    "designPath": "brands/debt-clear-usa/DESIGN.md"
+  },
+  "driven-entrepreneur": {
+    "slug": "driven-entrepreneur",
+    "name": "Driven Entrepreneur",
+    "skillPath": "brands/driven-entrepreneur/SKILL.md",
+    "designPath": "brands/driven-entrepreneur/DESIGN.md"
+  },
+  "gundry-md": {
+    "slug": "gundry-md",
+    "name": "Gundry MD",
+    "skillPath": "brands/gundry-md/SKILL.md",
+    "designPath": "brands/gundry-md/DESIGN.md"
+  },
+  "power-life": {
+    "slug": "power-life",
+    "name": "Power Life",
+    "skillPath": "brands/power-life/SKILL.md",
+    "designPath": "brands/power-life/DESIGN.md"
+  },
+  "roundhouse-provisions": {
+    "slug": "roundhouse-provisions",
+    "name": "Roundhouse Provisions",
+    "skillPath": "brands/roundhouse-provisions/SKILL.md",
+    "designPath": "brands/roundhouse-provisions/DESIGN.md"
+  },
+  "terra-mare": {
+    "slug": "terra-mare",
+    "name": "Terra Mare",
+    "skillPath": "brands/terra-mare/SKILL.md",
+    "designPath": "brands/terra-mare/DESIGN.md"
+  }
+}
