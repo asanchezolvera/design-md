@@ -13,7 +13,7 @@ Comprehensive design system documentation for all Golden Hippo brands. Each bran
 | Power Life            | `power-life`            | Complete | Montserrat       | Montserrat     | Voltage Cobalt `#1C439B` | 10px (confidently soft) |
 | Roundhouse Provisions | `roundhouse-provisions` | Complete | Antonio          | Barlow         | Ranger Ember `#EE5531`   | 8–14px (confident-grit) |
 | Driven Entrepreneur   | `driven-entrepreneur`   | Complete | Albert Sans      | Inter          | Deep Forest `#154847`    | Pill (9999px)           |
-| ActivatedYou          | `activated-you`         | Pending  | —                | —              | —                        | —                       |
+| ActivatedYou          | `activated-you`         | Complete | Roboto           | Roboto         | Cultivated Green `#52744B` | 12–20px (soft botanical) |
 
 ## Directory Structure
 
@@ -39,7 +39,8 @@ design-md/
     │   └── DESIGN.md
     ├── driven-entrepreneur/        # Driven Entrepreneur
     │   └── DESIGN.md
-    └── activated-you/              # (Pending)
+    └── activated-you/              # ActivatedYou
+        └── DESIGN.md
 ```
 
 Each brand is registered in [`brands/index.json`](brands/index.json) with its slug, display name, and the canonical paths to its `DESIGN.md` and `SKILL.md`. New brands should be added to the registry when their DESIGN.md is created.
