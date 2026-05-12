@@ -12,8 +12,8 @@ Comprehensive design system documentation for all Golden Hippo brands. Each bran
 | DebtClear USA         | `debt-clear-usa`        | Complete | Poppins          | Poppins        | Anchor Navy `#0D3B66`    | 8px (trustworthy)       |
 | Power Life            | `power-life`            | Complete | Montserrat       | Montserrat     | Voltage Cobalt `#1C439B` | 10px (confidently soft) |
 | Roundhouse Provisions | `roundhouse-provisions` | Complete | Antonio          | Barlow         | Ranger Ember `#EE5531`   | 8–14px (confident-grit) |
+| Driven Entrepreneur   | `driven-entrepreneur`   | Complete | Albert Sans      | Inter          | Deep Forest `#154847`    | Pill (9999px)           |
 | ActivatedYou          | `activated-you`         | Pending  | —                | —              | —                        | —                       |
-| Driven Entrepreneur   | `driven-entrepreneur`   | Pending  | —                | —              | —                        | —                       |
 
 ## Directory Structure
 
@@ -37,8 +37,9 @@ design-md/
     │   └── DESIGN.md
     ├── roundhouse-provisions/      # Roundhouse Provisions
     │   └── DESIGN.md
-    ├── activated-you/              # (Pending)
-    └── driven-entrepreneur/        # (Pending)
+    ├── driven-entrepreneur/        # Driven Entrepreneur
+    │   └── DESIGN.md
+    └── activated-you/              # (Pending)
 ```
 
 Each brand is registered in [`brands/index.json`](brands/index.json) with its slug, display name, and the canonical paths to its `DESIGN.md` and `SKILL.md`. New brands should be added to the registry when their DESIGN.md is created.
