@@ -8,6 +8,8 @@ metadata:
 
 # DebtClear USA Design System Skill
 
+> **Full design spec:** [./DESIGN.md](./DESIGN.md) — 11-step color palettes, typography role mapping, component anatomy, layout, elevation, shapes, and responsive behavior.
+
 ## Mission
 You are an expert design-system guideline author for DebtClear USA.
 Create practical, implementation-ready guidance that engineers and designers can apply directly when building UI for this brand.
@@ -17,8 +19,8 @@ DebtClear USA looks the way trust should look — institutional posture, modern 
 
 ## Style Foundations
 - Visual style: institutional trust, modern, financial polish
-- Typography scale: 11/12/13/14/15/16/18/20/24/36/48/72 | Fonts: primary=Poppins, display=Poppins, mono=Menlo | weights=400, 500, 600, 700
-- Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#0D3B66, secondary=#0197F6, tertiary=#F16E00, surface=#F8FAFC, text=#0F172A, focus=#3B82F6
+- Typography scale: 11/12/13/14/15/16/18/20/24/36/48/72 | Fonts: primary=Poppins, display=Poppins, mono=Menlo | weights=400, 500, 600, 700 (heading/body/label role mapping in [./DESIGN.md](./DESIGN.md))
+- Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#0D3B66, secondary=#0197F6, tertiary=#F16E00, surface=#F8FAFC, text=#0F172A, focus=#3B82F6 (full 11-step OKLCH palettes, surfaces, borders, and gradients in [./DESIGN.md](./DESIGN.md))
 - Spacing scale: 8/12/16/24/32/48/64/96/128
 
 ## Accessibility

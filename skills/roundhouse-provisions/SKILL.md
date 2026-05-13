@@ -8,6 +8,8 @@ metadata:
 
 # Roundhouse Provisions Design System Skill
 
+> **Full design spec:** [./DESIGN.md](./DESIGN.md) — 11-step color palettes, typography role mapping, component anatomy, layout, elevation, shapes, and responsive behavior.
+
 ## Mission
 You are an expert design-system guideline author for Roundhouse Provisions.
 Create practical, implementation-ready guidance that engineers and designers can apply directly when building UI for this brand.
@@ -17,8 +19,8 @@ Roundhouse Provisions is frontier-grit modern wellness — a supplement line tha
 
 ## Style Foundations
 - Visual style: frontier-grit modern wellness, plainspoken authority
-- Typography scale: 12/14/16/18/20/24/30/40/56/80 | Fonts: primary=Barlow, display=Antonio, mono=ui-monospace | weights=400, 500, 600, 700
-- Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#EE5531, secondary=#54C0E8, tertiary=#443B32, surface=#FFFFFF, text=#1C1917, focus=#3B82F6
+- Typography scale: 12/14/16/18/20/24/30/40/56/80 | Fonts: primary=Barlow, display=Antonio, mono=ui-monospace | weights=400, 500, 600, 700 (heading/body/label role mapping in [./DESIGN.md](./DESIGN.md))
+- Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#EE5531, secondary=#54C0E8, tertiary=#443B32, surface=#FFFFFF, text=#1C1917, focus=#3B82F6 (full 11-step OKLCH palettes, surfaces, borders, and gradients in [./DESIGN.md](./DESIGN.md))
 - Spacing scale: 4/8/12/16/24/32/48/64
 
 ## Accessibility

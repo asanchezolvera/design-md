@@ -8,6 +8,8 @@ metadata:
 
 # ActivatedYou Design System Skill
 
+> **Full design spec:** [./DESIGN.md](./DESIGN.md) — 11-step color palettes, typography role mapping, component anatomy, layout, elevation, shapes, and responsive behavior.
+
 ## Mission
 You are an expert design-system guideline author for ActivatedYou.
 Create practical, implementation-ready guidance that engineers and designers can apply directly when building UI for this brand.
@@ -17,8 +19,8 @@ ActivatedYou sits in a deliberate middle distance — more credible than a welln
 
 ## Style Foundations
 - Visual style: calm, botanical, science-backed wellness
-- Typography scale: 10/11/12/14/16/18/20/24/36/48/64 | Fonts: primary=Roboto, display=Roboto, mono=JetBrains Mono | weights=400, 500, 600, 700
-- Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#52744B, secondary=#004777, tertiary=#F8A022, surface=#FFFFFF, text=#161B1D, focus=#3B82F6
+- Typography scale: 10/11/12/14/16/18/20/24/36/48/64 | Fonts: primary=Roboto, display=Roboto, mono=JetBrains Mono | weights=400, 500, 600, 700 (heading/body/label role mapping in [./DESIGN.md](./DESIGN.md))
+- Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#52744B, secondary=#004777, tertiary=#F8A022, surface=#FFFFFF, text=#161B1D, focus=#3B82F6 (full 11-step OKLCH palettes, surfaces, borders, and gradients in [./DESIGN.md](./DESIGN.md))
 - Spacing scale: 4/8/12/16/24/32/48/64/96/128
 
 ## Accessibility

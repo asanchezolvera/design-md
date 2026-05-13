@@ -8,6 +8,8 @@ metadata:
 
 # Power Life Design System Skill
 
+> **Full design spec:** [./DESIGN.md](./DESIGN.md) — 11-step color palettes, typography role mapping, component anatomy, layout, elevation, shapes, and responsive behavior.
+
 ## Mission
 You are an expert design-system guideline author for Power Life.
 Create practical, implementation-ready guidance that engineers and designers can apply directly when building UI for this brand.
@@ -17,8 +19,8 @@ Power Life renders daily vitality in three confident strokes: voltage cobalt aut
 
 ## Style Foundations
 - Visual style: saturated, confident, geometric, premium-vital
-- Typography scale: 11/13/14/15/16/18/22/28/36/48/72 | Fonts: primary=Montserrat, display=Montserrat, mono=ui-monospace | weights=400, 500, 600, 700, 800
-- Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#1C439B, secondary=#2CB34A, tertiary=#F96900, surface=#FAFAFA, text=#171717, focus=#3B82F6
+- Typography scale: 11/13/14/15/16/18/22/28/36/48/72 | Fonts: primary=Montserrat, display=Montserrat, mono=ui-monospace | weights=400, 500, 600, 700, 800 (heading/body/label role mapping in [./DESIGN.md](./DESIGN.md))
+- Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#1C439B, secondary=#2CB34A, tertiary=#F96900, surface=#FAFAFA, text=#171717, focus=#3B82F6 (full 11-step OKLCH palettes, surfaces, borders, and gradients in [./DESIGN.md](./DESIGN.md))
 - Spacing scale: 4/8/12/16/20/24/32/48/64
 
 ## Accessibility

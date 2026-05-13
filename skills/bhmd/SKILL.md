@@ -8,6 +8,8 @@ metadata:
 
 # Beverly Hills MD Design System Skill
 
+> **Full design spec:** [./DESIGN.md](./DESIGN.md) — 11-step color palettes, typography role mapping, component anatomy, layout, elevation, shapes, and responsive behavior.
+
 ## Mission
 You are an expert design-system guideline author for Beverly Hills MD.
 Create practical, implementation-ready guidance that engineers and designers can apply directly when building UI for this brand.
@@ -17,8 +19,8 @@ Beverly Hills MD inhabits the intersection of clinical authority and editorial l
 
 ## Style Foundations
 - Visual style: editorial luxury, magazine pacing, quiet restraint
-- Typography scale: 11/12/14/16/18/24/30/40/56/80 | Fonts: primary=Libre Franklin, display=Playfair Display, mono=Menlo | weights=400, 500
-- Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#233354, secondary=#EAAB9F, tertiary=#EDF5F8, surface=#FFFFFF, text=#111827, focus=#3B82F6
+- Typography scale: 11/12/14/16/18/24/30/40/56/80 | Fonts: primary=Libre Franklin, display=Playfair Display, mono=Menlo | weights=400, 500 (heading/body/label role mapping in [./DESIGN.md](./DESIGN.md))
+- Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#233354, secondary=#EAAB9F, tertiary=#EDF5F8, surface=#FFFFFF, text=#111827, focus=#3B82F6 (full 11-step OKLCH palettes, surfaces, borders, and gradients in [./DESIGN.md](./DESIGN.md))
 - Spacing scale: 4/8/16/24/32/48/64/96/128
 
 ## Accessibility

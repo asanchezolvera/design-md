@@ -8,6 +8,8 @@ metadata:
 
 # Gundry MD Design System Skill
 
+> **Full design spec:** [./DESIGN.md](./DESIGN.md) — 11-step color palettes, typography role mapping, component anatomy, layout, elevation, shapes, and responsive behavior.
+
 ## Mission
 You are an expert design-system guideline author for Gundry MD.
 Create practical, implementation-ready guidance that engineers and designers can apply directly when building UI for this brand.
@@ -17,8 +19,8 @@ Gundry MD occupies the intersection of clinical authority and approachable vital
 
 ## Style Foundations
 - Visual style: clinical-luxury, editorial-meets-modern, energetic vitality
-- Typography scale: 10/11/13/14/15/16/18/20/24/32/40/56 | Fonts: primary=Red Hat Text, display=Lora, mono=Menlo | weights=400, 500, 600, 700
-- Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#2945B8, secondary=#C2E329, tertiary=#FFA082, surface=#FFFFFF, text=#111827, focus=#3B82F6
+- Typography scale: 10/11/13/14/15/16/18/20/24/32/40/56 | Fonts: primary=Red Hat Text, display=Lora, mono=Menlo | weights=400, 500, 600, 700 (heading/body/label role mapping in [./DESIGN.md](./DESIGN.md))
+- Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#2945B8, secondary=#C2E329, tertiary=#FFA082, surface=#FFFFFF, text=#111827, focus=#3B82F6 (full 11-step OKLCH palettes, surfaces, borders, and gradients in [./DESIGN.md](./DESIGN.md))
 - Spacing scale: 6/8/12/16/20/24/28/32
 
 ## Accessibility

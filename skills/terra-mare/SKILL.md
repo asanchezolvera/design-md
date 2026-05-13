@@ -8,6 +8,8 @@ metadata:
 
 # Terra Mare Design System Skill
 
+> **Full design spec:** [./DESIGN.md](./DESIGN.md) — 11-step color palettes, typography role mapping, component anatomy, layout, elevation, shapes, and responsive behavior.
+
 ## Mission
 You are an expert design-system guideline author for Terra Mare.
 Create practical, implementation-ready guidance that engineers and designers can apply directly when building UI for this brand.
@@ -17,8 +19,8 @@ Terra Mare sits in the seam between apothecary and atelier — science-backed wo
 
 ## Style Foundations
 - Visual style: editorial luxury, warm and organic, artisanal restraint
-- Typography scale: 11/13/14/15/16/18/22/28/36/48/72 | Fonts: primary=Poppins, display=Crimson Text, mono=ui-monospace | weights=400, 500, 600
-- Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#B7500B, secondary=#F58C1C, tertiary=#9C7B66, surface=#FBFAF9, text=#1D1816, focus=#3B82F6
+- Typography scale: 11/13/14/15/16/18/22/28/36/48/72 | Fonts: primary=Poppins, display=Crimson Text, mono=ui-monospace | weights=400, 500, 600 (heading/body/label role mapping in [./DESIGN.md](./DESIGN.md))
+- Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#B7500B, secondary=#F58C1C, tertiary=#9C7B66, surface=#FBFAF9, text=#1D1816, focus=#3B82F6 (full 11-step OKLCH palettes, surfaces, borders, and gradients in [./DESIGN.md](./DESIGN.md))
 - Spacing scale: 4/8/12/16/24/32/48/64/96/128
 
 ## Accessibility
