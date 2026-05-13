@@ -23,6 +23,9 @@ Terra Mare sits in the seam between apothecary and atelier — science-backed wo
 - Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#B7500B, secondary=#F58C1C, tertiary=#9C7B66, surface=#FBFAF9, text=#1D1816, focus=#3B82F6 (full 11-step OKLCH palettes, surfaces, borders, and gradients in [./DESIGN.md](./DESIGN.md))
 - Spacing scale: 4/8/12/16/24/32/48/64/96/128
 
+## Component Tokens
+Terra Mare conforms to the canonical taxonomies in [../../CONTEXT.md](../../CONTEXT.md): `button-{primary, secondary, outline, ghost, inverse}`, `card{-elevated, -feature, -inverse}`, `badge{-primary, -success, -warning, -error, -info}`, `input{-focus, -disabled, -error, -inverse}`, `nav{-link, -link-active, -inverse}`. Brand-specific variants (Marigold accent CTA, product card, modal container, textarea, Marigold pricing tag) live as **prose recipes** in DESIGN.md §7, never as new front-matter tokens.
+
 ## Accessibility
 WCAG 2.2 AA, keyboard-first interactions, visible focus states using `#3B82F6` focus ring, minimum 44px touch targets
 
@@ -38,6 +41,7 @@ considered, literary, warm, grounded, refined, earthy, magazine-paced, confident
 - use `xs` shadows as the default elevation; reach for `md`+ only for genuine interactivity
 
 ## Rules: Don't
+- avoid inventing brand-named tokens (`button-accent`, `card-editorial`, `card-dark`) — component tokens are role-based per CONTEXT.md Meta-rule 1; brand-color variants like the Marigold accent CTA live as prose recipes in DESIGN.md §7
 - avoid pure black — primary text is `{colors.neutral-900}` (`#1D1816`)
 - avoid cool grays (Slate, Zinc) — they break warm-palette coherence
 - avoid Crimson Text below 18px — small serifs look fragile

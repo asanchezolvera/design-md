@@ -269,20 +269,6 @@ components:
     backgroundColor: "{colors.primary-200}"
     textColor: "{colors.primary-800}"
 
-  button-accent:
-    backgroundColor: "{colors.secondary-400}"
-    textColor: "{colors.secondary-800}"
-    typography: "{typography.button-label}"
-    rounded: "{rounded.md}"
-    padding: 12px 24px
-    height: 44px
-  button-accent-hover:
-    backgroundColor: "{colors.secondary-300}"
-    textColor: "{colors.secondary-800}"
-  button-accent-active:
-    backgroundColor: "{colors.secondary-600}"
-    textColor: "{colors.white}"
-
   button-secondary:
     backgroundColor: "{colors.neutral-200}"
     textColor: "{colors.neutral-800}"
@@ -296,6 +282,9 @@ components:
   button-secondary-active:
     backgroundColor: "{colors.neutral-400}"
     textColor: "{colors.neutral-900}"
+  button-secondary-disabled:
+    backgroundColor: "{colors.neutral-100}"
+    textColor: "{colors.neutral-400}"
 
   button-outline:
     backgroundColor: "{colors.white}"
@@ -310,6 +299,25 @@ components:
   button-outline-active:
     backgroundColor: "{colors.primary-100}"
     textColor: "{colors.primary-700}"
+  button-outline-disabled:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.neutral-400}"
+
+  button-ghost:
+    backgroundColor: transparent
+    textColor: "{colors.primary-500}"
+    typography: "{typography.button-label}"
+    rounded: "{rounded.md}"
+    padding: 12px 20px
+  button-ghost-hover:
+    backgroundColor: "{colors.primary-50}"
+    textColor: "{colors.primary-600}"
+  button-ghost-active:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-700}"
+  button-ghost-disabled:
+    backgroundColor: transparent
+    textColor: "{colors.neutral-400}"
 
   button-inverse:
     backgroundColor: "{colors.white}"
@@ -321,23 +329,29 @@ components:
   button-inverse-hover:
     backgroundColor: "{colors.primary-50}"
     textColor: "{colors.primary-600}"
+  button-inverse-active:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-700}"
+  button-inverse-disabled:
+    backgroundColor: "{colors.neutral-200}"
+    textColor: "{colors.neutral-500}"
 
   card:
     backgroundColor: "{colors.white}"
     textColor: "{colors.neutral-900}"
     rounded: "{rounded.lg}"
     padding: 24px
-  card-editorial:
+  card-elevated:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.neutral-900}"
+    rounded: "{rounded.lg}"
+    padding: 24px
+  card-feature:
     backgroundColor: "{colors.tertiary-50}"
     textColor: "{colors.neutral-900}"
     rounded: "{rounded.xl}"
     padding: 32px
-  card-product:
-    backgroundColor: "{colors.white}"
-    textColor: "{colors.neutral-900}"
-    rounded: "{rounded.xl}"
-    padding: 24px
-  card-dark:
+  card-inverse:
     backgroundColor: "{colors.neutral-800}"
     textColor: "{colors.neutral-50}"
     rounded: "{rounded.lg}"
@@ -356,24 +370,43 @@ components:
   input-disabled:
     backgroundColor: "{colors.neutral-100}"
     textColor: "{colors.neutral-600}"
-
-  textarea:
+  input-error:
     backgroundColor: "{colors.white}"
     textColor: "{colors.neutral-900}"
+  input-inverse:
+    backgroundColor: "{colors.neutral-900}"
+    textColor: "{colors.neutral-50}"
     typography: "{typography.body-md}"
     rounded: "{rounded.md}"
     padding: 12px 16px
+    height: 48px
 
-  navigation:
+  nav:
     backgroundColor: "{colors.white}"
     textColor: "{colors.neutral-700}"
     typography: "{typography.button-label}"
     padding: 0 32px
     height: 80px
+  nav-link:
+    backgroundColor: transparent
+    textColor: "{colors.neutral-700}"
+    typography: "{typography.button-label}"
+    padding: 8px 12px
+  nav-link-active:
+    backgroundColor: transparent
+    textColor: "{colors.primary-500}"
+    typography: "{typography.button-label}"
+    padding: 8px 12px
+  nav-inverse:
+    backgroundColor: "{colors.neutral-900}"
+    textColor: "{colors.neutral-50}"
+    typography: "{typography.button-label}"
+    padding: 0 32px
+    height: 80px
 
   badge:
-    backgroundColor: "{colors.secondary-100}"
-    textColor: "{colors.secondary-800}"
+    backgroundColor: "{colors.neutral-100}"
+    textColor: "{colors.neutral-700}"
     typography: "{typography.label-md}"
     rounded: "{rounded.full}"
     padding: 4px 12px
@@ -383,18 +416,30 @@ components:
     typography: "{typography.label-md}"
     rounded: "{rounded.full}"
     padding: 4px 12px
-  badge-neutral:
-    backgroundColor: "{colors.neutral-100}"
-    textColor: "{colors.neutral-700}"
+  badge-success:
+    backgroundColor: "{colors.success-100}"
+    textColor: "{colors.success-800}"
     typography: "{typography.label-md}"
     rounded: "{rounded.full}"
     padding: 4px 12px
-
-  modal:
-    backgroundColor: "{colors.white}"
-    textColor: "{colors.neutral-900}"
-    rounded: "{rounded.2xl}"
-    padding: 32px
+  badge-warning:
+    backgroundColor: "{colors.warning-100}"
+    textColor: "{colors.warning-800}"
+    typography: "{typography.label-md}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+  badge-error:
+    backgroundColor: "{colors.error-100}"
+    textColor: "{colors.error-800}"
+    typography: "{typography.label-md}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+  badge-info:
+    backgroundColor: "{colors.info-100}"
+    textColor: "{colors.info-800}"
+    typography: "{typography.label-md}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
 ---
 
 # Terra Mare
@@ -718,28 +763,44 @@ Every component below is mirrored in the front matter `components` block using t
 
 ### Buttons
 
-All buttons share `rounded.md` (8px), `button-label` typography (Poppins 15px / weight 500 / +0.01em tracking, **title case**, not uppercase), 44px height, and 12px × 24px padding.
+Five canonical role-based variants. All buttons share `rounded.md` (8px), `button-label` typography (Poppins 15px / weight 500 / +0.01em tracking, **title case**, not uppercase), 44px height, and 12px × 24px padding (except `button-ghost`, which uses 20px horizontal).
 
-| Variant            | Background                                                    | Text                               | Hover                                                           | Active                                                           | Personality                                                                     |
-| ------------------ | ------------------------------------------------------------- | ---------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `button-primary`   | `{colors.primary-500}` `#B7500B`                              | `{colors.white}` `#FFFFFF`         | bg `{colors.primary-600}` `#933D00`                             | bg `{colors.primary-700}` `#722D00`                              | The brand's default CTA — confident, warm, unambiguous.                         |
-| `button-accent`    | `{colors.secondary-400}` `#F58C1C`                            | `{colors.secondary-800}` `#4E2700` | bg `{colors.secondary-300}` `#F9A45C`                           | bg `{colors.secondary-600}` `#874800` (white text)               | For sun-forward moments — subscription banners, "Save" CTAs, promotional flags. |
-| `button-secondary` | `{colors.neutral-200}` `#E8E4E3`                              | `{colors.neutral-800}` `#2B2422`   | bg `{colors.neutral-300}` `#D8D2D0`                             | bg `{colors.neutral-400}` `#ABA09C`                              | For supporting actions — "Learn more," "Add to comparison."                     |
-| `button-outline`   | `{colors.white}` `#FFFFFF` (1px solid `{colors.neutral-300}`) | `{colors.primary-500}` `#B7500B`   | bg `{colors.primary-50}` `#FFF4EF`, text `{colors.primary-600}` | bg `{colors.primary-100}` `#FFE3D6`, text `{colors.primary-700}` | Lowest visual weight — text links upgraded to button shape.                     |
-| `button-inverse`   | `{colors.white}` `#FFFFFF`                                    | `{colors.primary-500}` `#B7500B`   | bg `{colors.primary-50}` `#FFF4EF`                              | —                                                                | For CTAs sitting on dark hero backgrounds.                                      |
+| Variant            | Background                                                    | Text                             | Hover                                                           | Active                                                           | Personality                                                              |
+| ------------------ | ------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| `button-primary`   | `{colors.primary-500}` `#B7500B`                              | `{colors.white}` `#FFFFFF`       | bg `{colors.primary-600}` `#933D00`                             | bg `{colors.primary-700}` `#722D00`                              | The brand's conversion CTA — confident, warm, unambiguous.               |
+| `button-secondary` | `{colors.neutral-200}` `#E8E4E3`                              | `{colors.neutral-800}` `#2B2422` | bg `{colors.neutral-300}` `#D8D2D0`                             | bg `{colors.neutral-400}` `#ABA09C`                              | For supporting actions — "Learn more," "Add to comparison."              |
+| `button-outline`   | `{colors.white}` `#FFFFFF` (1px solid `{colors.neutral-300}`) | `{colors.primary-500}` `#B7500B` | bg `{colors.primary-50}` `#FFF4EF`, text `{colors.primary-600}` | bg `{colors.primary-100}` `#FFE3D6`, text `{colors.primary-700}` | Bordered, light-surface variant when a filled button would over-compete. |
+| `button-ghost`     | transparent                                                   | `{colors.primary-500}` `#B7500B` | bg `{colors.primary-50}` `#FFF4EF`, text `{colors.primary-600}` | bg `{colors.primary-100}` `#FFE3D6`, text `{colors.primary-700}` | Lowest visual weight — inline links-as-buttons, tertiary actions.        |
+| `button-inverse`   | `{colors.white}` `#FFFFFF`                                    | `{colors.primary-500}` `#B7500B` | bg `{colors.primary-50}` `#FFF4EF`, text `{colors.primary-600}` | bg `{colors.primary-100}` `#FFE3D6`, text `{colors.primary-700}` | For CTAs sitting on dark hero backgrounds.                               |
 
-**Note on the primary hover/active progression.** Hover and active states both deepen the sienna (500 → 600 → 700) — counter-intuitive for "lift on hover," but white text on Sienna-400 (`#DE7944`) fails WCAG AA contrast (3.06:1). Going darker keeps the press-feedback direction consistent and the text legible at every state. The accent button can hover lighter because its dark text on light marigold maintains contrast naturally.
+**Note on the primary hover/active progression.** Hover and active states both deepen the sienna (500 → 600 → 700) — counter-intuitive for "lift on hover," but white text on Sienna-400 (`#DE7944`) fails WCAG AA contrast (3.06:1). Going darker keeps the press-feedback direction consistent and the text legible at every state.
 
-Resting shadow `xs`; hover shadow `sm` on the primary. Disabled state: `button-primary-disabled` uses `primary-200` background with `primary-800` text.
+Resting shadow `xs`; hover shadow `sm` on the primary. Every variant has a `-disabled` state defined in front matter; primary disabled uses `primary-200` background with `primary-800` text.
+
+#### Prose recipes (brand-specific button patterns)
+
+These patterns sit outside the canonical 5 and live as recipes rather than tokens (per [CONTEXT.md](../../CONTEXT.md) Meta-rule 5).
+
+- **Marigold accent CTA.** For sun-forward moments — subscription banners, "Save" callouts, promotional flags. Start from the `button-primary` shape, override background to `{colors.secondary-400}` (`#F58C1C`) and text to `{colors.secondary-800}` (`#4E2700`). Hover background `{colors.secondary-300}` (`#F9A45C`); active background `{colors.secondary-600}` (`#874800`) with white text. **Use sparingly** — it's the spark, not the workhorse. Per [CONTEXT.md](../../CONTEXT.md)'s resolved ambiguity on `accent`, this is a brand-specific scarcity treatment, not a canonical role.
 
 ### Cards & Containers
 
-| Variant          | Background                       | Text                             | Padding | Radius       | Border / Shadow                                                                                            |
-| ---------------- | -------------------------------- | -------------------------------- | ------- | ------------ | ---------------------------------------------------------------------------------------------------------- |
-| `card`           | `{colors.white}` `#FFFFFF`       | `{colors.neutral-900}` `#1D1816` | 24px    | `rounded.lg` | `1px solid {colors.neutral-200}` + shadow `xs`; hover: `sm` + border `neutral-300`                         |
-| `card-editorial` | `{colors.tertiary-50}` `#FAF6F3` | `{colors.neutral-900}` `#1D1816` | 32px    | `rounded.xl` | None — tonal separation from the page                                                                      |
-| `card-product`   | `{colors.white}` `#FFFFFF`       | `{colors.neutral-900}` `#1D1816` | 24px    | `rounded.xl` | Shadow `sm`; hover: `md`, image scales 1.02. Image area uses `rounded.lg` and a `Sunrise Wash` background. |
-| `card-dark`      | `{colors.neutral-800}` `#2B2422` | `{colors.neutral-50}` `#FBFAF9`  | 24px    | `rounded.lg` | `1px solid {colors.neutral-700}` (`#473C39`)                                                               |
+Four canonical role-based variants.
+
+| Variant         | Background                       | Text                             | Padding | Radius       | Border / Shadow                                                                    |
+| --------------- | -------------------------------- | -------------------------------- | ------- | ------------ | ---------------------------------------------------------------------------------- |
+| `card`          | `{colors.white}` `#FFFFFF`       | `{colors.neutral-900}` `#1D1816` | 24px    | `rounded.lg` | `1px solid {colors.neutral-200}` + shadow `xs`; hover: `sm` + border `neutral-300` |
+| `card-elevated` | `{colors.white}` `#FFFFFF`       | `{colors.neutral-900}` `#1D1816` | 24px    | `rounded.lg` | Shadow `sm` resting (one step deeper than `card`); hover: `md`, no border.         |
+| `card-feature`  | `{colors.tertiary-50}` `#FAF6F3` | `{colors.neutral-900}` `#1D1816` | 32px    | `rounded.xl` | No border, no shadow — tonal separation from the page does the work.               |
+| `card-inverse`  | `{colors.neutral-800}` `#2B2422` | `{colors.neutral-50}` `#FBFAF9`  | 24px    | `rounded.lg` | `1px solid {colors.neutral-700}` (`#473C39`)                                       |
+
+`card-feature` is the editorial-magazine card — tinted clay background for benefit blocks, founder framing, brand-promise sections. The slight `rounded.xl` bump gives narrative content a softer magazine-spread feel than the architectural `rounded.lg` cards.
+
+#### Prose recipes (brand-specific card patterns)
+
+- **Product card.** Start from `card-elevated` (white, `rounded.xl`, shadow `sm`). Override radius to `rounded.xl` for the magazine-spread feel; on hover, lift to shadow `md` and scale the inner image 1.02. The product image area sits inside a 1:1 container with `rounded.lg` and a `Sunrise Wash` gradient background (`linear-gradient(180deg, #FFF5ED 0%, #FBFAF9 100%)`) — never on pure white.
+- **Modal container.** Start from `card` shape, override radius to `rounded.2xl` (24px), padding to 32px, and add shadow `xl` — the rare brand-allowed deep lift, reserved for genuinely modal moments. Always lives over a `rgba(0,0,0,0.4)` scrim.
+- **Textarea.** Same spec as `input` (white bg, `neutral-300` border, `rounded.md`, 12px × 16px padding, `body-md` typography) but with no fixed height and `resize: vertical`.
 
 ### Inputs & Forms
 
@@ -756,24 +817,32 @@ Resting shadow `xs`; hover shadow `sm` on the primary. Disabled state: `button-p
 | Height         | 48px (prevents iOS zoom)                     |
 | Typography     | `body-md` (Poppins 16px)                     |
 
-Disabled inputs use `neutral-100` background with `neutral-600` text. Error inputs use `2px solid {colors.error-600}` border with `error-600` helper text below. Labels use `label-md` (Poppins 13px / 500 / +0.01em) and sit above inputs with 6px bottom margin.
+Five canonical states defined in front matter: `input` (base), `input-focus`, `input-disabled`, `input-error`, `input-inverse`.
+
+- **`input-disabled`** — `{colors.neutral-100}` background with `{colors.neutral-600}` text.
+- **`input-error`** — `2px solid {colors.error-600}` border with `{colors.error-600}` helper text directly below.
+- **`input-inverse`** — `{colors.neutral-900}` background, `{colors.neutral-50}` text, `1px solid {colors.neutral-700}` border. For form fields sitting inside a dark hero band.
+
+Labels use `label-md` (Poppins 13px / 500 / +0.01em) and sit above inputs with 6px bottom margin.
 
 ### Navigation
 
-| Property        | Value                                                                                      |
-| --------------- | ------------------------------------------------------------------------------------------ |
-| Background      | `rgba(255, 255, 255, 0.95)` with `backdrop-filter: blur(12px)`                             |
-| Border bottom   | `1px solid {colors.neutral-200}` (`#E8E4E3`)                                               |
-| Height          | 80px                                                                                       |
-| Padding         | 0 32px, max-width 1280px centered                                                          |
-| Logo placement  | Left-aligned (Crimson Text wordmark)                                                       |
-| Nav links       | `button-label` typography (Poppins 15px / 500), color `{colors.neutral-700}`               |
-| Hover           | Color shifts to `{colors.primary-500}` (`#B7500B`)                                         |
-| Active link     | Color `{colors.primary-500}` with 2px underline in `{colors.secondary-400}` (`#F58C1C`)    |
-| Primary nav CTA | `button-accent` ("Sign Up" / "Subscribe"), right-aligned                                   |
-| Mobile          | Hamburger drawer slides from right at `<lg` (1024px), full-height, `neutral-50` background |
+Four canonical tokens: `nav` (the bar), `nav-link`, `nav-link-active`, `nav-inverse`.
 
-Sticky on scroll. The backdrop blur is the brand's signature nav treatment — never replace with a solid white sticky.
+| Property        | Value                                                                                                       |
+| --------------- | ----------------------------------------------------------------------------------------------------------- |
+| `nav` bg        | `rgba(255, 255, 255, 0.95)` with `backdrop-filter: blur(12px)`                                              |
+| Border bottom   | `1px solid {colors.neutral-200}` (`#E8E4E3`)                                                                |
+| Height          | 80px                                                                                                        |
+| Padding         | 0 32px, max-width 1280px centered                                                                           |
+| Logo placement  | Left-aligned (Crimson Text wordmark)                                                                        |
+| `nav-link`      | `button-label` typography (Poppins 15px / 500), color `{colors.neutral-700}`; hover color `primary-500`     |
+| `nav-link-active` | Color `{colors.primary-500}` with 2px underline in `{colors.secondary-400}` (Marigold scarcity accent)    |
+| Primary nav CTA | Marigold accent CTA prose recipe ("Sign Up" / "Subscribe"), right-aligned                                   |
+| `nav-inverse`   | `{colors.neutral-900}` background, `{colors.neutral-50}` text — for dark editorial overlays / footers       |
+| Mobile          | Hamburger drawer slides from right at `<lg` (1024px), full-height, `neutral-50` background                  |
+
+Sticky on scroll. The backdrop blur is the brand's signature nav treatment — never replace with a solid white sticky. Inside `nav-inverse`, links auto-adapt: text color shifts to `{colors.neutral-50}`, hover to `{colors.primary-200}`, active underline stays `{colors.secondary-400}`.
 
 ### Image Treatment
 
@@ -785,19 +854,23 @@ Sticky on scroll. The backdrop blur is the brand's signature nav treatment — n
 | Aspect ratios  | 4:5 (portrait) for product photography, 16:9 for editorial banners, 1:1 for lifestyle |
 | Tone           | Warm-graded — golden hour, natural light, never cool/clinical                         |
 
+### Badges
+
+Six canonical role-based variants. All pill-shaped (`rounded.full`), `label-md` typography, 4px × 12px padding.
+
+- **`badge`** — `{colors.neutral-100}` bg, `{colors.neutral-700}` text. The neutral default; metadata pills, category tags, low-emphasis labels.
+- **`badge-primary`** — `{colors.primary-100}` bg, `{colors.primary-800}` text. High-emphasis brand label: "Bestseller," "New."
+- **`badge-success`** / **`badge-warning`** / **`badge-error`** / **`badge-info`** — Standardized semantic statuses using the Tailwind green/yellow/red/blue palettes at the 100/800 tone pair.
+
+#### Prose recipes (brand-specific badge patterns)
+
+- **Marigold pricing tag.** For account-only savings, "Save up to 50%" callouts, and other Marigold-toned promotional flags. Same shape as `badge` (pill, `label-md`, 4px × 12px), but override background to `{colors.secondary-100}` (`#FFE4CF`) and text to `{colors.secondary-800}` (`#4E2700`). Reserve for moments where Marigold's "spark" tone is the point — don't replace `badge-primary` for general high-emphasis labels.
+
 ### Distinctive Components
 
 **Editorial Pullquote.** Crimson Text 36px italic, indented with a 4px `{colors.secondary-400}` (`#F58C1C`) left rule, used for founder quotes and brand statements.
 
-**Account Pricing Tag** (`badge`). Pill-shaped, `{colors.secondary-100}` (`#FFE4CF`) background, `{colors.secondary-800}` (`#4E2700`) text, `label-md` typography weight 600, 4px × 12px padding, `rounded.full`. Used to highlight account-only savings.
-
 **Daggered Disclaimer.** `micro` typography (Poppins 11px) in `{colors.neutral-500}` (`#7C6D67`), prefixed with `†` for FDA-required statements. Always lives at the bottom of product blocks.
-
-**Badge** variants:
-
-- `badge` — `{colors.secondary-100}` bg, `{colors.secondary-800}` text. Default; "Save," promotional flags.
-- `badge-primary` — `{colors.primary-100}` bg, `{colors.primary-800}` text. "Bestseller," "New."
-- `badge-neutral` — `{colors.neutral-100}` bg, `{colors.neutral-700}` text. Metadata pills, category tags.
 
 ## 8. Do's and Don'ts
 
@@ -827,6 +900,7 @@ Sticky on scroll. The backdrop blur is the brand's signature nav treatment — n
 - **Don't** put product images on pure white inside product cards — use `tertiary-50` or `Sunrise Wash`.
 - **Don't** use `rounded.2xl` (24px) on small components like buttons — it reads as toy-like.
 - **Don't** use a lighter sienna step for the primary button's hover state — white text on `primary-400` fails AA contrast.
+- **Don't** invent brand-named tokens like `button-accent`, `card-editorial`, or `card-dark`. Component tokens are role-based per [CONTEXT.md](../../CONTEXT.md) Meta-rule 1 — the canonical 5 buttons (`primary`/`secondary`/`outline`/`ghost`/`inverse`), 4 cards (`card`/`elevated`/`feature`/`inverse`), 6 badges (neutral/primary/success/warning/error/info), 5 inputs, 4 nav tokens. Marigold CTAs, editorial cards, product cards, modals, and pricing tags are prose recipes (§7), not tokens.
 
 ## 9. Responsive Behavior
 
@@ -903,15 +977,17 @@ This section equips AI coding tools (Claude, Cursor, GitHub Copilot, etc.) to im
 
 ### Example Component Prompts
 
-1. **"Build a product card matching the `card-product` spec — `{colors.white}` background, `1px solid {colors.neutral-200}` border, `{rounded.xl}` (16px) corners, 24px padding, `xs` shadow at rest, transitioning to `md` shadow + 1.02 image scale on hover. Product image sits in a 1:1 container with `{rounded.lg}` and a `Sunrise Wash` gradient background (`linear-gradient(180deg, #FFF5ED 0%, #FBFAF9 100%)`). Title in `{typography.headline-sm}` (Crimson Text 28px / weight 500) in `{colors.neutral-900}`. Description in `{typography.body-sm}` (Poppins 14px) in `{colors.neutral-700}`. Price in `{typography.body-lg}` weight 600 in `{colors.neutral-900}`. Account pricing badge uses the `badge` spec — `{colors.secondary-100}` bg, `{colors.secondary-800}` text, `{rounded.full}`. Primary CTA uses `button-primary`."**
+1. **"Build a product card following the §7 'product card' prose recipe — start from `card-elevated` (white bg, shadow `sm`), override radius to `{rounded.xl}` (16px), keep 24px padding. On hover, lift to shadow `md` and scale the inner image 1.02. Product image sits in a 1:1 container with `{rounded.lg}` and a `Sunrise Wash` gradient background (`linear-gradient(180deg, #FFF5ED 0%, #FBFAF9 100%)`). Title in `{typography.headline-sm}` (Crimson Text 28px / weight 500) in `{colors.neutral-900}`. Description in `{typography.body-sm}` (Poppins 14px) in `{colors.neutral-700}`. Price in `{typography.body-lg}` weight 600 in `{colors.neutral-900}`. Account pricing label uses the §7 'Marigold pricing tag' prose recipe — `badge` shape with `{colors.secondary-100}` bg and `{colors.secondary-800}` text. Primary CTA uses `button-primary`."**
 
-2. **"Build an editorial founder section. Background `{colors.tertiary-50}` (`#FAF6F3`). Two-column at `lg`+, stacking below. Left: founder portrait, 4:5 aspect ratio, `{rounded.xl}` (16px), no shadow. Right: overline `OUR FOUNDER` using `{typography.overline}` (Poppins 11px / weight 600 / uppercase / +0.12em tracking) in `{colors.tertiary-500}`. H2 in `{typography.headline-md}` (Crimson Text 36px / weight 600) in `{colors.neutral-900}` — italicize key phrases for emphasis. Body copy in `{typography.body-serif}` (Crimson Text 18px / 1.65 line-height) in `{colors.neutral-700}`. CTA uses the `button-outline` spec. Section padding 96px vertical."**
+2. **"Build an editorial founder section. Wrap it in `card-feature` (`{colors.tertiary-50}` bg, `{rounded.xl}`, 32px padding) — or render the band full-bleed with the same tertiary-50 tonal wash and skip the card chrome. Two-column at `lg`+, stacking below. Left: founder portrait, 4:5 aspect ratio, `{rounded.xl}` (16px), no shadow. Right: overline `OUR FOUNDER` using `{typography.overline}` (Poppins 11px / weight 600 / uppercase / +0.12em tracking) in `{colors.tertiary-500}`. H2 in `{typography.headline-md}` (Crimson Text 36px / weight 600) in `{colors.neutral-900}` — italicize key phrases for emphasis. Body copy in `{typography.body-serif}` (Crimson Text 18px / 1.65 line-height) in `{colors.neutral-700}`. CTA uses `button-outline`. Section padding 96px vertical."**
 
 3. **"Build a Subscribe & Save banner. Background `Ember Brand` gradient (`linear-gradient(135deg, #B7500B 0%, #F58C1C 100%)`). 48px vertical padding, 32px horizontal, `{rounded.xl}` corners. Headline in `{typography.headline-md}` italic in `{colors.white}` with the savings copy in weight 600. Sub-copy in `{typography.body-md}` in `{colors.primary-100}`. Inverse CTA uses the `button-inverse` spec — `{colors.white}` bg, `{colors.primary-500}` text, `sm` shadow."**
 
 4. **"Build a quantity selector + add-to-cart form. Quantity input matches the `input` spec — 48px height, `{colors.white}` bg, `1px solid {colors.neutral-300}` border, `{rounded.md}` corners, `{typography.body-md}` (Poppins 16px), text `{colors.neutral-900}`. On focus, swap border to 2px solid `{colors.primary-500}` and add `0 0 0 3px rgba(183, 80, 11, 0.15)` ring. Label `Quantity` in `{typography.label-md}` in `{colors.neutral-700}`. Add to cart uses `button-primary` full-width at 48px height. Below the button, a daggered disclaimer in `{typography.micro}` in `{colors.neutral-500}`: `†These statements have not been evaluated by the FDA.`"**
 
-5. **"Build the sticky top nav. 80px height, sticky to viewport top. Background `rgba(255, 255, 255, 0.95)` with `backdrop-filter: blur(12px)`. `1px solid {colors.neutral-200}` bottom border. 32px horizontal padding, max-width 1280px centered. Left: wordmark logo. Center: nav links using `{typography.button-label}` (Poppins 15px / 500) in `{colors.neutral-700}`; hover color shifts to `{colors.primary-500}`; active link adds a 2px underline in `{colors.secondary-400}`. Right: `button-accent` ('Sign Up'). Below `lg` (1024px), collapse to hamburger opening a right-side drawer with `{colors.neutral-50}` background."**
+5. **"Build the sticky top nav using the `nav` token (80px height, sticky to viewport top, `rgba(255, 255, 255, 0.95)` background with `backdrop-filter: blur(12px)`, `1px solid {colors.neutral-200}` bottom border, 32px horizontal padding, max-width 1280px centered). Left: wordmark logo. Center: links using the `nav-link` token (`{typography.button-label}` Poppins 15px / 500 in `{colors.neutral-700}`); hover color shifts to `{colors.primary-500}`. Active link uses `nav-link-active` — color `{colors.primary-500}` with a 2px underline in `{colors.secondary-400}`. Right: the Marigold accent CTA prose recipe ('Sign Up' — `{colors.secondary-400}` bg, `{colors.secondary-800}` text, `rounded.md`). Below `lg` (1024px), collapse to a hamburger opening a right-side drawer with `{colors.neutral-50}` background."**
+
+6. **"Build a dark editorial CTA band using `card-inverse` (`{colors.neutral-800}` bg, `{colors.neutral-50}` text, `rounded.lg`, 24px padding). Headline in `{typography.headline-md}` italic. Sub-copy in `{typography.body-md}` in `{colors.neutral-300}`. Primary CTA uses `button-inverse` (`{colors.white}` bg, `{colors.primary-500}` text). Optional inline form input uses `input-inverse` (`{colors.neutral-900}` bg, `{colors.neutral-50}` text, `1px solid {colors.neutral-700}` border). Section padding 96px vertical."**
 
 ### Iteration Guide
 
