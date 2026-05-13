@@ -240,47 +240,41 @@ spacing:
   "31": 1920px
 
 components:
+  # Primary is the orange Liberty Ember CTA — the conversion CTA per CONTEXT.md.
+  # Navy moves to button-secondary (the workaday non-headline action button).
   button-primary:
-    backgroundColor: "{colors.primary-800}"
-    textColor: "{colors.neutral-50}"
-    typography: "{typography.label-md}"
-    rounded: "{rounded.md}"
-    padding: 14px 28px
-    height: 52px
-  button-primary-hover:
-    backgroundColor: "{colors.primary-700}"
-    textColor: "{colors.neutral-50}"
-  button-primary-active:
-    backgroundColor: "{colors.primary-900}"
-    textColor: "{colors.neutral-50}"
-  button-primary-disabled:
-    backgroundColor: "{colors.neutral-300}"
-    textColor: "{colors.neutral-600}"
-
-  button-cta:
     backgroundColor: "{colors.tertiary-400}"
     textColor: "{colors.primary-900}"
     typography: "{typography.label-md}"
     rounded: "{rounded.md}"
     padding: 14px 28px
     height: 52px
-  button-cta-hover:
+  button-primary-hover:
     backgroundColor: "{colors.tertiary-500}"
     textColor: "{colors.neutral-50}"
-  button-cta-active:
+  button-primary-active:
     backgroundColor: "{colors.tertiary-600}"
     textColor: "{colors.neutral-50}"
+  button-primary-disabled:
+    backgroundColor: "{colors.neutral-300}"
+    textColor: "{colors.neutral-500}"
 
   button-secondary:
-    backgroundColor: "{colors.neutral-100}"
-    textColor: "{colors.primary-800}"
+    backgroundColor: "{colors.primary-800}"
+    textColor: "{colors.neutral-50}"
     typography: "{typography.label-md}"
     rounded: "{rounded.md}"
     padding: 14px 28px
     height: 52px
   button-secondary-hover:
-    backgroundColor: "{colors.neutral-200}"
-    textColor: "{colors.primary-800}"
+    backgroundColor: "{colors.primary-700}"
+    textColor: "{colors.neutral-50}"
+  button-secondary-active:
+    backgroundColor: "{colors.primary-900}"
+    textColor: "{colors.neutral-50}"
+  button-secondary-disabled:
+    backgroundColor: "{colors.neutral-300}"
+    textColor: "{colors.neutral-500}"
 
   button-outline:
     backgroundColor: "#FFFFFF"
@@ -292,6 +286,12 @@ components:
   button-outline-hover:
     backgroundColor: "{colors.primary-50}"
     textColor: "{colors.primary-800}"
+  button-outline-active:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-800}"
+  button-outline-disabled:
+    backgroundColor: "#FFFFFF"
+    textColor: "{colors.neutral-400}"
 
   button-ghost:
     backgroundColor: transparent
@@ -303,6 +303,30 @@ components:
   button-ghost-hover:
     backgroundColor: "{colors.primary-50}"
     textColor: "{colors.primary-800}"
+  button-ghost-active:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-800}"
+  button-ghost-disabled:
+    backgroundColor: transparent
+    textColor: "{colors.neutral-400}"
+
+  # For dark hero bands (primary-800 / primary-900 surfaces).
+  button-inverse:
+    backgroundColor: "#FFFFFF"
+    textColor: "{colors.primary-800}"
+    typography: "{typography.label-md}"
+    rounded: "{rounded.md}"
+    padding: 14px 28px
+    height: 52px
+  button-inverse-hover:
+    backgroundColor: "{colors.neutral-100}"
+    textColor: "{colors.primary-800}"
+  button-inverse-active:
+    backgroundColor: "{colors.neutral-200}"
+    textColor: "{colors.primary-800}"
+  button-inverse-disabled:
+    backgroundColor: "{colors.neutral-700}"
+    textColor: "{colors.neutral-500}"
 
   card:
     backgroundColor: "#FFFFFF"
@@ -310,13 +334,22 @@ components:
     rounded: "{rounded.lg}"
     padding: 32px
 
-  card-tinted:
+  # Off-white card with deeper resting shadow — for cards sitting on tinted bands.
+  card-elevated:
+    backgroundColor: "{colors.neutral-50}"
+    textColor: "{colors.neutral-900}"
+    rounded: "{rounded.lg}"
+    padding: 32px
+
+  # Tinted-emphasis card. Renamed from card-tinted to canonical card-feature.
+  card-feature:
     backgroundColor: "{colors.primary-50}"
     textColor: "{colors.primary-900}"
     rounded: "{rounded.lg}"
     padding: 32px
 
-  card-dark:
+  # Dark-surface card. Renamed from card-dark to canonical -inverse spelling.
+  card-inverse:
     backgroundColor: "{colors.primary-900}"
     textColor: "{colors.neutral-50}"
     rounded: "{rounded.lg}"
@@ -338,6 +371,30 @@ components:
   input-error:
     backgroundColor: "#FFFFFF"
     textColor: "{colors.neutral-900}"
+  # For inputs on dark hero bands (primary-800/900 surfaces).
+  input-inverse:
+    backgroundColor: "{colors.primary-900}"
+    textColor: "{colors.neutral-50}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.md}"
+    padding: 14px 16px
+    height: 52px
+
+  # Canonical neutral base — Slate-tinted gray label.
+  badge:
+    backgroundColor: "{colors.neutral-100}"
+    textColor: "{colors.neutral-800}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+
+  # High-emphasis brand label — navy-tinted.
+  badge-primary:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-800}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
 
   badge-success:
     backgroundColor: "{colors.success-50}"
@@ -353,20 +410,43 @@ components:
     rounded: "{rounded.full}"
     padding: 4px 12px
 
-  badge-info:
-    backgroundColor: "{colors.secondary-50}"
-    textColor: "{colors.secondary-700}"
+  badge-error:
+    backgroundColor: "{colors.error-50}"
+    textColor: "{colors.error-700}"
     typography: "{typography.label-sm}"
     rounded: "{rounded.full}"
     padding: 4px 12px
 
-  nav-bar:
+  # Canonical badge-info uses Tailwind info-blue (NOT brand secondary-azure)
+  # per CONTEXT.md + the brand's own §2 note that the brand azure is separate
+  # from the Tailwind Info palette.
+  badge-info:
+    backgroundColor: "{colors.info-50}"
+    textColor: "{colors.info-700}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+
+  nav:
     backgroundColor: "#FFFFFF"
     textColor: "{colors.neutral-900}"
     padding: 16px 32px
     height: 80px
 
-  nav-bar-dark:
+  nav-link:
+    backgroundColor: transparent
+    textColor: "{colors.primary-800}"
+    typography: "{typography.label-md}"
+    padding: 8px 12px
+
+  # Active state: same navy text + 2px tertiary-400 underline (border-bottom).
+  nav-link-active:
+    backgroundColor: transparent
+    textColor: "{colors.primary-800}"
+    typography: "{typography.label-md}"
+    padding: 8px 12px
+
+  nav-inverse:
     backgroundColor: "{colors.primary-800}"
     textColor: "{colors.neutral-50}"
     padding: 16px 32px
@@ -377,7 +457,7 @@ components:
 
 ## 1. Visual Theme & Atmosphere
 
-DebtClear USA looks the way trust _should_ look — institutional posture, modern bones, no theatrics. The visual identity is anchored by a deep, almost-black navy (`#0D3B66`) that does most of the heavy lifting: it shows up in nav bars, primary buttons, hero backgrounds, and statements of authority. Against that navy, a confident azure (`#0197F6`) carries the digital, forward-looking side of the brand — links, info states, secondary actions — while a warm orange (`#F16E00`) serves as the human element. The orange isn't decoration. It's reserved for moments where a real person is being asked to take action: "Get my plan," "See if I qualify," "Start now." When the orange shows up, something is being offered.
+DebtClear USA looks the way trust _should_ look — institutional posture, modern bones, no theatrics. The visual identity is anchored by a deep, almost-black navy (`#0D3B66`) that does most of the heavy lifting: it shows up in nav bars, `button-secondary` (the institutional workhorse action), hero backgrounds, and statements of authority. Against that navy, a confident azure (`#0197F6`) carries the digital, forward-looking side of the brand — links, info states, secondary digital accents — while a warm orange (`#F16E00`) serves as the human element. The orange isn't decoration: it's `button-primary`, reserved for moments where a real person is being asked to take action — "Get my plan," "See if I qualify," "Start now." When the orange shows up, something is being offered. (Per CONTEXT.md, `button-primary` is defined by role — most important action button — not by which color the brand considers signature. DebtClear's signature is the navy; its conversion CTA is the orange. Both truths fit.)
 
 The brand sits next to a Slate neutral palette, which is the most opinionated Tailwind neutral — distinctly blue-toned, polished, and reminiscent of financial platforms and serious newspapers. This is intentional. A warmer neutral (Stone, Taupe) would soften the brand into something cozy and forgettable; Slate keeps DebtClear USA reading as substantial. Typography is Poppins everywhere — geometric, friendly, and wide enough to be legible at small sizes for users who may be reading numbers and disclosures with reading glasses on. The aesthetic is bold and expressive within the constraints of the financial category: large numbers, confident headlines, generous whitespace, and CTAs that don't whisper.
 
@@ -385,9 +465,9 @@ The brand's job is to sit somewhere between a Chase ad and a Wealthfront product
 
 **Key Characteristics**
 
-- Deep navy authority (`#0D3B66`) as the primary visual signal of trust and stability
-- Warm orange (`#F16E00`) reserved exclusively for human-action moments
-- Azure (`#0197F6`) for digital affordances — links, info, secondary buttons
+- Deep navy authority (`#0D3B66`) is the brand's signature color and the `button-secondary` background — the institutional voice across nav, hero bands, and the workaday action button
+- Warm orange (`#F16E00`) is `button-primary` — the conversion CTA, used exclusively for human-action moments and reserved to one per viewport
+- Azure (`#0197F6`) for digital affordances — text links, illustrative accents, brand-secondary digital touchpoints
 - Slate neutrals for cool, editorial polish — never warm or beige
 - Poppins everywhere, with confident weight contrast (400 body, 600/700 headlines)
 - Generous whitespace; dense layouts read as desperate in this category
@@ -398,20 +478,20 @@ The brand's job is to sit somewhere between a Chase ad and a Wealthfront product
 
 ### Primary — Anchor Navy
 
-The institutional voice of the brand. Used for nav bars, primary buttons, hero sections, footers, and any moment that needs to read as substantial. The anchor sits at step 800 because the user-supplied hex is genuinely dark — using it lower in the scale would have made the palette feel anemic at deep steps.
+The institutional voice of the brand. Used for nav bars, `button-secondary` (the institutional workhorse button), hero sections, footers, and any moment that needs to read as substantial. The anchor sits at step 800 because the user-supplied hex is genuinely dark — using it lower in the scale would have made the palette feel anemic at deep steps. Note: the color is named "primary" in the palette taxonomy (brand-color hierarchy) but the brand's `button-primary` is the orange tertiary — DebtClear is the case in CONTEXT.md where "primary as palette tier" and "primary as button role" intentionally diverge.
 
 | Step  | Token         | Hex       | Usage Guidance                                                                          |
 | ----- | ------------- | --------- | --------------------------------------------------------------------------------------- |
-| 50    | `primary-50`  | `#F2F7FE` | Tinted card backgrounds, selected-state highlights, subtle banner fills                 |
-| 100   | `primary-100` | `#DFEBF8` | Badge backgrounds, navy-tinted info banners, hover background for ghost links           |
+| 50    | `primary-50`  | `#F2F7FE` | `card-feature` tint, selected-state highlights, subtle banner fills                     |
+| 100   | `primary-100` | `#DFEBF8` | `badge-primary` background, navy-tinted info banners, outline/ghost active state        |
 | 200   | `primary-200` | `#BDD7F4` | Soft tints, dividers on tinted surfaces, disabled-state navy fills                      |
 | 300   | `primary-300` | `#99BEE7` | Focus rings (brand alternative to default blue), illustration mid-tones                 |
 | 400   | `primary-400` | `#719CCB` | Mid-tone navy — used sparingly; works as a quiet text accent on dark surfaces           |
-| 500   | `primary-500` | `#4B78A7` | Secondary navy text on light tints, illustration shadows                                |
-| 600   | `primary-600` | `#345D89` | Secondary buttons on dark surfaces, hover-from-anchor lightening                        |
-| 700   | `primary-700` | `#26476A` | **Hover state for primary buttons** — one step lighter than anchor for visible feedback |
-| 800 ★ | `primary-800` | `#0D3B66` | **Default — primary buttons, nav, hero backgrounds, brand wordmark**                    |
-| 900   | `primary-900` | `#122334` | Pressed/active state for primary buttons; deep dark surfaces; footer alternative        |
+| 500   | `primary-500` | `#4B78A7` | Navy text on light tints, illustration shadows                                          |
+| 600   | `primary-600` | `#345D89` | Quiet navy text on dark surfaces, hover-from-anchor lightening                          |
+| 700   | `primary-700` | `#26476A` | **Hover state for `button-secondary`** — one step lighter than anchor                   |
+| 800 ★ | `primary-800` | `#0D3B66` | **Default — `button-secondary`, `nav-inverse`, hero backgrounds, brand wordmark**       |
+| 900   | `primary-900` | `#122334` | Pressed state for `button-secondary`; `card-inverse` / `input-inverse` background       |
 | 950   | `primary-950` | `#07101B` | Near-black with navy undertone — dark theme backgrounds, deepest overlays               |
 
 ### Secondary — Signal Azure
@@ -434,7 +514,7 @@ The digital, modern voice. Pairs with the navy anywhere a layer of energy is nee
 
 ### Tertiary — Liberty Ember
 
-The human-action color. This is the brand's only warm note and it's deliberately rationed: any time the user is being invited to _do something_ — qualify, enroll, claim, start — the ember shows up. Anchored at step 400 to preserve the source hex's vibrancy.
+The human-action color and the brand's `button-primary` background. This is the brand's only warm note and it's deliberately rationed: any time the user is being invited to _do something_ — qualify, enroll, claim, start — the ember shows up. Anchored at step 400 to preserve the source hex's vibrancy.
 
 | Step  | Token          | Hex       | Usage Guidance                                                           |
 | ----- | -------------- | --------- | ------------------------------------------------------------------------ |
@@ -442,9 +522,9 @@ The human-action color. This is the brand's only warm note and it's deliberately
 | 100   | `tertiary-100` | `#FFE3D5` | Badge fills for "limited time" or "new" markers                          |
 | 200   | `tertiary-200` | `#FFC6A8` | Soft warm tints, illustration highlights                                 |
 | 300   | `tertiary-300` | `#FF9F6B` | Decorative accents, illustration mid-tones                               |
-| 400 ★ | `tertiary-400` | `#F16E00` | **Default — high-conversion CTA buttons, action callouts, hero accents** |
-| 500   | `tertiary-500` | `#B85200` | **Hover state for ember CTAs** — visibly darker, signals press-readiness |
-| 600   | `tertiary-600` | `#913F00` | Pressed/active state for ember CTAs                                      |
+| 400 ★ | `tertiary-400` | `#F16E00` | **Default — `button-primary` (the conversion CTA), `nav-link-active` underline, hero action accents** |
+| 500   | `tertiary-500` | `#B85200` | **Hover state for `button-primary`** — visibly darker, signals press-readiness |
+| 600   | `tertiary-600` | `#913F00` | Pressed state for `button-primary`                                       |
 | 700   | `tertiary-700` | `#702F00` | Ember text on light tints (50–200); readable warm text on white          |
 | 800   | `tertiary-800` | `#542200` | Deep ember text on tinted backgrounds                                    |
 | 900   | `tertiary-900` | `#3A1500` | Dark ember overlays, footer warm accents                                 |
@@ -683,178 +763,121 @@ DebtClear USA's geometry is _moderately rounded_ — soft enough to feel modern 
 
 ## 7. Component Stylings
 
-Every component below has a matching front-matter entry under `components`. The prose specs are the human-readable explanation; the YAML is the contract.
+Every canonical token below has a matching front-matter entry under `components` and follows the canonical taxonomies in [../../CONTEXT.md](../../CONTEXT.md). Brand-specific patterns (neutral utility button, the trust block, number callout) live as **prose recipes** below — they are styling instructions composed from canonical tokens, not new front-matter tokens.
+
+**Important — primary/secondary semantics:** DebtClear USA is the brand where `button-primary` is the orange Liberty Ember CTA (the conversion CTA) and `button-secondary` is the deep navy button (the workaday non-headline action). The orange does the asking; the navy does the institutional voice. The migration plan promoted orange and demoted navy on purpose — see CONTEXT.md's "Flagged ambiguities — 'primary'" resolution.
 
 ### Buttons
 
-Five variants, all sharing the same height and corner radius for visual consistency.
+Five canonical variants, all sharing the same `rounded.md` (8px) corner radius and 52px height (44px for ghost).
 
-**Primary — Authority**
+| Token              | Background            | Text                  | Hover bg              | Active bg             | Disabled bg           | Disabled text         |
+| ------------------ | --------------------- | --------------------- | --------------------- | --------------------- | --------------------- | --------------------- |
+| `button-primary`   | `{colors.tertiary-400}` | `{colors.primary-900}` | `{colors.tertiary-500}` | `{colors.tertiary-600}` | `{colors.neutral-300}` | `{colors.neutral-500}` |
+| `button-secondary` | `{colors.primary-800}`  | `{colors.neutral-50}`  | `{colors.primary-700}`  | `{colors.primary-900}`  | `{colors.neutral-300}` | `{colors.neutral-500}` |
+| `button-outline`   | `#FFFFFF` + `1px {colors.neutral-300}` stroke | `{colors.primary-800}` | `{colors.primary-50}` | `{colors.primary-100}` | `#FFFFFF` + `1px {colors.neutral-200}` stroke | `{colors.neutral-400}` |
+| `button-ghost`     | transparent           | `{colors.primary-800}` | `{colors.primary-50}` | `{colors.primary-100}` | transparent           | `{colors.neutral-400}` |
+| `button-inverse`   | `#FFFFFF`             | `{colors.primary-800}` | `{colors.neutral-100}` | `{colors.neutral-200}` | `{colors.neutral-700}` | `{colors.neutral-500}` |
 
-- Background: `{colors.primary-800}` (`#0D3B66`)
-- Text: `{colors.neutral-50}` (`#F8FAFC`)
-- Padding: 14px / 28px, height 52px
-- Radius: `rounded.md` (8px)
-- Hover: `{colors.primary-700}` (`#26476A`) — visibly lighter
-- Active: `{colors.primary-900}` (`#122334`) — pressed-into-the-page
-- The default action when there's no warm-action moment. Used for "Sign in," "Continue," "Save."
+**`button-primary` — the conversion CTA.** The single highest-intent action on a page. "See if I qualify," "Get my plan," "Start now." Use at most once per visible viewport — its power comes from rarity. Text is `{colors.primary-900}` deep navy, not white: the bright ember doesn't clear WCAG AA against white text, but the deep navy clears it at 5.3:1 and looks intentional. Hover and active states _do_ use `{colors.neutral-50}` white text because the darker oranges underneath have enough contrast.
 
-**CTA — Conversion (Liberty Ember)**
+**`button-secondary` — the institutional workhorse.** Used for "Sign in," "Continue," "Save," "Cancel a plan" — every non-headline action. Navy `{colors.primary-800}` is the brand's authority color; it does most of the heavy lifting outside of the conversion moment.
 
-- Background: `{colors.tertiary-400}` (`#F16E00`)
-- Text: `{colors.primary-900}` (`#122334`) — dark navy, not white. The bright ember doesn't clear WCAG AA against white text, but the deep navy clears it at 5.3:1 and looks intentional, not compromised. Hover and active states _do_ use white text because the darker oranges underneath have enough contrast.
-- Padding: 14px / 28px, height 52px
-- Radius: `rounded.md` (8px)
-- Hover: Background `{colors.tertiary-500}` (`#B85200`), text `{colors.neutral-50}`
-- Active: Background `{colors.tertiary-600}` (`#913F00`), text `{colors.neutral-50}`
-- The single highest-intent action on a page. "See if I qualify," "Get my plan," "Start now." Use at most once per visible viewport — its power comes from rarity.
+**`button-outline`** — used on tinted hero backgrounds where a solid navy or ember would compete with the primary CTA.
 
-**Secondary — Neutral**
+**`button-ghost`** — inline links-as-buttons, low-priority actions, in-page nav.
 
-- Background: `{colors.neutral-100}` (`#F1F5F9`)
-- Text: `{colors.primary-800}`
-- Padding: 14px / 28px, height 52px
-- Radius: `rounded.md`
-- Hover: `{colors.neutral-200}` (`#E2E8F0`)
-- For "Cancel," "Back," "Learn more" — quiet next-to-primary.
+**`button-inverse`** — for use inside a `card-inverse` or `nav-inverse` band (`primary-800` / `primary-900` surfaces). White pill with navy text.
 
-**Outline — Light**
+#### Prose recipes (brand-specific button patterns)
 
-- Background: `#FFFFFF` with `1px solid {colors.neutral-300}`
-- Text: `{colors.primary-800}`
-- Padding: 14px / 28px, height 52px
-- Hover: Background `{colors.primary-50}` (`#F2F7FE`)
-- Used on tinted hero backgrounds where a solid neutral button would compete with the primary CTA.
-
-**Ghost — Tertiary**
-
-- Background: transparent
-- Text: `{colors.primary-800}`
-- Padding: 12px / 20px, height 44px
-- Hover: Background `{colors.primary-50}`
-- Inline links-as-buttons, navigation items, low-priority actions.
-
-**Disabled (any variant)**
-
-- Background: `{colors.neutral-300}` (`#CBD5E1`)
-- Text: `{colors.neutral-500}` (`#64748B`)
-- Cursor: `not-allowed`
+**Neutral utility button.** Background `{colors.neutral-100}`, text `{colors.primary-800}`, hover `{colors.neutral-200}`. Same height (52px) and radius (`rounded.md`) as the canonical variants. For non-brand-anchored utility CTAs — "Skip this step," "Maybe later," account-utility flows — where navy `button-secondary` reads as too institutional and ember `button-primary` is reserved for conversion. Use sparingly; the canonical `button-secondary` (navy) and `button-outline` cover most low-emphasis cases.
 
 ### Cards & Containers
 
-**Default card (light)**
+Four canonical card roles. Cards do not have hover/active/disabled states; interactive cards inherit hover behavior from the page-level interaction layer (shadow lift + cursor).
 
-- Background: `#FFFFFF`
-- Border: `1px solid {colors.neutral-200}` (`#E2E8F0`)
-- Radius: `rounded.lg` (12px)
-- Padding: 32px (24px on mobile)
-- Shadow: `sm` at rest; `md` on hover for interactive cards
+| Token           | Background            | Text                  | Border / Shadow                                            |
+| --------------- | --------------------- | --------------------- | ---------------------------------------------------------- |
+| `card`          | `#FFFFFF`             | `{colors.neutral-900}` | `1px solid {colors.neutral-200}` + `sm` shadow at rest     |
+| `card-elevated` | `{colors.neutral-50}` | `{colors.neutral-900}` | No border + `md` shadow at rest, `lg` on hover             |
+| `card-feature`  | `{colors.primary-50}` | `{colors.primary-900}` | No border, no shadow — the navy tint is the structural cue |
+| `card-inverse`  | `{colors.primary-900}` | `{colors.neutral-50}`  | No border — sits on light-page-deep-navy contrast          |
 
-**Tinted card**
+**`card`** — the workhorse. Used for feature lists, product info, dashboard widgets.
 
-- Background: `{colors.primary-50}` (`#F2F7FE`)
-- Text: `{colors.primary-900}`
-- Radius: `rounded.lg`
-- Padding: 32px
-- No border, no shadow — the tint is the structural cue
+**`card-elevated`** — off-white with deeper resting shadow. Use when the card sits on a tinted band (`primary-50`, `neutral-100`) and the standard white-on-white with `sm` shadow would disappear. Also the right choice for dashboard widgets that need to claim visual priority in a dense layout.
 
-**Dark card (testimonial / feature)**
+**`card-feature`** — tinted-emphasis card. The navy tint draws attention without the warmth of an ember band. Use for "Why DebtClear" benefit blocks, comparison panels, "How it works" steps.
 
-- Background: `{colors.primary-900}` (`#122334`)
-- Text: `{colors.neutral-50}`
-- Radius: `rounded.lg` (or `rounded.xl` for hero feature blocks)
-- Padding: 32px–48px
+**`card-inverse`** — deep-navy testimonial / dark feature block. Padding may stretch to 48px on hero feature variants; radius can step up to `rounded.xl` for hero showcase blocks.
+
+#### Prose recipes (brand-specific card patterns)
+
+**Trust block.** A horizontal strip showing partner logos, accreditation marks (BBB rating, security badges), and review-star summary. Background `{colors.neutral-100}`, padding 32px vertical, content max-width 1024px, `rounded.none`. Sits directly under the hero on every marketing page — load-bearing for trust in this category. Not a card — closer to a tinted full-bleed section — but documented here because authors reach for "trust card" instinctively.
+
+**Number callout.** A large stat (e.g., "$3 BILLION DEBT RELIEVED") with an `overline` eyebrow above it: eyebrow `{typography.overline}` in `{colors.tertiary-400}`; number `{typography.display}` or `{typography.headline-lg}` in `{colors.primary-800}`; caption `{typography.body-md}` in `{colors.neutral-600}`. Lives directly on the page background (no card wrapper) or inside a `card-feature` / `card-inverse` when used as a hero element.
 
 ### Inputs & Forms
 
-**Text input — default**
+Five canonical input variants. Single visual identity per brand; the taxonomy is states-as-variants.
 
-- Background: `#FFFFFF`
-- Text: `{colors.neutral-900}`
-- Border: `1px solid {colors.neutral-300}` (`#CBD5E1`)
-- Padding: 14px / 16px, height 52px
-- Radius: `rounded.md` (8px)
-- Typography: `body-md`
-- Placeholder: `{colors.neutral-400}` (`#94A3B8`)
+| Token            | Background             | Text                   | Border                                                   |
+| ---------------- | ---------------------- | ---------------------- | -------------------------------------------------------- |
+| `input`          | `#FFFFFF`              | `{colors.neutral-900}` | `1px solid {colors.neutral-300}`                         |
+| `input-focus`    | `#FFFFFF`              | `{colors.neutral-900}` | `2px solid {colors.focus-ring}` + 2px outline at 2px offset |
+| `input-disabled` | `{colors.neutral-100}` | `{colors.neutral-600}` | `1px solid {colors.neutral-200}`; cursor `not-allowed`   |
+| `input-error`    | `#FFFFFF`              | `{colors.neutral-900}` | `2px solid {colors.error-600}` + `{colors.error-700}` `body-sm` helper text below |
+| `input-inverse`  | `{colors.primary-900}` | `{colors.neutral-50}`  | `1px solid {colors.primary-700}` (border lightens on focus to `{colors.focus-ring}`) |
 
-**Focus state**
+Common spec for all variants: padding 14px / 16px, height 52px, radius `rounded.md` (8px), typography `body-md`, placeholder `{colors.neutral-400}`.
 
-- Border: `2px solid {colors.focus-ring}` (`#3B82F6`)
-- Outline: `2px solid {colors.focus-ring}` with 2px offset (for keyboard users)
+**Form labels** — typography `label-md`, color `{colors.neutral-900}`; margin 8px below the label, 6px above helper text.
 
-**Error state**
+### Badges
 
-- Border: `2px solid {colors.error-600}` (`#DC2626`)
-- Helper text below: `{colors.error-700}`, `body-sm`
+Six canonical badge roles. All share radius `rounded.full`, padding 4px / 12px, typography `label-sm`.
 
-**Disabled**
+| Token            | Background             | Text                   | Use                                                  |
+| ---------------- | ---------------------- | ---------------------- | ---------------------------------------------------- |
+| `badge`          | `{colors.neutral-100}` | `{colors.neutral-800}` | Default neutral label — counts, categories, tags     |
+| `badge-primary`  | `{colors.primary-100}` | `{colors.primary-800}` | High-emphasis brand label — "Verified," "Featured"   |
+| `badge-success`  | `{colors.success-50}`  | `{colors.success-700}` | Positive system feedback — "Approved," "Complete"    |
+| `badge-warning`  | `{colors.warning-50}`  | `{colors.warning-800}` | Caution system feedback — "Pending," "Action needed" |
+| `badge-error`    | `{colors.error-50}`    | `{colors.error-700}`   | Error / destructive system feedback                  |
+| `badge-info`     | `{colors.info-50}`     | `{colors.info-700}`    | Informational system feedback (Tailwind blue)        |
 
-- Background: `{colors.neutral-100}`
-- Text: `{colors.neutral-500}`
-- Cursor: `not-allowed`
-
-**Form labels**
-
-- Typography: `label-md`, color `{colors.neutral-900}`
-- Margin: 8px below label, 6px above helper text
+Note: `badge-info` uses Tailwind `info-*` (Tailwind blue), not the brand `secondary-*` azure — per §2 the brand azure is reserved for digital affordances and is intentionally distinct from the Tailwind Info palette.
 
 ### Navigation
 
-**Desktop nav (light)**
+Four canonical nav tokens. The bar itself, the links inside, the active state, and the inverse-surface variant.
 
-- Background: `#FFFFFF`
-- Height: 80px
-- Border-bottom: `1px solid {colors.neutral-200}`
-- Logo on left; nav links center or right; CTA pinned right
-- Active link: text color `{colors.primary-800}`, weight 600, with a 2px `{colors.tertiary-400}` underline
+| Token             | Background             | Text / Treatment                                                  |
+| ----------------- | ---------------------- | ----------------------------------------------------------------- |
+| `nav`             | `#FFFFFF`              | Text `{colors.neutral-900}`; 80px height; 16/32 padding; `1px solid {colors.neutral-200}` bottom border |
+| `nav-link`        | transparent            | Text `{colors.primary-800}`, `{typography.label-md}`; hover bg `{colors.primary-50}` |
+| `nav-link-active` | transparent            | Text `{colors.primary-800}`, `{typography.label-md}` + `2px solid {colors.tertiary-400}` underline (border-bottom) |
+| `nav-inverse`     | `{colors.primary-800}` | Text `{colors.neutral-50}`; 80px height; same 16/32 padding       |
 
-**Desktop nav (dark / inverted)**
+**Auto-adapt rule:** Inside `nav-inverse`, links flip to `{colors.neutral-50}` text and the active-link underline keeps the `{colors.tertiary-400}` ember (it pops against the navy). No separate `nav-link-inverse` token — documented as a prose adaptation per CONTEXT.md's nav guidance.
 
-- Background: `{colors.primary-800}` (`#0D3B66`)
-- Text: `{colors.neutral-50}`
-- Active link: 2px `{colors.tertiary-400}` underline
-- Used on landing pages where the nav sits on top of a hero image
-
-**Mobile nav**
-
-- Hamburger menu collapses to a sheet from the right
-- Sheet background: `#FFFFFF`
-- Sheet radius: `rounded.xl` top-only
-- Nav links: `feature-title` typography, 56px tap height each
+**Mobile nav.** Hamburger menu collapses to a sheet from the right. Sheet background `#FFFFFF`, sheet radius `rounded.xl` top-only, nav links `feature-title` typography at 56px tap height each.
 
 ### Image Treatment
 
-- **Hero images:** Full-bleed, `rounded.none`, no shadow
-- **Card images:** Match parent card radius (typically `rounded.lg`), shadow inherits from card
-- **Avatars:** `rounded.full`, sized at 32px / 40px / 48px / 64px (no in-between)
+- **Hero images:** Full-bleed, `rounded.none`, no shadow.
+- **Card images:** Match parent card radius (typically `rounded.lg`), shadow inherits from card.
+- **Avatars:** `rounded.full`, sized at 32px / 40px / 48px / 64px (no in-between).
 - **Illustrations:** Limited palette — only navy, azure, ember, and Slate neutrals. No off-brand colors, no gradients beyond the two sanctioned ones.
-
-### Distinctive Components
-
-**Trust block**
-A horizontal strip showing partner logos, accreditation marks (BBB rating, security badges), and review-star summary. Background: `{colors.neutral-100}`, padding 32px vertical, content max-width 1024px. Sits directly under the hero on every marketing page — it's load-bearing for trust in this category.
-
-**Number callout**
-A large stat (e.g., "$3 BILLION DEBT RELIEVED") with an `overline` eyebrow above it.
-
-- Eyebrow: `overline` typography, color `{colors.tertiary-400}`
-- Number: `display` or `headline-lg`, color `{colors.primary-800}`
-- Caption below: `body-md`, color `{colors.neutral-600}`
-
-**Status badge**
-
-- Success: `badge-success` — `{colors.success-50}` bg, `{colors.success-700}` text
-- Warning: `badge-warning` — `{colors.warning-50}` bg, `{colors.warning-800}` text
-- Info: `badge-info` — `{colors.secondary-50}` bg, `{colors.secondary-700}` text
-- Radius: `rounded.full`, padding 4px / 12px, typography `label-sm`
 
 ## 8. Do's and Don'ts
 
 **Do**
 
-- Use `{colors.primary-800}` (`#0D3B66`) as the dominant brand color across nav, hero, and primary buttons.
-- Reserve `{colors.tertiary-400}` (`#F16E00`) for the single highest-intent CTA in a viewport.
-- Lead marketing pages with a Trust block directly under the hero — partner logos, accreditation, review-star summary.
+- Render `button-primary` (the conversion CTA) in `{colors.tertiary-400}` (`#F16E00`) and reserve it to the single highest-intent action in a viewport.
+- Render `button-secondary` (the institutional workhorse) in `{colors.primary-800}` (`#0D3B66`) — the navy is the brand's signature color across nav, hero backgrounds, and every non-conversion action.
+- Lead marketing pages with a Trust block directly under the hero — partner logos, accreditation, review-star summary (per §7 prose recipe).
 - Use Slate neutrals (`{colors.neutral-50}` page, `{colors.neutral-200}` borders) — they reinforce the cool brand palette.
 - Set body copy at `{typography.body-md}` (16px / 1rem) with 1.6 line-height for legibility on disclosures and FAQs.
 - Treat numbers as the hero — render dollar amounts and percentages at `{typography.headline-md}` or larger.
@@ -865,10 +888,11 @@ A large stat (e.g., "$3 BILLION DEBT RELIEVED") with an `overline` eyebrow above
 
 **Don't**
 
-- Don't use the ember (`{colors.tertiary-400}`) as a decorative accent. It is exclusively an action color.
-- Don't let two ember CTAs compete in the same viewport — power comes from rarity.
+- Don't invent brand-named or role-colliding tokens (`button-cta`, `card-tinted`, `card-dark`, `nav-bar`, `nav-bar-dark`). Component tokens are role-based per [CONTEXT.md](../../CONTEXT.md) Meta-rule 1; orange is `button-primary` because it fills the conversion-CTA role, navy is `button-secondary` because it fills the workaday action role, and the neutral utility button lives as a prose recipe in §7.
+- Don't use the ember (`{colors.tertiary-400}`) as a decorative accent. It is exclusively an action color — and now it's the literal `button-primary`, so a stray ember accent will read as a misplaced CTA.
+- Don't let two `button-primary` (ember) CTAs compete in the same viewport — power comes from rarity.
 - Don't substitute Stone, Taupe, or any warm neutral for `neutral-*` (Slate). The cool undertone is intentional.
-- Don't pair the brand azure (`{colors.secondary-400}`) with the Tailwind Info palette in the same component — they read as the same color and create ambiguity.
+- Don't pair the brand azure (`{colors.secondary-400}`) with the Tailwind Info palette in the same component — they read as the same color and create ambiguity. `badge-info` uses the Tailwind palette by contract.
 - Don't use italics for emphasis. Use weight `600` or color `{colors.primary-800}` instead.
 - Don't use radii larger than `{rounded.2xl}` (24px) — the brand is moderately rounded, not playful.
 - Don't introduce gradients beyond the two sanctioned ones (Authority navy and Conversion ember).
@@ -916,52 +940,58 @@ A large stat (e.g., "$3 BILLION DEBT RELIEVED") with an `overline` eyebrow above
 
 ### Quick Color Reference
 
-| Token              | Hex       | Role                                                 |
-| ------------------ | --------- | ---------------------------------------------------- |
-| `primary-800` ★    | `#0D3B66` | Primary buttons, nav, hero — the default brand color |
-| `primary-700`      | `#26476A` | Primary button hover                                 |
-| `primary-900`      | `#122334` | Primary button pressed; dark cards                   |
-| `primary-50`       | `#F2F7FE` | Tinted card backgrounds, ghost-button hover          |
-| `secondary-400` ★  | `#0197F6` | Brand azure — links, info accents, secondary CTAs    |
-| `secondary-500`    | `#0079C6` | Azure hover state                                    |
-| `secondary-50`     | `#F0F8FF` | Info badge backgrounds                               |
-| `tertiary-400` ★   | `#F16E00` | Conversion CTAs only — the action color              |
-| `tertiary-500`     | `#B85200` | CTA hover state                                      |
-| `tertiary-600`     | `#913F00` | CTA pressed state                                    |
-| `neutral-50`       | `#F8FAFC` | Page background                                      |
-| `neutral-100`      | `#F1F5F9` | Secondary button background                          |
-| `neutral-200`      | `#E2E8F0` | Default border / divider                             |
-| `neutral-300`      | `#CBD5E1` | Input border, prominent divider                      |
-| `neutral-600`      | `#475569` | Secondary text                                       |
-| `neutral-900`      | `#0F172A` | Primary body text                                    |
-| `surface-elevated` | `#FFFFFF` | Card / modal background                              |
-| `focus-ring`       | `#3B82F6` | Keyboard focus indicator                             |
+| Token              | Hex       | Role                                                            |
+| ------------------ | --------- | --------------------------------------------------------------- |
+| `tertiary-400` ★   | `#F16E00` | `button-primary` — the conversion CTA (orange)                  |
+| `tertiary-500`     | `#B85200` | `button-primary` hover                                          |
+| `tertiary-600`     | `#913F00` | `button-primary` pressed                                        |
+| `primary-800` ★    | `#0D3B66` | `button-secondary`, nav, hero bg — the institutional brand color |
+| `primary-700`      | `#26476A` | `button-secondary` hover                                        |
+| `primary-900`      | `#122334` | `button-secondary` pressed; `card-inverse` background           |
+| `primary-50`       | `#F2F7FE` | `card-feature` tint, ghost/outline hover                        |
+| `secondary-400` ★  | `#0197F6` | Brand azure — text links, secondary digital accents             |
+| `secondary-500`    | `#0079C6` | Azure link hover state                                          |
+| `info-700`         | `#1D4ED8` | `badge-info` text (Tailwind blue, NOT brand azure)              |
+| `info-50`          | `#EFF6FF` | `badge-info` background                                         |
+| `neutral-50`       | `#F8FAFC` | Page background                                                 |
+| `neutral-100`      | `#F1F5F9` | `badge` neutral background; neutral utility button background   |
+| `neutral-200`      | `#E2E8F0` | Default border / divider                                        |
+| `neutral-300`      | `#CBD5E1` | Input border, prominent divider                                 |
+| `neutral-600`      | `#475569` | Secondary text                                                  |
+| `neutral-900`      | `#0F172A` | Primary body text                                               |
+| `surface-elevated` | `#FFFFFF` | Card / modal background                                         |
+| `focus-ring`       | `#3B82F6` | Keyboard focus indicator                                        |
 
 ### Token Reference Cheat Sheet
 
 - Component definitions reference tokens, never raw hex codes. Use `{colors.primary-800}`, `{colors.tertiary-400}`, `{rounded.md}`, `{typography.body-md}`.
-- The YAML front matter is the authoritative source for any token-level value. If a value isn't there, it's not part of the system.
-- State variants use suffix naming: `button-primary`, `button-primary-hover`, `button-primary-active`, `button-primary-disabled`.
+- The YAML front matter is the authoritative source for any token-level value. If a value isn't there, it's not part of the system — and brand-specific patterns (the neutral utility button, trust block, number callout) are documented as **prose recipes** in §7, never as new front-matter tokens.
+- State variants use suffix naming: `button-primary`, `button-primary-hover`, `button-primary-active`, `button-primary-disabled`. All five canonical button variants carry the full four-state matrix.
 - Color aliases (`primary`, `secondary`, `tertiary`, `surface`, `on-surface`) point at specific numbered steps. Use the aliases for general references and the numbered steps when a specific shade matters.
-- The brand secondary (`secondary-400`) is _not_ the same as the Tailwind Info palette (`info-500`) even though both are blue. Use `secondary-*` for brand accents; use `info-*` only for system info messaging.
+- The brand secondary (`secondary-400`) is _not_ the same as the Tailwind Info palette (`info-500`) even though both are blue. Use `secondary-*` for brand digital accents (links, illustrative azure); `badge-info` uses `info-*` by contract.
+- **Primary is orange, secondary is navy.** DebtClear is the brand where the conversion CTA is `button-primary` (the ember) and the institutional navy is `button-secondary`. When an agent says "primary button," they should render orange.
 
 ### Example Component Prompts
 
-1. "Build a primary CTA button using the `button-cta` component spec — `{colors.tertiary-400}` background, `{colors.primary-900}` text (dark navy, not white — required for WCAG AA), `{typography.label-md}`, `{rounded.md}` corners, 14px / 28px padding, hover state `{colors.tertiary-500}` background with `{colors.neutral-50}` text."
+1. "Build the page's conversion CTA using the `button-primary` component spec — `{colors.tertiary-400}` (`#F16E00`) background, `{colors.primary-900}` text (dark navy, not white — required for WCAG AA), `{typography.label-md}`, `{rounded.md}` corners, 14px / 28px padding. Hover state: background `{colors.tertiary-500}`, text `{colors.neutral-50}`."
 
-2. "Build a hero section with a `{colors.primary-800}` background, `{typography.display}` headline in `{colors.neutral-50}`, and a `button-cta` pinned bottom-left. Add a 2px `{colors.tertiary-400}` underline accent under the eyebrow `{typography.overline}`."
+2. "Build a hero section with a `card-inverse` background band (`{colors.primary-900}`), `{typography.display}` headline in `{colors.neutral-50}`, and a `button-primary` (the ember CTA) pinned bottom-left. Add a 2px `{colors.tertiary-400}` underline accent under the eyebrow `{typography.overline}`. Form inputs inside the band use the `input-inverse` spec."
 
 3. "Build a feature card using the `card` component spec — white background, `1px solid {colors.neutral-200}` border, `{rounded.lg}` corners, 32px padding, `sm` shadow at rest, `md` shadow on hover. Title uses `{typography.headline-sm}`, body uses `{typography.body-md}`."
 
-4. "Build a number-callout block: eyebrow `{typography.overline}` in `{colors.tertiary-400}`, then a stat at `{typography.display}` in `{colors.primary-800}`, then a caption at `{typography.body-md}` in `{colors.neutral-600}`."
+4. "Build a number-callout block (per §7 prose recipe): eyebrow `{typography.overline}` in `{colors.tertiary-400}`, then a stat at `{typography.display}` in `{colors.primary-800}`, then a caption at `{typography.body-md}` in `{colors.neutral-600}`. Do not introduce a `number-callout` token — it's a typographic composition on the page background."
 
-5. "Build a Trust strip directly under the hero: `{colors.neutral-100}` background, 32px vertical padding, max-width 1024px, with a row of grayscale partner logos at 32px height and a star-rating summary on the right using `{typography.label-md}` text in `{colors.neutral-700}`."
+5. "Build a Trust strip directly under the hero (per §7 prose recipe): `{colors.neutral-100}` background, 32px vertical padding, max-width 1024px, with a row of grayscale partner logos at 32px height and a star-rating summary on the right using `{typography.label-md}` text in `{colors.neutral-700}`. Do not introduce a `trust-block` token — it's a tinted full-bleed section, not a card variant."
+
+6. "Build the marketing top nav (sticky): `nav` token for the bar itself (white, 80px, `1px solid {colors.neutral-200}` bottom border), `nav-link` for inactive items (`{colors.primary-800}` text), `nav-link-active` for the current page (same text + 2px `{colors.tertiary-400}` underline). Use `nav-inverse` instead of `nav` when the bar sits over a hero image — links inside flip to `{colors.neutral-50}` text and the underline keeps its ember color."
+
+7. "Build a 'Why DebtClear' block as a `card-feature`: `{colors.primary-50}` tinted background, `{colors.primary-900}` text, `{rounded.lg}` corners, 32px padding. Inside, lay out a 3-up grid of icon + headline-sm + body-md feature items. The tint is the structural cue — no border, no shadow."
 
 ### Iteration Guide
 
-1. **Always start from the front matter.** When generating any component, resolve every value back to a token in the YAML. If you can't, the request needs a new token defined first.
-2. **Respect the action-color rule.** `tertiary-400` is the conversion color. Don't use it for icons, decoration, illustrations, or non-action accents — those should use `secondary-400` or neutrals.
-3. **Use one ember CTA per viewport.** If a layout needs two prominent buttons, the second one is `button-primary` (navy), not a second ember.
+1. **Always start from the front matter.** When generating any component, resolve every value back to a token in the YAML. If you can't, the request needs either a new canonical token or a documented prose recipe in §7 — not an invented brand-named token.
+2. **Respect the action-color rule.** `tertiary-400` is the conversion color and the literal `button-primary` background. Don't use it for icons, decoration, illustrations, or non-action accents — those should use `secondary-400` (brand azure) or neutrals.
+3. **Use one `button-primary` (ember) per viewport.** If a layout needs two prominent buttons, the second one is `button-secondary` (navy), not a second ember.
 4. **When in doubt on neutrals, lean cool.** This brand uses Slate. Anything that introduces warm gray (Stone, Taupe) is a deviation.
 5. **Check WCAG AA before shipping any new component.** Body text (`body-md`) on `neutral-50` should clear 4.5:1; `label-md` on tinted backgrounds (50–100 steps) should clear 4.5:1 against the tint, not against white.
 6. **Match radius to component class.** Buttons and inputs are `md`; cards and modals are `lg`; hero blocks are `xl`. Mixing levels within the same hierarchy is a smell.

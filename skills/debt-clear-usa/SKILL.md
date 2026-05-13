@@ -23,6 +23,9 @@ DebtClear USA looks the way trust should look — institutional posture, modern 
 - Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#0D3B66, secondary=#0197F6, tertiary=#F16E00, surface=#F8FAFC, text=#0F172A, focus=#3B82F6 (full 11-step OKLCH palettes, surfaces, borders, and gradients in [./DESIGN.md](./DESIGN.md))
 - Spacing scale: 8/12/16/24/32/48/64/96/128
 
+## Component Tokens
+DebtClear USA conforms to the canonical taxonomies in [../../CONTEXT.md](../../CONTEXT.md): `button-{primary, secondary, outline, ghost, inverse}`, `card{-elevated, -feature, -inverse}`, `badge{-primary, -success, -warning, -error, -info}`, `input{-focus, -disabled, -error, -inverse}`, `nav{-link, -link-active, -inverse}`. Note that DebtClear is the brand where the semantic CTA promotion lands: `button-primary` is the orange Liberty Ember CTA (the conversion CTA — "See if I qualify," "Get my plan"), and `button-secondary` is the deep navy button (the institutional workhorse for "Sign in," "Continue," "Save"). When an agent says "primary button" they should render orange. Brand-specific patterns (the neutral utility button, trust block, number callout) live as **prose recipes** in DESIGN.md §7, never as new front-matter tokens. `badge-info` uses Tailwind `info-*` (not the brand `secondary-*` azure) by contract.
+
 ## Accessibility
 WCAG 2.2 AA, keyboard-first interactions, visible focus states using `#3B82F6` focus ring, minimum 44px touch targets
 
@@ -30,20 +33,22 @@ WCAG 2.2 AA, keyboard-first interactions, visible focus states using `#3B82F6` f
 institutional, confident, declarative, substantial, credible, plainspoken, expressive, decisive, trustworthy
 
 ## Rules: Do
-- use `{colors.primary-800}` (#0D3B66) as the dominant brand color across nav, hero, and primary buttons
-- reserve `{colors.tertiary-400}` (#F16E00) for the single highest-intent CTA per viewport
+- use `{colors.tertiary-400}` (#F16E00) as `button-primary` — the conversion CTA, reserved to one per viewport
+- use `{colors.primary-800}` (#0D3B66) as `button-secondary` and the dominant brand color across nav and hero backgrounds — the institutional voice
 - set body copy at `{typography.body-md}` (16px) with 1.6 line-height for disclosure legibility
 - render dollar amounts and percentages at `{typography.headline-md}` (36px) or larger
 - apply `{rounded.md}` (8px) to buttons and inputs; `{rounded.lg}` (12px) to cards
 - use `{colors.focus-ring}` (#3B82F6) with 2px outline and 2px offset on every interactive element
 
 ## Rules: Don't
-- avoid using ember (`tertiary-400`) as decoration — it is exclusively an action color
-- avoid two ember CTAs in the same viewport; power comes from rarity
+- avoid inventing brand-named or role-colliding tokens (`button-cta`, `card-tinted`, `card-dark`, `nav-bar`, `nav-bar-dark`) — component tokens are role-based per CONTEXT.md Meta-rule 1; brand-specific patterns (the neutral utility button, trust block, number callout) live as prose recipes in DESIGN.md §7
+- avoid using ember (`tertiary-400`) as decoration — it is exclusively the conversion-CTA color and the literal `button-primary` background
+- avoid two `button-primary` (ember) CTAs in the same viewport; the second prominent action is `button-secondary` (navy)
 - avoid Stone, Taupe, or any warm neutral — Slate's cool undertone is intentional
 - avoid italics for emphasis; use weight 600 or `{colors.primary-800}` instead
 - avoid radii larger than `{rounded.2xl}` (24px) — moderately rounded, not playful
 - avoid gradients beyond the two sanctioned ones (Authority navy and Conversion ember)
+- avoid pairing the brand azure (`secondary-400`) with the Tailwind Info palette in the same component; `badge-info` uses Tailwind `info-*` by contract
 
 ## Expected Behavior
 - Follow the foundations first, then component consistency.
