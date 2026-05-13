@@ -280,31 +280,9 @@ components:
   button-secondary-active:
     backgroundColor: "{colors.neutral-300}"
     textColor: "{colors.neutral-900}"
-
-  button-accent:
-    backgroundColor: "{colors.tertiary-600}"
-    textColor: "{colors.white}"
-    typography: "{typography.button-label}"
-    rounded: "{rounded.md}"
-    padding: 14px 28px
-    height: 48px
-  button-accent-hover:
-    backgroundColor: "{colors.tertiary-700}"
-    textColor: "{colors.white}"
-  button-accent-active:
-    backgroundColor: "{colors.tertiary-800}"
-    textColor: "{colors.white}"
-
-  button-vital:
-    backgroundColor: "{colors.secondary-600}"
-    textColor: "{colors.white}"
-    typography: "{typography.button-label}"
-    rounded: "{rounded.md}"
-    padding: 14px 28px
-    height: 48px
-  button-vital-hover:
-    backgroundColor: "{colors.secondary-700}"
-    textColor: "{colors.white}"
+  button-secondary-disabled:
+    backgroundColor: "{colors.neutral-100}"
+    textColor: "{colors.neutral-400}"
 
   button-outline:
     backgroundColor: "{colors.white}"
@@ -316,6 +294,12 @@ components:
   button-outline-hover:
     backgroundColor: "{colors.primary-50}"
     textColor: "{colors.primary-800}"
+  button-outline-active:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-900}"
+  button-outline-disabled:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.neutral-400}"
 
   button-ghost:
     backgroundColor: transparent
@@ -323,17 +307,33 @@ components:
     typography: "{typography.button-label}"
     rounded: "{rounded.md}"
     padding: 14px 20px
+    height: 48px
   button-ghost-hover:
     backgroundColor: "{colors.primary-50}"
     textColor: "{colors.primary-800}"
+  button-ghost-active:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-900}"
+  button-ghost-disabled:
+    backgroundColor: transparent
+    textColor: "{colors.neutral-400}"
 
-  button-pill:
-    backgroundColor: "{colors.primary-700}"
-    textColor: "{colors.white}"
+  button-inverse:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.primary-700}"
     typography: "{typography.button-label}"
-    rounded: "{rounded.full}"
-    padding: 14px 32px
+    rounded: "{rounded.md}"
+    padding: 14px 28px
     height: 48px
+  button-inverse-hover:
+    backgroundColor: "{colors.primary-50}"
+    textColor: "{colors.primary-800}"
+  button-inverse-active:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-900}"
+  button-inverse-disabled:
+    backgroundColor: "{colors.neutral-200}"
+    textColor: "{colors.neutral-500}"
 
   card:
     backgroundColor: "{colors.white}"
@@ -341,43 +341,67 @@ components:
     rounded: "{rounded.lg}"
     padding: 24px
 
-  card-tinted:
+  card-elevated:
+    backgroundColor: "{colors.neutral-50}"
+    textColor: "{colors.neutral-900}"
+    rounded: "{rounded.lg}"
+    padding: 24px
+
+  card-feature:
     backgroundColor: "{colors.primary-50}"
     textColor: "{colors.primary-900}"
     rounded: "{rounded.lg}"
     padding: 24px
 
-  card-dark:
+  card-inverse:
     backgroundColor: "{colors.neutral-900}"
     textColor: "{colors.neutral-50}"
     rounded: "{rounded.lg}"
     padding: 24px
 
-  card-product:
-    backgroundColor: "{colors.white}"
-    textColor: "{colors.neutral-900}"
-    rounded: "{rounded.lg}"
-    padding: 16px
-
-  badge-vital:
-    backgroundColor: "{colors.secondary-100}"
-    textColor: "{colors.secondary-800}"
+  badge:
+    backgroundColor: "{colors.neutral-100}"
+    textColor: "{colors.neutral-800}"
     typography: "{typography.label-sm}"
     rounded: "{rounded.full}"
     padding: 4px 12px
     height: 24px
 
-  badge-spark:
-    backgroundColor: "{colors.tertiary-400}"
-    textColor: "{colors.tertiary-950}"
+  badge-primary:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-800}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+    height: 24px
+
+  badge-success:
+    backgroundColor: "{colors.success-100}"
+    textColor: "{colors.success-800}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+    height: 24px
+
+  badge-warning:
+    backgroundColor: "{colors.warning-100}"
+    textColor: "{colors.warning-800}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+    height: 24px
+
+  badge-error:
+    backgroundColor: "{colors.error-100}"
+    textColor: "{colors.error-800}"
     typography: "{typography.label-sm}"
     rounded: "{rounded.full}"
     padding: 4px 12px
     height: 24px
 
   badge-info:
-    backgroundColor: "{colors.primary-100}"
-    textColor: "{colors.primary-800}"
+    backgroundColor: "{colors.info-100}"
+    textColor: "{colors.info-800}"
     typography: "{typography.label-sm}"
     rounded: "{rounded.full}"
     padding: 4px 12px
@@ -396,51 +420,35 @@ components:
   input-disabled:
     backgroundColor: "{colors.neutral-100}"
     textColor: "{colors.neutral-600}"
+  input-error:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.neutral-900}"
+  input-inverse:
+    backgroundColor: "{colors.primary-900}"
+    textColor: "{colors.white}"
 
-  navbar:
+  nav:
     backgroundColor: "{colors.white}"
     textColor: "{colors.neutral-900}"
     typography: "{typography.label-md}"
     padding: 16px 32px
     height: 72px
-
-  navbar-dark:
+  nav-link:
+    backgroundColor: transparent
+    textColor: "{colors.neutral-700}"
+    typography: "{typography.label-md}"
+    padding: 8px 12px
+  nav-link-active:
+    backgroundColor: transparent
+    textColor: "{colors.primary-700}"
+    typography: "{typography.label-md}"
+    padding: 8px 12px
+  nav-inverse:
     backgroundColor: "{colors.neutral-900}"
     textColor: "{colors.neutral-50}"
     typography: "{typography.label-md}"
     padding: 16px 32px
     height: 72px
-
-  banner-promo:
-    backgroundColor: "{colors.tertiary-400}"
-    textColor: "{colors.tertiary-950}"
-    typography: "{typography.label-md}"
-    padding: 10px 24px
-    height: 40px
-
-  callout-info:
-    backgroundColor: "{colors.primary-50}"
-    textColor: "{colors.primary-900}"
-    rounded: "{rounded.md}"
-    padding: 16px 20px
-
-  callout-success:
-    backgroundColor: "{colors.secondary-50}"
-    textColor: "{colors.secondary-800}"
-    rounded: "{rounded.md}"
-    padding: 16px 20px
-
-  callout-warning:
-    backgroundColor: "{colors.warning-50}"
-    textColor: "{colors.warning-800}"
-    rounded: "{rounded.md}"
-    padding: 16px 20px
-
-  callout-error:
-    backgroundColor: "{colors.error-50}"
-    textColor: "{colors.error-800}"
-    rounded: "{rounded.md}"
-    padding: 16px 20px
 ---
 
 # Power Life
@@ -784,58 +792,90 @@ Power Life's geometry is **confidently rounded, not playful**. Corners are softe
 
 ## 7. Component Stylings
 
-Every component below has a matching definition in the YAML front matter using the spec's closed property set (`backgroundColor`, `textColor`, `typography`, `rounded`, `padding`, `size`, `height`, `width`). Token references like `{colors.primary-700}` resolve to the front matter palette.
+The prose specs below explain the *why*; the front matter's `components` block holds the machine-readable definitions. Both must agree. Component tokens follow the canonical taxonomies in [CONTEXT.md](../../CONTEXT.md); brand-specific patterns outside those taxonomies are documented as **prose recipes** in this section.
 
 ### Buttons
 
-The brand ships five core button variants — primary, secondary, accent (spark), vital (green), outline — plus a `pill` variant for hero CTAs and `ghost` for in-text actions.
+Five canonical variants. All share `rounded.md` (10px) corners, `button-label` typography (Montserrat 15px / weight 700 / +0.03em tracking), 48px height, and 14px × 28px padding (the `button-ghost` variant pulls horizontal padding back to 20px).
 
-| Variant | Background | Text | Personality |
-|---------|------------|------|-------------|
-| `button-primary` | `primary-700` `#1C439B` | white | The default CTA. Cobalt, confident, the brand's signature click. |
-| `button-primary-hover` | `primary-800` `#193060` | white | One step darker — deepens the cobalt without changing chroma. |
-| `button-primary-active` | `primary-900` `#102042` | white | Pressed state — almost-black cobalt. |
-| `button-secondary` | `neutral-100` `#F5F5F5` | `neutral-900` | The "alternate" button — used for "Learn more" / "View details" alongside a primary. |
-| `button-accent` | `tertiary-600` `#953B00` | white | Spark CTA for promos. Used rarely — never as the *only* CTA on a page. |
-| `button-vital` | `secondary-600` `#006E23` | white | Vitality CTA — "Add to subscription", "Start your routine". Reserved for go-signal moments. |
-| `button-outline` | white | `primary-700` | On-light alternative for the primary. Same height, same padding. |
-| `button-ghost` | transparent | `primary-700` | In-text and toolbar actions. Smaller horizontal padding. |
-| `button-pill` | `primary-700` | white | Hero/landing CTAs only — full radius for landing-page punch. |
+| Variant | Background | Text | Hover Background | Active Background | Personality |
+|---------|------------|------|------------------|-------------------|-------------|
+| `button-primary` | `{colors.primary-700}` `#1C439B` | `{colors.white}` | `{colors.primary-800}` `#193060` | `{colors.primary-900}` `#102042` | The default CTA. Cobalt, confident, the brand's signature click. |
+| `button-secondary` | `{colors.neutral-100}` `#F5F5F5` | `{colors.neutral-900}` | `{colors.neutral-200}` `#E5E5E5` | `{colors.neutral-300}` `#D4D4D4` | The "alternate" button — "Learn more," "View details" alongside a primary. |
+| `button-outline` | `{colors.white}` | `{colors.primary-700}` | `{colors.primary-50}` `#F3F7FF` | `{colors.primary-100}` `#DFEAFF` | On-light alternative for the primary. 1.5px solid `{colors.primary-700}` border. Same height, same padding. |
+| `button-ghost` | transparent | `{colors.primary-700}` | `{colors.primary-50}` | `{colors.primary-100}` | Inline links-as-buttons, low-emphasis nav items, tertiary actions. No border. |
+| `button-inverse` | `{colors.white}` | `{colors.primary-700}` | `{colors.primary-50}` | `{colors.primary-100}` | The light treatment for dark surfaces — sits inside `card-inverse` neutral-dark bands and dark hero strips. |
 
-**Sizing:** All buttons default to **48px height** with **14px vertical / 28px horizontal padding** and `rounded.md` (10px). The `button-pill` variant uses `rounded.full` and 32px horizontal padding. Disabled state: `neutral-200` background, `neutral-600` text, no hover transition.
+Disabled states are uniform across all five — `neutral-200` background and `neutral-500/600` text — see the front matter for the exact per-variant tokens. Focus rings use the global `info-500` (`#3B82F6`) ring at 2px with 2px offset; no per-variant focus token.
+
+#### Prose recipes (brand-specific button patterns)
+
+- **Spark CTA (orange)** — for promo moments, "limited time," "new product launch" CTAs where Spark Orange is the right read. Render a `button-primary`-shaped element (`{rounded.md}`, 14px × 28px padding, 48px height, `{typography.button-label}`) with `{colors.tertiary-600}` (`#953B00`) background and `{colors.white}` text — note the deeper 600-step is required so white text passes AA against orange. Hover lifts to `{colors.tertiary-700}` (`#732C00`); active to `{colors.tertiary-800}` (`#571F00`). Per CONTEXT.md (resolved ambiguity #2), "accent" is not a canonical role — Spark Orange is a brand scarcity treatment, never the primary CTA. **Never the only CTA on a page** — pair with a cobalt `button-primary` for the actual conversion action.
+
+- **Vital CTA (green)** — for vitality/go-signal moments — "Add to subscription," "Start your routine," "Activate your formula." Render a `button-primary`-shaped element with `{colors.secondary-600}` (`#006E23`) background and `{colors.white}` text — the 600-step is required so white text passes AA against the bright Vital Green at 400. Hover lifts to `{colors.secondary-700}` (`#005519`); active to `{colors.secondary-800}` (`#003F10`). Use sparingly — this is the "yes" beat in the experience, not a workhorse button. **Never the only CTA on a page** — cobalt remains the brand's conversion CTA.
+
+- **Pill CTA (shape variant)** — for hero/landing-page moments where a wider, softer silhouette suits the brand-moment claim, render any of the five canonical button variants but override `rounded` to `{rounded.full}` (9999px) and widen horizontal padding to 32px. Most commonly applied to `button-primary` for hero CTAs. This is a shape variant, not a separate role — don't introduce a new `button-pill` token.
 
 ### Cards & Containers
 
-| Variant | Background | Border | Radius | Use |
-|---------|------------|--------|--------|-----|
-| `card` | white | optional `neutral-200` 1px | `rounded.lg` (16px) | Default content card |
-| `card-tinted` | `primary-50` `#F3F7FF` | none | `rounded.lg` | Cobalt-tinted highlight card |
-| `card-dark` | `neutral-900` `#171717` | none | `rounded.lg` | Dark-section feature card |
-| `card-product` | white | `neutral-200` 1px | `rounded.lg` | PDP grid card — bottle image + name + price + CTA |
+Four canonical card variants. Cards default to `rounded.lg` (16px) and `xs` shadow at rest — the brand is shadow-averse, so resting elevation prefers borders or tonal lift over shadow.
 
-Cards default to **24px padding**. The `card-product` variant uses 16px padding to keep grids dense. Shadow on resting state: `xs` (very subtle); hover: `md`. Dark cards never carry shadow — borders on dark are handled by `neutral-700`.
+| Variant | Background | Text | Padding | Treatment |
+|---------|------------|------|---------|-----------|
+| `card` | `{colors.white}` | `{colors.neutral-900}` | 24px | Optional `1px solid {colors.neutral-200}` border + `xs` shadow at rest. The workhorse container. |
+| `card-elevated` | `{colors.neutral-50}` `#FAFAFA` | `{colors.neutral-900}` | 24px | Tonal lift via off-white background, optional `md` shadow. For cards sitting on tinted bands or competing with surrounding content. |
+| `card-feature` | `{colors.primary-50}` `#F3F7FF` | `{colors.primary-900}` `#102042` | 24px | None — tonal separation from the page background. Cobalt tint for "Why Power Life" benefit blocks. |
+| `card-inverse` | `{colors.neutral-900}` `#171717` | `{colors.neutral-50}` `#FAFAFA` | 24px | None — neutral-dark depth for hero bands, trust strips, and dark-section feature blocks. |
+
+All cards use `rounded.lg` (16px). For a neutral-dark card on a light page, no border — the tonal contrast is the separation; borders on dark sit at `{colors.neutral-700}`. For a light card on a tinted band (e.g. `primary-50` page band), reach for `card-elevated`'s off-white background to differentiate without resorting to a heavier shadow.
+
+#### Prose recipes (brand-specific card patterns)
+
+- **Product card** — the PDP grid card with bottle imagery, product name, price, and CTA. Render a `card`-shaped container but tighten padding to 16px to keep product grids dense. Resting shadow `xs`; on hover, lift via `translateY(-2px)` and transition shadow to `md`. Product image container inside uses `{rounded.md}` (10px) — slightly less than the parent card, per visual nesting. Do not introduce a new `card-product` token — this is a padding-and-interaction recipe, not a separate role.
 
 ### Badges
 
-| Variant | Background | Text | Use |
-|---------|------------|------|-----|
-| `badge-vital` | `secondary-100` `#D6F2D8` | `secondary-800` | "Active ingredient", "Doctor formulated" — anything tied to vitality/credibility |
-| `badge-spark` | `tertiary-400` `#F96900` | `tertiary-950` | "New", "Limited", "Bestseller" — high-attention moments only |
-| `badge-info` | `primary-100` `#DFEAFF` | `primary-800` | Neutral info — "Subscribe & save", "Free shipping" |
+Six canonical badge variants — two tone roles (`badge`, `badge-primary`) and four status roles (`success`, `warning`, `error`, `info`). All use `rounded.full`, `label-sm` typography (Montserrat 12px / 600 / +0.04em), and 4px / 12px padding.
 
-All badges: **24px height**, **4px vertical / 12px horizontal padding**, `label-sm` typography (12px / 600 / +0.04em), `rounded.full`.
+- **`badge`** — `{colors.neutral-100}` background with `{colors.neutral-800}` text. The default neutral label.
+- **`badge-primary`** — `{colors.primary-100}` (`#DFEAFF`) background with `{colors.primary-800}` (`#193060`) text. The high-emphasis brand label — "Subscribe & save," "Free shipping," "Bestseller."
+- **`badge-success` / `badge-warning` / `badge-error` / `badge-info`** — Tailwind-derived status badges (green / yellow / red / blue at the 100/800 tone pair) for system feedback in account screens and forms.
+
+#### Prose recipes (brand-specific badge patterns)
+
+- **Vital badge (green)** — for "Active ingredient," "Doctor formulated," "Vitality blend" labels, render a badge-shaped element (`{rounded.full}`, 4px / 12px padding, `{typography.label-sm}`) with `{colors.secondary-100}` (`#D6F2D8`) background and `{colors.secondary-800}` (`#003F10`) text. The vitality counterpart to the `badge` neutral default. Distinct from `badge-success` — vital is brand expression, success is system feedback.
+- **Spark badge (orange)** — for "New," "Limited," "Bestseller" high-attention moments, render a badge-shaped element with `{colors.tertiary-400}` (`#F96900`) background and `{colors.tertiary-950}` (`#200700`) dark text. The 400-step plus dark text is required — white text on `tertiary-400` fails AA at badge sizes. Reserve for *spark* moments; never use this badge style as a default.
 
 ### Inputs & Forms
 
-`input` uses **white background**, **`neutral-900` text**, **`neutral-300` 1px border**, `rounded.md` (10px), 48px height, 12px / 16px padding. On focus: 2px `info-500` (`#3B82F6`) ring offset by 2px, border darkens to `primary-700`. Disabled inputs use `neutral-100` background and `neutral-600` text. Helper text is `caption` (13px) `neutral-600`. Error text is `caption` `error-600`.
+| Spec | Value |
+|------|-------|
+| Background | `{colors.white}` |
+| Text | `{colors.neutral-900}` |
+| Placeholder | `{colors.neutral-400}` |
+| Border | `1px solid {colors.neutral-300}` (`#D4D4D4`) |
+| Border (focus) | `2px solid {colors.primary-700}` |
+| Focus ring | `0 0 0 2px {colors.info-500}` at 2px offset |
+| Radius | `{rounded.md}` (10px) — matches buttons |
+| Padding | 12px × 16px |
+| Height | 48px |
+| Typography | `{typography.body-md}` |
+
+- **`input-focus`** — border swaps to `2px solid {colors.primary-700}` with the `info-500` focus ring.
+- **`input-disabled`** — `{colors.neutral-100}` background with `{colors.neutral-600}` text.
+- **`input-error`** — same white background and `neutral-900` text as default, with a `2px solid {colors.error-600}` border and an `error-600` helper-text line below at `caption` typography.
+- **`input-inverse`** — for inputs sitting inside a `nav-inverse` bar or a `card-inverse` dark hero band. `{colors.primary-900}` (`#102042`) background, `{colors.white}` text, 1px `primary-700` border. Focus brightens border to `{colors.white}`.
+
+Helper text is `caption` (13px) `{colors.neutral-600}`. Error text is `caption` `{colors.error-600}`.
 
 ### Navigation
 
-The default navigation is the **light navbar** — white background, `neutral-900` text, `label-md` typography, 72px height, 16px / 32px padding. The Power Life wordmark sits left; the cart and account CTAs sit right. Below `lg` (1024px), the nav collapses to a hamburger with a slide-out drawer using the same surface treatment.
+- **`nav`** — the bar/container. `{colors.white}` background, `{colors.neutral-900}` resting text, `label-md` typography, 72px height, 16px / 32px padding. Power Life wordmark left; cart and account CTAs right. Below `lg` (1024px), nav collapses to a hamburger with a slide-out drawer using the same surface treatment.
+- **`nav-link`** — link styling inside the nav. `label-md` typography (Montserrat 14px / weight 600 / +0.01em), `{colors.neutral-700}` text on light nav (auto-adapts to `{colors.white}` inside `nav-inverse`), transparent background, 8px / 12px padding. Hover swaps text to `{colors.primary-700}`.
+- **`nav-link-active`** — active / current-page link. Same metrics as `nav-link`, but text swaps to `{colors.primary-700}` (`#1C439B`) and a 2px `{colors.primary-700}` bottom border sits under the label.
+- **`nav-inverse`** — `{colors.neutral-900}` background, `{colors.neutral-50}` text, same dimensions as `nav`. For dark-mode and high-contrast landing pages. Use sparingly; the brand reads better on white. Links inside auto-adapt: text reads `{colors.neutral-50}` instead of `{colors.neutral-700}`; active state stays anchored on cobalt — `{colors.primary-400}` (`#6996F0`) — to pop against neutral-dark.
 
-A **dark navbar** variant exists for dark-mode and high-contrast landing pages — `neutral-900` background, `neutral-50` text, same dimensions. Use sparingly; the brand reads better on white.
-
-The primary CTA in the nav uses `button-primary` at a slightly reduced height (40px instead of 48px) to feel like nav furniture rather than a page-anchor button.
+The primary CTA inside the nav uses `button-primary` at a slightly reduced height (40px instead of 48px) to feel like nav furniture rather than a page-anchor button.
 
 ### Image Treatment
 
@@ -844,10 +884,11 @@ The primary CTA in the nav uses `button-primary` at a slightly reduced height (4
 - **Avatars** use `rounded.full`.
 - **Decorative illustrations** (ingredient icons, vitality icons) are typically two-color — usually `primary-700` + `secondary-400`, or `neutral-900` + `tertiary-400`. Never three-color illustrations.
 
-### Distinctive Components
+#### Prose recipes (brand-specific overlay and section patterns)
 
-- **Promo banner** (`banner-promo`) — full-bleed `tertiary-400` strip with `tertiary-950` dark text at 14px / 600 / +0.01em. 40px height. Used at the top of marketing pages for free shipping / limited-time messaging. Never use this banner for purely informational content — it's for *spark* moments.
-- **Callout boxes** — Four flavors (`callout-info`, `callout-success`, `callout-warning`, `callout-error`) following the standard semantic palette pattern. `rounded.md`, 16px / 20px padding, no border, light tinted background with matching dark text.
+- **Promo banner** — for the top-of-page free-shipping / limited-time strip, render a full-bleed band (`{rounded.none}`, full viewport width) with `{colors.tertiary-400}` (`#F96900`) background and `{colors.tertiary-950}` (`#200700`) dark text at `{typography.label-md}` (Montserrat 14px / 600 / +0.01em). 40px height, 10px / 24px padding, center-aligned. Used only for *spark* moments — never for purely informational content. Do not introduce a new `banner-promo` token; this is a section pattern, not a component role.
+- **Tonal callouts** — for body-content callouts (info, success, warning, error tonal blocks distinct from form-state `input-error` / `badge-error`), render a `rounded.md` (10px) tinted block at 16px / 20px padding, no border. Tone pairs: info uses `{colors.primary-50}` bg / `{colors.primary-900}` text; success uses `{colors.secondary-50}` (`#EEFBEE`) / `{colors.secondary-800}`; warning uses `{colors.warning-50}` / `{colors.warning-800}`; error uses `{colors.error-50}` / `{colors.error-800}`. These are editorial body-content patterns — not the form-validation `input-error` or `badge-error` system feedback. Do not introduce `callout-*` tokens; this is a prose pattern.
+- **Modal container** — for modal dialogs, popovers, and command palettes, render a `card`-shaped container with `{colors.white}` background, `{colors.neutral-900}` text, `{rounded.xl}` (24px) corners (top corners for sheet-style; full radius for centered modals), and 32px padding. Pair with an `xl` shadow for the visible lift; this is one of the rare moments the brand's shadow-averse discipline allows real depth. Backdrop uses `{colors.neutral-900}` at 40% opacity.
 
 ---
 
@@ -878,6 +919,7 @@ The primary CTA in the nav uses `button-primary` at a slightly reduced height (4
 - **Don't shrink body text below 14px.** Anything smaller belongs in the `caption` / `micro` typography tokens — not running body.
 - **Don't use Spark Orange for primary CTAs.** Cobalt is the default click target. Orange is for promo moments only.
 - **Don't dilute the palette.** Avoid `primary-400` (`#6996F0`) for primary text or CTAs — it's a mid-tone for accents only. The brand sits firmly at 700.
+- **Don't invent brand-named tokens** (`button-vital`, `button-spark`, `button-accent`, `card-tinted`, `card-product`, `badge-vital`, `badge-spark`, `navbar`, `banner-promo`, `callout-info`, etc.). Per [CONTEXT.md](../../CONTEXT.md) Meta-rule 1, component tokens are role-based, not color-named or pattern-named. Brand-specific patterns that fall outside the canonical taxonomy (Vital CTA, Spark CTA, pill shape variant, product card, vital/spark badges, promo banner, tonal callouts, modal container) live as **prose recipes** in §7, never as new front-matter tokens.
 
 ---
 
@@ -923,11 +965,11 @@ This section is written for AI coding assistants generating Power Life UI. The f
 | `primary-700` ★ | `#1C439B` | Default primary CTA, brand links, nav accent |
 | `primary-800` | `#193060` | Primary button hover |
 | `primary-50` | `#F3F7FF` | Tinted callout bg, ghost-button hover |
-| `secondary-400` ★ | `#2CB34A` | Vital badge, active-ingredient marker |
-| `secondary-600` | `#006E23` | Vital CTA button (white text) |
-| `secondary-50` | `#EEFBEE` | Success callout background |
-| `tertiary-400` ★ | `#F96900` | Promo banner, "new" badge (dark text) |
-| `tertiary-600` | `#953B00` | Accent/spark CTA button (white text) |
+| `secondary-400` ★ | `#2CB34A` | Vital badge (prose recipe), active-ingredient marker |
+| `secondary-600` | `#006E23` | Vital CTA (prose recipe) — white text on green |
+| `secondary-50` | `#EEFBEE` | Success tonal callout (prose recipe) background |
+| `tertiary-400` ★ | `#F96900` | Promo banner (prose recipe), spark badge (dark text) |
+| `tertiary-600` | `#953B00` | Spark CTA (prose recipe) — white text on orange |
 | `tertiary-50` | `#FFF4F0` | Soft promo card background |
 | `neutral-50` | `#FAFAFA` | Page background |
 | `neutral-100` | `#F5F5F5` | Secondary button, tinted section |
@@ -950,19 +992,23 @@ This section is written for AI coding assistants generating Power Life UI. The f
 
 > Build a hero section using `{typography.display}` for the headline in `{colors.neutral-900}`, `{typography.body-lg}` for the subheadline in `{colors.neutral-600}`, and a `button-primary` CTA (`{colors.primary-700}` background, white text, `{rounded.md}` corners). Set section padding to `{spacing.13}` vertical (80px) on mobile, `{spacing.14}` (96px) on desktop. Lifestyle photo on the right at `{rounded.xl}` (24px) corners with a `2xl` shadow.
 
-> Build a product card with `{colors.white}` background, `{colors.neutral-200}` 1px border, `{rounded.lg}` corners, and `{spacing.6}` padding (16px). Product image on top in a `{rounded.md}` container. Product name in `{typography.feature-title}` `{colors.neutral-900}`. Price in `{typography.body-md}` `{colors.neutral-600}`. A `badge-spark` ("New") in the top-right corner using `{colors.tertiary-400}` background and `{colors.tertiary-950}` dark text. CTA at the bottom is `button-primary` full-width.
+> Build a product card from the §7 product-card prose recipe: `{colors.white}` background, `{colors.neutral-200}` 1px border, `{rounded.lg}` corners, and `{spacing.6}` padding (16px — tighter than the canonical `card`'s 24px to keep grids dense). Product image on top in a `{rounded.md}` container. Product name in `{typography.feature-title}` `{colors.neutral-900}`. Price in `{typography.body-md}` `{colors.neutral-600}`. A spark badge ("New") in the top-right corner using the §7 spark-badge prose recipe — `{colors.tertiary-400}` background, `{colors.tertiary-950}` dark text. CTA at the bottom is `button-primary` full-width. On hover: `translateY(-2px)` + shadow `xs` → `md`. Do not introduce a `card-product` or `badge-spark` token.
 
-> Build a promo banner using the `banner-promo` spec: `{colors.tertiary-400}` (#F96900) background, `{colors.tertiary-950}` (#200700) dark text, `{typography.label-md}`, 40px height, full-bleed at viewport width. Content: "Free shipping on orders $75+". No icon. Center-aligned text.
+> Build a promo banner from the §7 promo-banner prose recipe: full-bleed band (`{rounded.none}`, viewport-width) with `{colors.tertiary-400}` (`#F96900`) background, `{colors.tertiary-950}` (`#200700`) dark text, `{typography.label-md}`, 40px height, 10px / 24px padding, center-aligned. Content: "Free shipping on orders $75+". No icon. This is a section pattern — do not introduce a `banner-promo` token.
 
-> Build a callout card highlighting an "Active ingredient" with `{colors.secondary-50}` background, `{colors.secondary-800}` text, `{rounded.md}` corners, `{spacing.6}` / `{spacing.7}` padding (16px / 20px). Use a `badge-vital` chip in the top-left with `{colors.secondary-100}` background and `{colors.secondary-800}` text reading "Vitality blend". Body in `{typography.body-md}`.
+> Build a tonal callout card highlighting an "Active ingredient" from the §7 tonal-callouts prose recipe: `{colors.secondary-50}` background, `{colors.secondary-800}` text, `{rounded.md}` corners, `{spacing.6}` / `{spacing.7}` padding (16px / 20px), no border. Use a vital badge from the §7 prose recipe in the top-left — `{colors.secondary-100}` background, `{colors.secondary-800}` text — reading "Vitality blend". Body in `{typography.body-md}`. Do not introduce `callout-success` or `badge-vital` tokens.
 
 > Build a primary CTA button using the `button-primary` component spec: `{colors.primary-700}` background, `{colors.white}` text, `{typography.button-label}` (15px / 700 / +0.03em), `{rounded.md}` corners, 14px / 28px padding, 48px height. Hover state shifts to `{colors.primary-800}`. Active state shifts to `{colors.primary-900}`. Focus ring is 2px `{colors.info-500}` with 2px offset.
+
+> Build a dark hero band using `card-inverse` — `{colors.neutral-900}` (`#171717`) background, `{colors.neutral-50}` text, `{rounded.lg}` (16px) corners, 24px padding (32px on hero contexts). Inside: a `{typography.display}` headline in `{colors.neutral-50}`, a `{typography.body-lg}` subhead in `{colors.neutral-300}`, and a CTA using the `button-inverse` spec (`{colors.white}` background, `{colors.primary-700}` text) — `button-primary` would lose contrast against the dark band. Email input fields inside use `input-inverse` (`{colors.primary-900}` background, `{colors.white}` text, 1px `primary-700` border).
+
+> Build a sticky top nav using the `nav` spec — 72px tall, `{colors.white}` background, 16px × 32px padding, with a 1px hairline bottom border in `{colors.neutral-200}`. Power Life wordmark on the left, nav links centered using the `nav-link` spec (`{typography.label-md}` Montserrat 14px / weight 600 / +0.01em / `{colors.neutral-700}` text), and a `button-primary` CTA on the right at 40px height (nav furniture). The current page uses the `nav-link-active` spec — text shifts to `{colors.primary-700}` with a 2px `{colors.primary-700}` bottom border. Below `lg` (1024px), nav collapses to a hamburger that opens a full-screen overlay using the `nav-inverse` spec — `{colors.neutral-900}` background, `{colors.neutral-50}` text.
 
 ### Iteration Guide
 
 1. **Start with the alias, swap to the numbered step only when you need a non-default tone.** `{colors.primary}` covers most cases; reach for `{colors.primary-50}` or `{colors.primary-800}` when you specifically want a tint or a hover state.
 2. **If white text fails AA against a saturated brand color, bump the background to the 600-step variant.** This is built into the system — `secondary-400` is for badges with dark text; `secondary-600` is for buttons with white text. Same pattern for `tertiary`.
-3. **Cobalt is the primary CTA. Orange is never a primary CTA on its own.** If the page already has a `button-accent`, the surrounding hierarchy must include at least one `button-primary` as the actual primary action.
+3. **Cobalt is the primary CTA. Orange is never a primary CTA on its own.** If the page uses the §7 Spark CTA prose recipe (orange) or Vital CTA prose recipe (green), the surrounding hierarchy must include at least one `button-primary` (cobalt) as the actual conversion action. Neither orange nor green is a canonical role — both are scarcity / "yes-moment" treatments per [CONTEXT.md](../../CONTEXT.md) resolved ambiguity #2.
 4. **Default to `button-label` typography for all buttons.** The +0.03em tracking matters — it's part of the brand voice. Don't override it.
 5. **Don't introduce new gradients.** Only `Cobalt Rise` (`primary-700` → `primary-900`) and `Spark Sun` (`tertiary-400` → `tertiary-600`) are sanctioned. No three-color brand gradients.
 6. **Use the standardized semantic palettes for system feedback.** Form errors use `error-*`; success toasts use `success-*`. Brand colors (cobalt, vital green, spark orange) are not for system messaging — they're for brand expression.

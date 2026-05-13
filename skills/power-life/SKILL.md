@@ -23,6 +23,9 @@ Power Life renders daily vitality in three confident strokes: voltage cobalt aut
 - Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#1C439B, secondary=#2CB34A, tertiary=#F96900, surface=#FAFAFA, text=#171717, focus=#3B82F6 (full 11-step OKLCH palettes, surfaces, borders, and gradients in [./DESIGN.md](./DESIGN.md))
 - Spacing scale: 4/8/12/16/20/24/32/48/64
 
+## Component Tokens
+Power Life conforms to the canonical taxonomies in [../../CONTEXT.md](../../CONTEXT.md): `button-{primary, secondary, outline, ghost, inverse}`, `card{-elevated, -feature, -inverse}`, `badge{-primary, -success, -warning, -error, -info}`, `input{-focus, -disabled, -error, -inverse}`, `nav{-link, -link-active, -inverse}`. Brand-specific variants (Spark CTA orange, Vital CTA green, pill shape override, product card, spark badge, vital badge, promo banner, tonal callouts, modal container) live as **prose recipes** in DESIGN.md §7, never as new front-matter tokens.
+
 ## Accessibility
 WCAG 2.2 AA, keyboard-first interactions, visible focus states using `#3B82F6` focus ring, minimum 44px touch targets
 
@@ -38,6 +41,7 @@ direct, vital, confident, energetic, grown-up, decisive, unapologetic, premium, 
 - set button labels to 15px / 700 / +0.03em tracking — buttons must feel like a decision
 
 ## Rules: Don't
+- avoid inventing brand-named tokens (`button-vital`, `button-accent`, `button-spark`, `card-tinted`, `badge-vital`, `badge-spark`, `navbar`, `banner-promo`, `callout-info`) — component tokens are role-based per CONTEXT.md Meta-rule 1; brand-color variants and pattern blocks live as prose recipes in DESIGN.md §7
 - don't use Info Blue (`info-500` #3B82F6) as a brand color — it's the focus ring only
 - don't put white text on `tertiary-400` at body sizes; use `tertiary-950` dark text or shift bg to `tertiary-600`
 - don't combine saturated brand colors in gradients — only `Cobalt Rise` and `Spark Sun` are sanctioned
