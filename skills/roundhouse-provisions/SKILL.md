@@ -23,6 +23,9 @@ Roundhouse Provisions is frontier-grit modern wellness — a supplement line tha
 - Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#EE5531, secondary=#54C0E8, tertiary=#443B32, surface=#FFFFFF, text=#1C1917, focus=#3B82F6 (full 11-step OKLCH palettes, surfaces, borders, and gradients in [./DESIGN.md](./DESIGN.md))
 - Spacing scale: 4/8/12/16/24/32/48/64
 
+## Component Tokens
+Roundhouse conforms to the canonical taxonomies in [../../CONTEXT.md](../../CONTEXT.md): `button-{primary, secondary, outline, ghost, inverse}`, `card{-elevated, -feature, -inverse}`, `badge{-primary, -success, -warning, -error, -info}`, `input{-focus, -disabled, -error, -inverse}`, `nav{-link, -link-active, -inverse}`. Brand-specific variants (ember-moment CTA, sky CTA, saddle CTA, pill shape, product card, sky/saddle tonal badges, ember promo banner, tonal callouts, stamp marks) live as **prose recipes** in DESIGN.md §7, never as new front-matter tokens.
+
 ## Accessibility
 WCAG 2.2 AA, keyboard-first interactions, visible focus states using `#3B82F6` focus ring, minimum 44px touch targets
 
@@ -39,10 +42,10 @@ direct, earned, plainspoken, rugged, warm, grounded, confident, declarative, unp
 
 ## Rules: Don't
 - avoid white text on `primary-400` (#EE5531) — contrast fails AA at ~3.3:1
+- avoid inventing brand-named tokens (`button-ember`, `card-ember`, `badge-saddle`) — component tokens are role-based per CONTEXT.md Meta-rule 1; brand-color variants live as prose recipes in DESIGN.md §7
 - avoid Antonio below `headline-xs` (24px) or at weights under 600 — it cramps and reads weak
 - avoid Antonio in mixed case — headlines, displays, and overlines are always uppercase
 - avoid Gray, Zinc, or Slate neutrals — warm Stone undertone is part of the identity
-- avoid `xl` / `2xl` shadows for hierarchy — depth comes from color, border, and position
 - avoid pure black (`#000000`) — use `neutral-950` or `tertiary-950` to preserve warm undertone
 
 ## Expected Behavior

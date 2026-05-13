@@ -275,20 +275,6 @@ components:
     backgroundColor: "{colors.neutral-200}"
     textColor: "{colors.neutral-600}"
 
-  button-ember:
-    backgroundColor: "{colors.primary-400}"
-    textColor: "{colors.neutral-900}"
-    typography: "{typography.button-label}"
-    rounded: "{rounded.md}"
-    padding: 14px 28px
-    height: 48px
-  button-ember-hover:
-    backgroundColor: "{colors.primary-500}"
-    textColor: "{colors.white}"
-  button-ember-active:
-    backgroundColor: "{colors.primary-600}"
-    textColor: "{colors.white}"
-
   button-secondary:
     backgroundColor: "{colors.neutral-100}"
     textColor: "{colors.neutral-900}"
@@ -302,28 +288,9 @@ components:
   button-secondary-active:
     backgroundColor: "{colors.neutral-300}"
     textColor: "{colors.neutral-900}"
-
-  button-sky:
-    backgroundColor: "{colors.secondary-600}"
-    textColor: "{colors.white}"
-    typography: "{typography.button-label}"
-    rounded: "{rounded.md}"
-    padding: 14px 28px
-    height: 48px
-  button-sky-hover:
-    backgroundColor: "{colors.secondary-700}"
-    textColor: "{colors.white}"
-
-  button-saddle:
-    backgroundColor: "{colors.tertiary-700}"
-    textColor: "{colors.white}"
-    typography: "{typography.button-label}"
-    rounded: "{rounded.md}"
-    padding: 14px 28px
-    height: 48px
-  button-saddle-hover:
-    backgroundColor: "{colors.tertiary-800}"
-    textColor: "{colors.white}"
+  button-secondary-disabled:
+    backgroundColor: "{colors.neutral-100}"
+    textColor: "{colors.neutral-400}"
 
   button-outline:
     backgroundColor: "{colors.white}"
@@ -335,6 +302,12 @@ components:
   button-outline-hover:
     backgroundColor: "{colors.primary-50}"
     textColor: "{colors.primary-800}"
+  button-outline-active:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-800}"
+  button-outline-disabled:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.neutral-400}"
 
   button-ghost:
     backgroundColor: transparent
@@ -345,14 +318,29 @@ components:
   button-ghost-hover:
     backgroundColor: "{colors.tertiary-50}"
     textColor: "{colors.tertiary-800}"
+  button-ghost-active:
+    backgroundColor: "{colors.tertiary-100}"
+    textColor: "{colors.tertiary-900}"
+  button-ghost-disabled:
+    backgroundColor: transparent
+    textColor: "{colors.neutral-400}"
 
-  button-pill:
-    backgroundColor: "{colors.primary-600}"
-    textColor: "{colors.white}"
+  button-inverse:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.neutral-900}"
     typography: "{typography.button-label}"
-    rounded: "{rounded.full}"
-    padding: 14px 32px
+    rounded: "{rounded.md}"
+    padding: 14px 28px
     height: 48px
+  button-inverse-hover:
+    backgroundColor: "{colors.neutral-100}"
+    textColor: "{colors.neutral-900}"
+  button-inverse-active:
+    backgroundColor: "{colors.neutral-200}"
+    textColor: "{colors.neutral-900}"
+  button-inverse-disabled:
+    backgroundColor: "{colors.tertiary-800}"
+    textColor: "{colors.tertiary-500}"
 
   card:
     backgroundColor: "{colors.white}"
@@ -360,31 +348,33 @@ components:
     rounded: "{rounded.lg}"
     padding: 24px
 
-  card-raised:
+  card-elevated:
     backgroundColor: "{colors.neutral-50}"
     textColor: "{colors.neutral-900}"
     rounded: "{rounded.lg}"
     padding: 24px
 
-  card-ember:
+  card-feature:
     backgroundColor: "{colors.primary-50}"
     textColor: "{colors.primary-900}"
     rounded: "{rounded.lg}"
     padding: 24px
 
-  card-dark:
+  card-inverse:
     backgroundColor: "{colors.tertiary-900}"
     textColor: "{colors.neutral-50}"
     rounded: "{rounded.lg}"
     padding: 24px
 
-  card-product:
-    backgroundColor: "{colors.white}"
-    textColor: "{colors.neutral-900}"
-    rounded: "{rounded.lg}"
-    padding: 16px
+  badge:
+    backgroundColor: "{colors.neutral-100}"
+    textColor: "{colors.neutral-800}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+    height: 24px
 
-  badge-ember:
+  badge-primary:
     backgroundColor: "{colors.primary-400}"
     textColor: "{colors.primary-950}"
     typography: "{typography.label-sm}"
@@ -392,17 +382,33 @@ components:
     padding: 4px 12px
     height: 24px
 
-  badge-sky:
-    backgroundColor: "{colors.secondary-100}"
-    textColor: "{colors.secondary-900}"
+  badge-success:
+    backgroundColor: "{colors.success-100}"
+    textColor: "{colors.success-800}"
     typography: "{typography.label-sm}"
     rounded: "{rounded.full}"
     padding: 4px 12px
     height: 24px
 
-  badge-saddle:
-    backgroundColor: "{colors.tertiary-100}"
-    textColor: "{colors.tertiary-900}"
+  badge-warning:
+    backgroundColor: "{colors.warning-100}"
+    textColor: "{colors.warning-800}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+    height: 24px
+
+  badge-error:
+    backgroundColor: "{colors.error-100}"
+    textColor: "{colors.error-800}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+    height: 24px
+
+  badge-info:
+    backgroundColor: "{colors.info-100}"
+    textColor: "{colors.info-800}"
     typography: "{typography.label-sm}"
     rounded: "{rounded.full}"
     padding: 4px 12px
@@ -421,51 +427,35 @@ components:
   input-disabled:
     backgroundColor: "{colors.neutral-100}"
     textColor: "{colors.neutral-600}"
+  input-error:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.neutral-900}"
+  input-inverse:
+    backgroundColor: "{colors.tertiary-800}"
+    textColor: "{colors.neutral-50}"
 
-  navbar:
+  nav:
     backgroundColor: "{colors.white}"
     textColor: "{colors.neutral-900}"
     typography: "{typography.label-md}"
     padding: 16px 32px
     height: 72px
-
-  navbar-dark:
+  nav-link:
+    backgroundColor: transparent
+    textColor: "{colors.neutral-900}"
+    typography: "{typography.label-md}"
+    padding: 8px 12px
+  nav-link-active:
+    backgroundColor: transparent
+    textColor: "{colors.primary-700}"
+    typography: "{typography.label-md}"
+    padding: 8px 12px
+  nav-inverse:
     backgroundColor: "{colors.tertiary-900}"
     textColor: "{colors.neutral-50}"
     typography: "{typography.label-md}"
     padding: 16px 32px
     height: 72px
-
-  banner-promo:
-    backgroundColor: "{colors.primary-400}"
-    textColor: "{colors.primary-950}"
-    typography: "{typography.label-md}"
-    padding: 10px 24px
-    height: 40px
-
-  callout-info:
-    backgroundColor: "{colors.secondary-50}"
-    textColor: "{colors.secondary-900}"
-    rounded: "{rounded.md}"
-    padding: 16px 20px
-
-  callout-success:
-    backgroundColor: "{colors.success-50}"
-    textColor: "{colors.success-800}"
-    rounded: "{rounded.md}"
-    padding: 16px 20px
-
-  callout-warning:
-    backgroundColor: "{colors.warning-50}"
-    textColor: "{colors.warning-800}"
-    rounded: "{rounded.md}"
-    padding: 16px 20px
-
-  callout-error:
-    backgroundColor: "{colors.error-50}"
-    textColor: "{colors.error-800}"
-    rounded: "{rounded.md}"
-    padding: 16px 20px
 ---
 
 # Roundhouse Provisions
@@ -785,43 +775,54 @@ Roundhouse sits in the *confident-modest* radius register: enough rounding to fe
 
 ## 7. Component Stylings
 
-The prose specs below explain the *why*; the front matter's `components` block holds the machine-readable definitions. Both must agree.
+The prose specs below explain the *why*; the front matter's `components` block holds the machine-readable definitions. Both must agree. Component tokens follow the canonical taxonomies in [CONTEXT.md](../../CONTEXT.md); brand-specific patterns outside those taxonomies are documented as **prose recipes** in this section.
 
 ### Buttons
 
-**`button-primary`** — the workhorse CTA. Deep rust background (`primary-600`, `#A42500`), white text (`#FFFFFF`), 14px / 28px padding, 48px height, 8px radius, Barlow 700 at 15px with 0.04em letter-spacing. Hover deepens to `primary-700`; active to `primary-800`. Reads as *the same ember forged darker* — keeps the brand heat while clearing AA against white text cleanly.
+**`button-primary`** — the workhorse conversion CTA. Deep rust background (`primary-600`, `#A42500`), white text (`#FFFFFF`), 14px / 28px padding, 48px height, 8px radius, Barlow 700 at 15px with 0.04em letter-spacing. Hover deepens to `primary-700`; active to `primary-800`. Reads as *the same ember forged darker* — keeps the brand heat while clearing AA against white text cleanly.
 
-**`button-ember`** — the brand-moment button. Bright ember background (`primary-400`, `#EE5531`) with **dark text** (`neutral-900`), same dimensions. Reserved for promo banners, hero CTAs over imagery, and any place where the ember is the message. On hover/active it deepens and switches to white text. Use sparingly — when this button shows up, it should mean *this is the moment*.
+**`button-secondary`** — neutral, supporting actions. Stone-100 background, deep stone text. Hover stone-200, active stone-300. The reliable "second" button next to the rust primary.
 
-**`button-secondary`** — neutral, supporting actions. Stone-100 background, deep stone text. Hover stone-200, active stone-300. The reliable "second" button next to ember or rust primaries.
-
-**`button-sky`** — informational / verified-trust CTAs. Sky blue background (`secondary-600`, `#006481`), white text, same dimensions. Use for "Learn more" or "Verify ingredients" — anywhere the brand wants to invoke clarity and altitude rather than heat.
-
-**`button-saddle`** — grounded, premium-feel CTA. Deep saddle background (`tertiary-700`, `#443B32`), white text. Reads as worn leather; use for footer CTAs, "Subscribe" type actions, anything where the brand wants weight without orange.
-
-**`button-outline`** — white background with ember text (`primary-700`, `#7F1A00`), 2px ember-leaning border. Hover tints to `primary-50`. The "tell me more" / secondary CTA.
+**`button-outline`** — white background with ember text (`primary-700`, `#7F1A00`), 2px ember-leaning border. Hover tints to `primary-50`. The "tell me more" / lower-emphasis CTA when a filled button would compete with a nearby primary.
 
 **`button-ghost`** — transparent background, saddle text (`tertiary-700`). Used inline in body copy, in nav, in dense UI areas. Hover tints to `tertiary-50`.
 
-**`button-pill`** — `button-primary` shape with `rounded.full`. Use for promotional moments and contained badges-as-buttons.
+**`button-inverse`** — the dark-surface variant. White background with neutral-900 text, same dimensions as `button-primary`. For use inside a saddle navbar (`nav-inverse`), dark hero band, or any `card-inverse` surface where the rust primary would lose contrast or read muddy on the warm dark. Hover tints to neutral-100, active to neutral-200.
+
+#### Prose recipes (brand-specific button patterns)
+
+- **Brand-moment ember CTA** — when a hero, promo banner, or "the moment" placement calls for the bright ember as the message, render a button-shaped element with `primary-400` (`#EE5531`) background, **`neutral-900` dark text** (white fails AA at 3.3:1), and the same `button-primary` typography, radius, padding, and 48px height. On hover deepen to `primary-500` with white text; on active deepen to `primary-600` with white text. Use sparingly — when this pattern shows up, it should mean *this is the moment*. Never wallpaper.
+- **Sky CTA** (informational / verified-trust) — for "Learn more", "Verify ingredients", or any moment that wants to invoke clarity and altitude rather than heat, render a `button-primary`-shaped button with `secondary-600` (`#006481`) background and white text. Hover deepens to `secondary-700`. Use in trust-signal sections, ingredient education, scientific support copy.
+- **Saddle CTA** (grounded, premium-feel) — for footer CTAs, "Subscribe" actions, or anywhere the brand wants weight without orange, render a `button-primary`-shaped button with `tertiary-700` (`#443B32`) background and white text. Hover deepens to `tertiary-800`. Reads as worn leather.
+- **Pill shape variant** — for promotional moments and contained badges-as-buttons, take any of the button variants above and override `rounded` from `{rounded.md}` to `{rounded.full}`; widen horizontal padding to ~32px to balance the rounder silhouette. Use sparingly; the default brand button is `rounded.md`, not pill.
 
 ### Cards & Containers
 
 - **`card`** — white background, neutral-900 text, 14px radius, 24px padding. The default. Sits on white pages with a subtle `sm` shadow for separation.
-- **`card-raised`** — neutral-50 background, otherwise identical. For card-on-card or alternating-section moments where a slight tint is needed.
-- **`card-ember`** — `primary-50` background with `primary-900` text. The ember-tinted highlight card. Use sparingly for "key benefit" or "featured ingredient" moments.
-- **`card-dark`** — `tertiary-900` saddle background with neutral-50 text. For dark hero blocks and feature showcase moments. Uses no shadow; instead a `tertiary-800` 1px inner border for definition.
-- **`card-product`** — white background, smaller 16px padding for the denser product-grid context. Same 14px radius.
+- **`card-elevated`** — neutral-50 background, deeper `md` shadow, otherwise identical to `card`. For cards sitting on tinted bands, card-on-card layouts, or moments where a slight tint plus extra lift is needed.
+- **`card-feature`** — `primary-50` background with `primary-900` text. The ember-tinted semantic-emphasis card. Use for "Why Roundhouse" benefit blocks, featured-ingredient callouts, key-claim panels — anywhere a tint draws attention without going to full ember.
+- **`card-inverse`** — `tertiary-900` saddle background with neutral-50 text. For dark hero blocks and feature showcase moments. Uses no shadow; instead a `tertiary-800` 1px inner border for definition.
+
+#### Prose recipes (brand-specific card patterns)
+
+- **Product card** — for product-grid contexts where information density matters, take the base `card` (white, 14px radius) and tighten padding from 24px to 16px so more product imagery and price information fits per viewport. Same `sm` shadow at rest, `md` on hover. Title at `feature-title`, price at `headline-sm`. Reserve this denser footprint for the actual PDP grid and "Shop the Range" tiles — not for marketing-content cards.
 
 ### Inputs & Forms
 
-`input` — white background, neutral-900 text, 1px `neutral-300` border (default), 8px radius, 12px / 16px padding, 48px height. Focus state swaps border to `primary-600` with a 3px `primary-100` ring (or `focus-ring` blue `#3B82F6` for accessibility-first contexts). Disabled state uses `neutral-100` background and `neutral-600` text. Body-md typography (Barlow 16px / 1.6) for input text.
+`input` — white background, neutral-900 text, 1px `neutral-300` border (default), 8px radius, 12px / 16px padding, 48px height. Body-md typography (Barlow 16px / 1.6) for input text.
+
+- **`input-focus`** — border swaps to `primary-600` with a 3px `primary-100` ring (or `focus-ring` blue `#3B82F6` for accessibility-first contexts).
+- **`input-disabled`** — `neutral-100` background, `neutral-600` text.
+- **`input-error`** — same white background and neutral-900 text as default `input`, with a 1px `error-600` border and a 3px `error-100` focus ring; pair with `error-700` helper-text below at `caption` typography.
+- **`input-inverse`** — for inputs that sit inside a `nav-inverse` saddle bar or a `card-inverse` dark hero block. `tertiary-800` background, `neutral-50` text, 1px `tertiary-600` border. Focus brightens border to `primary-400` ember.
 
 ### Navigation
 
-**`navbar`** — white background, neutral-900 text, 16px / 32px padding, 72px height. Logo left, primary nav center or left-aligned after logo, primary CTA (`button-primary` or `button-ember`) right-aligned. 1px `neutral-200` bottom border for separation. Sticky on scroll.
+**`nav`** — the bar/container. White background, neutral-900 text, 16px / 32px padding, 72px height. Logo left, primary nav center or left-aligned after logo, conversion CTA (`button-primary` or the brand-moment ember recipe) right-aligned. 1px `neutral-200` bottom border for separation. Sticky on scroll.
 
-**`navbar-dark`** — saddle (`tertiary-900`) background, neutral-50 text, same dimensions. For dark-themed marketing pages, founder-story pages, or product pages where the dark frame is part of the design. Border swaps to `tertiary-800`.
+- **`nav-link`** — link styling inside the nav. `label-md` typography (Barlow 600 at 14px), neutral-900 text on light nav (auto-adapts to `neutral-50` inside `nav-inverse`), transparent background, 8px / 12px padding. Hover dims to `neutral-700` (or brightens to white on inverse).
+- **`nav-link-active`** — active / current-page link. Same metrics as `nav-link`, but text swaps to `primary-700` rust on light nav (or `primary-400` ember on inverse), and a 2px `primary-700` bottom border sits under the label.
+- **`nav-inverse`** — saddle (`tertiary-900`) background, `neutral-50` text, same dimensions as `nav`. For dark-themed marketing pages, founder-story pages, or product pages where the dark frame is part of the design. Border swaps to `tertiary-800`. Nav links inside auto-adapt: text reads `neutral-50` instead of `neutral-900`; active state uses `primary-400` ember instead of `primary-700` rust so it pops against the warm dark.
 
 ### Image Treatment
 
@@ -832,9 +833,16 @@ The prose specs below explain the *why*; the front matter's `components` block h
 
 ### Distinctive Components
 
-- **`badge-ember`** — bright `primary-400` background with near-black text (`primary-950`). The brand's stamp. Use for "FEATURED", "BESTSELLER", "NEW", at `label-sm` typography.
-- **`badge-sky` / `badge-saddle`** — tonal badge variants for "VERIFIED" and "CRAFT" / "QUALITY" type messaging.
-- **`banner-promo`** — full-width promo strip at top of page. `primary-400` ember background, `primary-950` text, 40px height. Reserved for actual promotions — don't decorate with this.
+- **`badge`** (base) — neutral-100 background with neutral-800 text. The default low-emphasis label.
+- **`badge-primary`** — bright `primary-400` background with near-black text (`primary-950`). The brand's stamp. Use for "FEATURED", "BESTSELLER", "NEW", at `label-sm` typography. This is the high-emphasis brand label.
+- **`badge-success` / `badge-warning` / `badge-error` / `badge-info`** — Tailwind-derived status badges (green / yellow / red / blue at the 100/800 tone pair). Use for system feedback: "In stock", "Low stock", "Out of stock", informational notices.
+
+#### Prose recipes (brand-specific badge patterns)
+
+- **Sky verified badge** — for "VERIFIED" / "3RD-PARTY TESTED" / "INGREDIENT-VERIFIED" trust signals, render a badge-shaped element (`rounded.full`, 4px / 12px padding, 24px height, `label-sm` typography) with `secondary-100` (`#D7EEF8`) background and `secondary-900` text. Tonal sky blue — reads as clarity, not heat.
+- **Saddle craft badge** — for "CRAFT" / "QUALITY" / "HANDMADE-IN-USA" provenance labels, render a badge-shaped element with `tertiary-100` background and `tertiary-900` text. Warm earthy tone — reads as worn leather.
+- **Ember promo banner** — full-width promo strip at top of page. `primary-400` ember background, `primary-950` text, 40px height, `label-md` typography, 10px / 24px padding. Reserved for actual promotions (free shipping, percentage off, new product launch) — never decorative.
+- **Tonal callouts** — for in-body informational blocks, render a tinted container at `rounded.md` (8px), 16px / 20px padding, with these color pairs: info uses `secondary-50` background + `secondary-900` text (prefer the brand sky over Tailwind Info Blue for branded informational moments); success uses `success-50` + `success-800`; warning uses `warning-50` + `warning-800`; error uses `error-50` + `error-800`. These are body-content patterns, not form-state tokens — keep the validation roles on `input-error` / `badge-error`.
 - **Stamp marks** — engraving-style badges for "MADE IN USA", "GLUTEN FREE", "NON-GMO". `rounded.none`, Antonio overline typography (uppercase, 0.18em tracking), saddle border + saddle text on transparent background. Should feel like a stamp on a wooden crate.
 
 ---
@@ -859,6 +867,7 @@ The prose specs below explain the *why*; the front matter's `components` block h
 
 - **Don't** put white text on `primary-400` (`#EE5531`) — contrast fails AA (~3.3:1). Either use dark text on ember, or use `primary-600` for the white-text button.
 - **Don't** use the bright ember as a section background — it overwhelms. Use `primary-50` for ember-tinted sections instead.
+- **Don't** invent brand-named tokens (`button-ember`, `card-ember`, `badge-saddle`). Per CONTEXT.md Meta-rule 1, component tokens are role-based, not color-named. Brand-color buttons live as prose recipes in §7, never as new front-matter tokens.
 - **Don't** stretch Antonio to body-sized type (anything under `headline-xs`). It gets cramped. Use Barlow for sub-20px text.
 - **Don't** set Antonio at weights under 600 — it loses its load-bearing punch and reads weak.
 - **Don't** render Antonio in mixed case. Headlines, displays, overlines — all uppercase, always. If a Figma comp or a hand-coded component shows Antonio in title case, it's wrong; the rendering should pick up `text-transform: uppercase` from the typography token automatically.
@@ -945,10 +954,10 @@ This section is for AI coding agents implementing Roundhouse Provisions UI. Refe
 ### Example Component Prompts
 
 1. *Build a primary CTA button using the `button-primary` component spec — `{colors.primary-600}` background, `{colors.white}` text, `{typography.button-label}`, `{rounded.md}` corners, 14px / 28px padding, 48px height. Hover deepens to `{colors.primary-700}`; active to `{colors.primary-800}`.*
-2. *Build a brand-moment hero CTA using `button-ember` — `{colors.primary-400}` background with `{colors.neutral-900}` text. This is the "the moment" variant; reserve for hero CTAs and promo banners.*
-3. *Build a product card using the `card` component spec — `{colors.white}` background, `{rounded.lg}` corners, 24px padding, `sm` shadow at rest / `md` on hover. Title in `{typography.headline-sm}`, price in `{typography.feature-title}`, body in `{typography.body-md}`.*
-4. *Build a dark-themed footer using `navbar-dark` style — `{colors.tertiary-900}` saddle background, `{colors.neutral-50}` text, `{typography.label-md}` for nav links. No shadow; use a `{colors.tertiary-800}` 1px top border for separation.*
-5. *Build a "MADE IN USA" stamp badge — `{rounded.none}` (engraved feel), 1px `{colors.tertiary-700}` border, `{typography.overline}` (Antonio all-caps with 0.18em tracking), `{colors.tertiary-700}` text, transparent background, 6px / 12px padding.*
+2. *Build a brand-moment hero CTA using the "brand-moment ember CTA" prose recipe in §7 — `{colors.primary-400}` background with `{colors.neutral-900}` dark text (white fails AA on ember at 3.3:1), same `button-primary` typography and dimensions. Reserve for hero CTAs and promo banners; do **not** add a new front-matter token for this pattern.*
+3. *Build a product card using the §7 "product card" prose recipe — base `card` (white, `{rounded.lg}` corners) with tightened 16px padding for the denser grid context. Title in `{typography.feature-title}`, price in `{typography.headline-sm}`, body in `{typography.body-md}`. `sm` shadow at rest, `md` on hover.*
+4. *Build a dark-themed nav using `nav-inverse` — `{colors.tertiary-900}` saddle background, `{colors.neutral-50}` text, `{typography.label-md}` for nav links. No shadow; use a `{colors.tertiary-800}` 1px top border for separation. Active links inside use `primary-400` ember.*
+5. *Build a "MADE IN USA" stamp badge using the §7 stamp-marks prose recipe — `{rounded.none}` (engraved feel), 1px `{colors.tertiary-700}` border, `{typography.overline}` (Antonio all-caps with 0.18em tracking), `{colors.tertiary-700}` text, transparent background, 6px / 12px padding. This is a stamp pattern, not a canonical `badge` variant.*
 
 ### Iteration Guide
 
