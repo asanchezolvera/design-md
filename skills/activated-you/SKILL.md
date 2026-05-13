@@ -23,6 +23,9 @@ ActivatedYou sits in a deliberate middle distance — more credible than a welln
 - Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#52744B, secondary=#004777, tertiary=#F8A022, surface=#FFFFFF, text=#161B1D, focus=#3B82F6 (full 11-step OKLCH palettes, surfaces, borders, and gradients in [./DESIGN.md](./DESIGN.md))
 - Spacing scale: 4/8/12/16/24/32/48/64/96/128
 
+## Component Tokens
+ActivatedYou conforms to the canonical taxonomies in [../../CONTEXT.md](../../CONTEXT.md): `button-{primary, secondary, outline, ghost, inverse}`, `card{-elevated, -feature, -inverse}`, `badge{-primary, -success, -warning, -error, -info}`, `input{-focus, -disabled, -error, -inverse}`, `nav{-link, -link-active, -inverse}`. Brand-specific variants (the gold scarcity CTA, gold premium badge, product tile, doctor module, trust banner) live as **prose recipes** in DESIGN.md §7, never as new front-matter tokens.
+
 ## Accessibility
 WCAG 2.2 AA, keyboard-first interactions, visible focus states using `#3B82F6` focus ring, minimum 44px touch targets
 
@@ -38,12 +41,12 @@ empowering, educational, calm, considered, plant-forward, science-backed, restra
 - apply rounded.lg (12px) to buttons, rounded.xl (20px) to cards, rounded.2xl (28px) to feature blocks
 
 ## Rules: Don't
+- avoid inventing brand-named tokens (`button-accent`, `badge-accent`, `product-tile`, `banner-trust`) — component tokens are role-based per CONTEXT.md Meta-rule 1; the gold scarcity CTA, gold premium badge, product tile, doctor module, and trust banner live as prose recipes in DESIGN.md §7
 - don't use primary green for success messaging — success-600 is intentionally distinct
 - don't put white text on tertiary-300 gold; use neutral-950 for contrast
 - don't tint the page background — white is the brand's surface
 - don't mix typefaces — Roboto runs the entire system
 - don't stack shadows above sm unless the element genuinely floats (modal, popover)
-- don't apply rounded.full to anything larger than a 48px badge or avatar
 
 ## Expected Behavior
 - Follow the foundations first, then component consistency.

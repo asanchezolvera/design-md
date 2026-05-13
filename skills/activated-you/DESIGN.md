@@ -270,20 +270,9 @@ components:
   button-secondary-active:
     backgroundColor: "{colors.secondary-900}"
     textColor: "{colors.neutral-50}"
-
-  button-accent:
-    backgroundColor: "{colors.tertiary-300}"
-    textColor: "{colors.neutral-950}"
-    typography: "{typography.label-md}"
-    rounded: "{rounded.lg}"
-    padding: 12px 24px
-    height: 48px
-  button-accent-hover:
-    backgroundColor: "{colors.tertiary-400}"
-    textColor: "{colors.neutral-950}"
-  button-accent-active:
-    backgroundColor: "{colors.tertiary-500}"
-    textColor: "{colors.neutral-50}"
+  button-secondary-disabled:
+    backgroundColor: "{colors.neutral-200}"
+    textColor: "{colors.neutral-600}"
 
   button-outline:
     backgroundColor: "#FFFFFF"
@@ -295,6 +284,12 @@ components:
   button-outline-hover:
     backgroundColor: "{colors.primary-50}"
     textColor: "{colors.primary-700}"
+  button-outline-active:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-800}"
+  button-outline-disabled:
+    backgroundColor: "#FFFFFF"
+    textColor: "{colors.neutral-400}"
 
   button-ghost:
     backgroundColor: "transparent"
@@ -306,6 +301,29 @@ components:
   button-ghost-hover:
     backgroundColor: "{colors.neutral-100}"
     textColor: "{colors.neutral-900}"
+  button-ghost-active:
+    backgroundColor: "{colors.neutral-200}"
+    textColor: "{colors.neutral-900}"
+  button-ghost-disabled:
+    backgroundColor: "transparent"
+    textColor: "{colors.neutral-400}"
+
+  button-inverse:
+    backgroundColor: "#FFFFFF"
+    textColor: "{colors.primary-700}"
+    typography: "{typography.label-md}"
+    rounded: "{rounded.lg}"
+    padding: 12px 24px
+    height: 48px
+  button-inverse-hover:
+    backgroundColor: "{colors.primary-50}"
+    textColor: "{colors.primary-700}"
+  button-inverse-active:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-800}"
+  button-inverse-disabled:
+    backgroundColor: "{colors.neutral-200}"
+    textColor: "{colors.neutral-500}"
 
   card:
     backgroundColor: "{colors.surface-raised}"
@@ -322,6 +340,11 @@ components:
     textColor: "{colors.primary-900}"
     rounded: "{rounded.2xl}"
     padding: 32px
+  card-inverse:
+    backgroundColor: "{colors.primary-900}"
+    textColor: "{colors.primary-50}"
+    rounded: "{rounded.xl}"
+    padding: 24px
 
   input:
     backgroundColor: "#FFFFFF"
@@ -336,26 +359,60 @@ components:
   input-disabled:
     backgroundColor: "{colors.neutral-100}"
     textColor: "{colors.neutral-600}"
+  input-error:
+    backgroundColor: "#FFFFFF"
+    textColor: "{colors.neutral-900}"
+  input-inverse:
+    backgroundColor: "{colors.neutral-900}"
+    textColor: "{colors.neutral-50}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.md}"
+    padding: 12px 16px
+    height: 48px
 
+  badge:
+    backgroundColor: "{colors.neutral-100}"
+    textColor: "{colors.neutral-700}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 10px
   badge-primary:
     backgroundColor: "{colors.primary-100}"
     textColor: "{colors.primary-800}"
     typography: "{typography.label-sm}"
     rounded: "{rounded.full}"
     padding: 4px 10px
-  badge-accent:
-    backgroundColor: "{colors.tertiary-100}"
-    textColor: "{colors.tertiary-700}"
+  badge-success:
+    backgroundColor: "{colors.success-100}"
+    textColor: "{colors.success-800}"
     typography: "{typography.label-sm}"
     rounded: "{rounded.full}"
     padding: 4px 10px
-  badge-neutral:
-    backgroundColor: "{colors.neutral-100}"
-    textColor: "{colors.neutral-700}"
+  badge-warning:
+    backgroundColor: "{colors.warning-100}"
+    textColor: "{colors.warning-800}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 10px
+  badge-error:
+    backgroundColor: "{colors.error-100}"
+    textColor: "{colors.error-800}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 10px
+  badge-info:
+    backgroundColor: "{colors.info-100}"
+    textColor: "{colors.info-800}"
     typography: "{typography.label-sm}"
     rounded: "{rounded.full}"
     padding: 4px 10px
 
+  nav:
+    backgroundColor: "#FFFFFF"
+    textColor: "{colors.neutral-900}"
+    typography: "{typography.label-md}"
+    padding: 0 24px
+    height: 80px
   nav-link:
     backgroundColor: "transparent"
     textColor: "{colors.neutral-700}"
@@ -366,21 +423,12 @@ components:
     textColor: "{colors.primary-700}"
     typography: "{typography.label-md}"
     padding: 8px 12px
-
-  product-tile:
-    backgroundColor: "#FFFFFF"
-    textColor: "{colors.neutral-900}"
-    rounded: "{rounded.xl}"
-    padding: 20px
-  product-tile-hover:
-    backgroundColor: "#FFFFFF"
-    textColor: "{colors.neutral-900}"
-
-  banner-trust:
+  nav-inverse:
     backgroundColor: "{colors.primary-900}"
     textColor: "{colors.primary-50}"
     typography: "{typography.label-md}"
-    padding: 12px 24px
+    padding: 0 24px
+    height: 80px
 ---
 
 # ActivatedYou
@@ -666,7 +714,7 @@ Soft but not rounded into oblivion. The brand sits in a friendly middle: 8–20p
 
 ### Application Rules
 
-- **Buttons** → `rounded.lg` (12px) for primary/secondary/accent/outline; `rounded.full` for icon-only round buttons
+- **Buttons** → `rounded.lg` (12px) for primary/secondary/outline/ghost/inverse and the gold scarcity CTA prose recipe; `rounded.full` for icon-only round buttons
 - **Cards** → `rounded.xl` (20px) standard; `rounded.2xl` (28px) for feature/hero cards
 - **Inputs** → `rounded.md` (8px) — slightly tighter than buttons to keep forms scannable
 - **Badges / pills** → `rounded.full`
@@ -677,48 +725,78 @@ Soft but not rounded into oblivion. The brand sits in a friendly middle: 8–20p
 
 ### Buttons
 
-| Variant       | Background          | Text                | Padding   | Radius     | Personality                                                |
-| ------------- | ------------------- | ------------------- | --------- | ---------- | ---------------------------------------------------------- |
-| **Primary**   | `primary-500` (`#52744B`) | `neutral-50` (`#F9FBFB`) | 12 × 24px | `rounded.lg` (12px) | The main CTA — botanical green, confident, warm           |
-| **Secondary** | `secondary-700` (`#004777`) | `neutral-50`        | 12 × 24px | `rounded.lg`        | The credibility CTA — "Talk to a doctor", "See the science"|
-| **Accent**    | `tertiary-300` (`#F8A022`) | `neutral-950` (`#090B0C`) | 12 × 24px | `rounded.lg`        | Reserved — limited edition, premium offers, "Save 20%"     |
-| **Outline**   | `#FFFFFF`           | `primary-700` (`#334D2E`) | 12 × 24px | `rounded.lg`        | Secondary action on light pages — paired with primary      |
-| **Ghost**     | `transparent`       | `neutral-900` (`#161B1D`) | 10 × 16px | `rounded.lg`        | Tertiary action — "Learn more", in-card actions            |
+Five canonical roles, defined in front matter. Each has uniform `-hover`, `-active`, and `-disabled` states.
 
-State variants are defined in the front matter:
+| Variant       | Background                  | Text                       | Padding   | Radius              | Personality                                                          |
+| ------------- | --------------------------- | -------------------------- | --------- | ------------------- | -------------------------------------------------------------------- |
+| **Primary**   | `primary-500` (`#52744B`)   | `neutral-50` (`#F9FBFB`)   | 12 × 24px | `rounded.lg` (12px) | The main CTA — botanical green, confident, warm                      |
+| **Secondary** | `secondary-700` (`#004777`) | `neutral-50`               | 12 × 24px | `rounded.lg`        | The credibility CTA — "Talk to a doctor", "See the science"          |
+| **Outline**   | `#FFFFFF`                   | `primary-700` (`#334D2E`)  | 12 × 24px | `rounded.lg`        | Bordered green-text variant; paired with `button-primary` on a row   |
+| **Ghost**     | `transparent`               | `neutral-900` (`#161B1D`)  | 10 × 16px | `rounded.lg`        | Tertiary action — "Learn more", in-card actions                      |
+| **Inverse**   | `#FFFFFF`                   | `primary-700`              | 12 × 24px | `rounded.lg`        | Light treatment for use on dark hero bands / `card-inverse` surfaces |
 
-- `button-primary-hover` → `primary-600`; `button-primary-active` → `primary-700`; `button-primary-disabled` → `neutral-200` bg, `neutral-600` text (passes AA)
-- `button-secondary-hover` → `secondary-800`; `button-secondary-active` → `secondary-900`
-- `button-accent-hover` → `tertiary-400`; `button-accent-active` → `tertiary-500` (text flips to `neutral-50` on active because the bg darkens past comfortable contrast for dark text)
-- `button-outline-hover` → `primary-50` background, text stays `primary-700`
-- `button-ghost-hover` → `neutral-100` background
+State variants in the front matter:
 
-All buttons default to 48px height. Use `xs` shadow on the primary button only; outline/ghost stay flat.
+- `button-primary` — hover `primary-600`; active `primary-700`; disabled `neutral-200` bg / `neutral-600` text (passes AA)
+- `button-secondary` — hover `secondary-800`; active `secondary-900`; disabled `neutral-200` bg / `neutral-600` text
+- `button-outline` — hover `primary-50` bg; active `primary-100` bg / `primary-800` text; disabled white bg / `neutral-400` text
+- `button-ghost` — hover `neutral-100` bg; active `neutral-200` bg; disabled `neutral-400` text
+- `button-inverse` — hover `primary-50` bg; active `primary-100` bg / `primary-800` text; disabled `neutral-200` bg / `neutral-500` text
+
+All buttons default to 48px height (ghost drops to 44px to feel lighter). Use `xs` shadow on the primary button only; outline/ghost/inverse stay flat.
+
+#### Prose recipes (brand-specific button patterns)
+
+- **Gold scarcity CTA (premium / limited-edition).** ActivatedYou's reserved gold treatment for rare moments — "Limited Edition," "Save 20%," subscription-tier upgrades. Per CONTEXT.md ambiguity #2 ("the gold accent is a rare scarcity treatment — prose recipe, never a canonical role"), this is **not** a token. Build it as: `{colors.tertiary-300}` (`#F8A022`) background, `{colors.neutral-950}` (`#090B0C`) text (white text fails AA against gold), same shape as `button-primary` (`{rounded.lg}`, 12 × 24px, 48px height, `{typography.label-md}`). Hover steps the background to `{colors.tertiary-400}` (`#D38400`) and keeps `neutral-950` text. Active steps to `{colors.tertiary-500}` (`#A26500`) and flips text to `{colors.neutral-50}` because the background darkens past comfortable contrast for dark text. Use sparingly — once per page at most; gold loses meaning if it becomes a default.
 
 ### Cards & Containers
 
-- **Standard card** (`card`) — `neutral-50` background on a white page (visible separation), `rounded.xl` (20px), 24px padding, `xs` shadow
-- **Elevated card** (`card-elevated`) — pure white background, `rounded.xl`, 24px padding, `sm` shadow (used when the card sits on a tinted band)
-- **Feature card** (`card-feature`) — `primary-50` background, `rounded.2xl` (28px), 32px padding. Used for "Why ActivatedYou" benefits, ingredient spotlights, doctor-led explainers. Text is `primary-900` for AA contrast on the soft green tint.
-- **Dark band** — `neutral-800` or `secondary-900` background, white text. Used for testimonial sections and the trust strip near checkout.
+Four canonical roles, no state variants (clickable cards are prose recipes).
+
+- **`card`** — `surface-raised` / `neutral-50` (`#F9FBFB`) background on a white page (visible separation), `rounded.xl` (20px), 24px padding, `xs` shadow.
+- **`card-elevated`** — pure white background, `rounded.xl`, 24px padding, `sm` shadow. Use when the card sits on a tinted band where `neutral-50` would disappear into the surface.
+- **`card-feature`** — `primary-50` (`#F4F8F3`) background, `rounded.2xl` (28px), 32px padding. Used for "Why ActivatedYou" benefits, ingredient spotlights, doctor-led explainers. Text is `primary-900` for AA contrast on the soft green tint.
+- **`card-inverse`** — `primary-900` (`#192616`) background, `primary-50` text, `rounded.xl`, 24px padding. The deep botanical-green surface for trust strips, testimonial bands, and any dark moment that should still feel brand-anchored rather than generically dark.
+
+#### Prose recipes (brand-specific card patterns)
+
+- **Product tile.** White (`#FFFFFF`) background, `rounded.xl` (20px), 20px padding (tighter than `card`'s 24 to keep grids dense), `xs` shadow at rest. Square product image (1:1) at the top, then product name in `{typography.feature-title}`, price in `{typography.label-md}`, then a `button-primary` "Add to cart" stacked below. On hover, lift to `md` shadow and (if applicable) reveal a "Free Shipping" badge using the gold premium-badge prose recipe (below).
+- **Doctor module.** `secondary-50` (`#F0F8FF`) background, `rounded.2xl` (28px), 32px padding — the brand's signature credibility block. Doctor headshot at `{rounded.full}`, 80px, on the left. Quote in `{typography.body-lg}` italic on the right. Signature in `{typography.headline-sm}` below the quote. Not a `card-feature` because the tint is `secondary-50` (clinical navy), not the canonical `primary-50` brand tint.
 
 ### Inputs & Forms
 
-- Background: `#FFFFFF` (always white, even inside `neutral-50` cards)
-- Border: 1px solid `neutral-300`; on focus: 2px ring of `focus-ring` (`#3B82F6`)
-- Text: `neutral-900`; placeholder: `neutral-500`
-- Radius: `rounded.md` (8px)
-- Padding: 12px vertical, 16px horizontal; height: 48px
-- Disabled: `neutral-100` bg, `neutral-600` text
-- Labels use `label-md` (14px / weight 500) above the input; helper/error text uses `body-sm` (14px / 400)
-- Error state: border `error-500`, helper text `error-600`
+Five canonical states defined in front matter: `input` (base), `input-focus`, `input-disabled`, `input-error`, `input-inverse`.
+
+- **`input`** — `#FFFFFF` background (always white, even inside `neutral-50` cards), 1px solid `neutral-300` border, `neutral-900` text, `neutral-500` placeholder, `rounded.md` (8px), 12 × 16px padding, 48px height.
+- **`input-focus`** — Keeps the white background; the focus is carried by a 2px ring in `{colors.focus-ring}` (`#3B82F6`).
+- **`input-disabled`** — `neutral-100` background, `neutral-600` text.
+- **`input-error`** — White background, `neutral-900` text, but with a 2px solid `error-600` border and helper text in `error-600` directly below at `body-sm`.
+- **`input-inverse`** — `neutral-900` background, `neutral-50` text, 1px solid `neutral-700` border. For form fields sitting inside a dark hero band or a `card-inverse` surface.
+
+Labels use `label-md` (14px / weight 500) above the input; helper/error text uses `body-sm` (14px / 400).
 
 ### Navigation
 
-- **Top nav** — White background, 1px `neutral-200` bottom border, 80px height on desktop. Logo on left, primary nav links centered or left-aligned, account + cart icons on right. Primary CTA ("Shop Now") uses `button-primary`.
-- **Nav links** — `nav-link`: `neutral-700` text, no background; `nav-link-active`: `primary-700` text with a 2px `primary-500` bottom indicator. Avoid filled pill states for nav — too loud.
-- **Mobile nav** — Hamburger opens a full-screen white sheet, links stack at `headline-sm` size with 16px vertical padding. Account/cart at the top of the sheet.
-- **Footer** — `neutral-900` background, white text. Logo, link columns, trust badges, FDA disclaimer in `micro` (10px) at the bottom.
+Four canonical tokens: `nav` (the bar), `nav-link`, `nav-link-active`, `nav-inverse`.
+
+- **`nav`** — White background, 1px `neutral-200` bottom border, 80px height on desktop, 24px horizontal padding. Logo on left, primary nav links centered or left-aligned, account + cart icons on right. Primary CTA ("Shop Now") uses `button-primary`.
+- **`nav-link`** — `neutral-700` text, no background, `label-md` typography, 8 × 12px padding. Hover shifts text to `primary-700`.
+- **`nav-link-active`** — `primary-700` text with a 2px `primary-500` bottom indicator. Avoid filled pill states for nav — too loud for the brand.
+- **`nav-inverse`** — `primary-900` background, `primary-50` text, same 80px / 24px geometry. For dark sticky navs on long-form editorial pages. Inside `nav-inverse`, link text auto-adapts to `primary-50` (hover `primary-200`); the active indicator stays `primary-500`.
+
+Mobile nav (`<md`) collapses to a hamburger that opens a full-screen white sheet — links stack at `headline-sm` size with 16px vertical padding, account/cart at the top of the sheet. Footer is `neutral-900` background with white text and a `micro` FDA disclaimer at the bottom.
+
+### Badges
+
+Six canonical role-based variants. All pill-shaped (`rounded.full`), `label-sm` typography, 4 × 10px padding.
+
+- **`badge`** — `neutral-100` bg, `neutral-700` text. The neutral default; metadata pills, category tags, low-emphasis labels.
+- **`badge-primary`** — `primary-100` bg, `primary-800` text. The high-emphasis brand label: "Bestseller," "New," "Plant-Based."
+- **`badge-success`** / **`badge-warning`** / **`badge-error`** / **`badge-info`** — Standardized semantic statuses using the Tailwind green/yellow/red/blue palettes at the 100/800 tone pair.
+
+#### Prose recipes (brand-specific badge patterns)
+
+- **Gold premium badge.** For "Limited Edition" / "Bestseller Gold" / subscription-tier flags where the gold scarcity treatment is the point. Same pill shape as `badge`, but override background to `{colors.tertiary-100}` (`#FCE5CD`) and text to `{colors.tertiary-700}` (`#623B00`). Reserved for premium moments — don't replace `badge-primary` for general high-emphasis labels.
 
 ### Image Treatment
 
@@ -729,10 +807,8 @@ All buttons default to 48px height. Use `xs` shadow on the primary button only; 
 
 ### Distinctive Components
 
-- **Product tile** (`product-tile`) — white background, `rounded.xl`, 20px padding, image at the top with the product name (`feature-title`), price (`label-md`), and an "Add to cart" button stacked below. On hover, lift to `md` shadow and reveal a `tertiary-100` "Free Shipping" badge if applicable.
-- **Trust banner** (`banner-trust`) — `primary-900` background, `primary-50` text, sits above the footer or below the hero. Contains four short trust marks: "Doctor-Formulated", "Plant-Based", "3rd-Party Tested", "60-Day Guarantee". 12px vertical padding, `label-md` typography.
-- **Ingredient strip** — horizontal scroll of pill-shaped ingredient names using `badge-primary`. Tap reveals a popover (uses `lg` shadow) with the ingredient story.
-- **Doctor module** — `secondary-50` background block, `rounded.2xl`, doctor headshot (rounded.full, 80px) on the left, quote in `body-lg` italic on the right, signature in `headline-sm`. This is the brand's signature credibility block.
+- **Trust banner** (prose recipe). `primary-900` background, `primary-50` text, sits above the footer or below the hero. Contains four short trust marks: "Doctor-Formulated", "Plant-Based", "3rd-Party Tested", "60-Day Guarantee". 12px vertical padding, `label-md` typography. Build from `card-inverse` geometry but stretch full-bleed and drop the `rounded.xl` to `rounded.none`.
+- **Ingredient strip.** Horizontal scroll of pill-shaped ingredient names using `badge-primary`. Tap reveals a popover (uses `lg` shadow) with the ingredient story.
 
 ## 8. Do's and Don'ts
 
@@ -761,6 +837,7 @@ All buttons default to 48px height. Use `xs` shadow on the primary button only; 
 8. **Don't** treat the disclaimer/micro text as a design afterthought — it's regulated content; keep it 10px, `neutral-700`, never lower contrast.
 9. **Don't** apply `rounded.full` to anything larger than a 48px badge/avatar. Stadium-rounding a 200px button reads as kitsch, not premium.
 10. **Don't** swap `error-600` for the brand red when something is broken — semantic palettes are universal across Golden Hippo brands and should not be re-styled.
+11. **Don't** invent brand-named tokens like `button-accent`, `badge-accent`, `button-gold`, `product-tile`, or `banner-trust`. Component tokens are role-based per [CONTEXT.md](../../CONTEXT.md) Meta-rule 1 — the canonical 5 buttons (`primary`/`secondary`/`outline`/`ghost`/`inverse`), 4 cards (`card`/`elevated`/`feature`/`inverse`), 6 badges (neutral/primary/success/warning/error/info), 5 inputs, 4 nav tokens. The gold scarcity CTA, gold premium badge, product tile, doctor module, and trust banner are prose recipes in §7, not tokens.
 
 ## 9. Responsive Behavior
 
@@ -815,7 +892,7 @@ This section is the AI-coding-assistant interface for ActivatedYou. Use the toke
 | `secondary-800` (secondary hover)  | `#163550` |
 | ★ `tertiary-300` (Golden Hour)     | `#F8A022` |
 | `tertiary-50` (premium tint)       | `#FFF5EB` |
-| `tertiary-400` (accent hover)      | `#D38400` |
+| `tertiary-400` (gold scarcity hover) | `#D38400` |
 | `surface` (page background)        | `#FFFFFF` |
 | `surface-raised` / `neutral-50`    | `#F9FBFB` |
 | `neutral-100` (recessed surface)   | `#F1F3F3` |
@@ -835,10 +912,12 @@ This section is the AI-coding-assistant interface for ActivatedYou. Use the toke
 ### Example Component Prompts
 
 1. **Primary CTA button**: "Build the `button-primary` component spec — `{colors.primary-500}` background, `{colors.neutral-50}` text, `{rounded.lg}` corners, 12 × 24px padding, 48px height. On hover swap to `{colors.primary-600}`."
-2. **Product tile**: "Build a product tile using the `product-tile` spec — `#FFFFFF` background, `{rounded.xl}` corners, 20px padding, `xs` shadow at rest. Include a square product image (1:1), `{typography.feature-title}` for the name, `{typography.label-md}` for price, and a `button-primary` 'Add to cart' button. On hover lift to `md` shadow."
-3. **Doctor module**: "Build the doctor credibility block — `{colors.secondary-50}` background, `{rounded.2xl}` corners, 32px padding. Place a 80px `{rounded.full}` portrait on the left, a quote in `{typography.body-lg}` italic on the right, and the doctor's name/title in `{typography.headline-sm}` below the quote."
-4. **Feature card**: "Build a feature/benefit card using the `card-feature` spec — `{colors.primary-50}` background, `{colors.primary-900}` text, `{rounded.2xl}` corners, 32px padding. Eyebrow uses `{typography.overline}`, title uses `{typography.headline-sm}`, body uses `{typography.body-md}`."
-5. **Premium accent CTA**: "Build a 'Limited Edition' CTA using `button-accent` — `{colors.tertiary-300}` background, `{colors.neutral-950}` text, `{rounded.lg}` corners. Use sparingly; reserved for premium/limited offers."
+2. **Product tile** (prose recipe — not a token): "Build the §7 'product tile' prose recipe — `#FFFFFF` background, `{rounded.xl}` corners, 20px padding, `xs` shadow at rest. Include a square product image (1:1), `{typography.feature-title}` for the name, `{typography.label-md}` for price, and a `button-primary` 'Add to cart' button. On hover lift to `md` shadow."
+3. **Doctor module** (prose recipe — not a token): "Build the §7 'doctor module' prose recipe — `{colors.secondary-50}` background, `{rounded.2xl}` corners, 32px padding. Place a 80px `{rounded.full}` portrait on the left, a quote in `{typography.body-lg}` italic on the right, and the doctor's name/title in `{typography.headline-sm}` below the quote."
+4. **Feature card**: "Build a feature/benefit card using `card-feature` — `{colors.primary-50}` background, `{colors.primary-900}` text, `{rounded.2xl}` corners, 32px padding. Eyebrow uses `{typography.overline}`, title uses `{typography.headline-sm}`, body uses `{typography.body-md}`."
+5. **Gold scarcity CTA** (prose recipe — not a token): "Build the §7 'gold scarcity CTA' prose recipe for a 'Limited Edition' button — `{colors.tertiary-300}` background, `{colors.neutral-950}` text (white fails AA on gold), `{rounded.lg}` corners, 12 × 24px padding, 48px height, `{typography.label-md}`. On hover swap to `{colors.tertiary-400}` keeping `neutral-950` text; on active swap to `{colors.tertiary-500}` and flip text to `{colors.neutral-50}`. Use sparingly — at most once per page."
+6. **Dark trust band**: "Build the §7 'trust banner' prose recipe — `card-inverse` geometry but full-bleed with `{rounded.none}`. `{colors.primary-900}` background, `{colors.primary-50}` text, four trust marks ('Doctor-Formulated', 'Plant-Based', '3rd-Party Tested', '60-Day Guarantee') in `{typography.label-md}`, 12px vertical padding. Inside, use `button-inverse` for any embedded CTA so it reads correctly on the dark surface."
+7. **Sticky top nav**: "Build the top nav using the `nav` token — `#FFFFFF` background, 1px `{colors.neutral-200}` bottom border, 80px height, 24px horizontal padding, sticky to viewport top. Logo on left; centered links use `nav-link` (`{typography.label-md}` in `{colors.neutral-700}`, hover shifts text to `{colors.primary-700}`). The current-page link uses `nav-link-active` (`{colors.primary-700}` text with a 2px `{colors.primary-500}` bottom indicator). Below `md` (768px), collapse to a hamburger opening a full-screen white sheet with `headline-sm` link sizing."
 
 ### Iteration Guide
 
