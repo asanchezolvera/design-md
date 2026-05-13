@@ -266,7 +266,7 @@ spacing:
   "31": 1920px
 
 components:
-  # Primary CTA — Solar Gold pill with Deep Forest text. The canonical button across the brand.
+  # Primary CTA — Solar Gold pill with Deep Forest text. The conversion CTA across the brand. The signature hover is a color inversion to forest bg + gold text.
   button-primary:
     backgroundColor: "{colors.tertiary-300}"
     textColor: "{colors.primary-700}"
@@ -284,34 +284,25 @@ components:
     backgroundColor: "{colors.tertiary-100}"
     textColor: "{colors.neutral-600}"
 
-  # Secondary CTA — Deep Forest pill with white text. Used when the primary yellow would compete (e.g., on the gold-tinted hero, on alternate sections).
-  button-forest:
+  # Secondary CTA — Deep Forest pill with white text. Workaday non-headline action: "Continue", "Save", form submits. Used when the gold primary would compete (e.g., on the gold-tinted hero, on alternate sections).
+  button-secondary:
     backgroundColor: "{colors.primary-700}"
     textColor: "{colors.white}"
     typography: "{typography.button-label}"
     rounded: "{rounded.full}"
     padding: 14px 32px
     height: 52px
-  button-forest-hover:
+  button-secondary-hover:
     backgroundColor: "{colors.primary-800}"
     textColor: "{colors.tertiary-300}"
-  button-forest-active:
+  button-secondary-active:
     backgroundColor: "{colors.primary-900}"
     textColor: "{colors.tertiary-300}"
+  button-secondary-disabled:
+    backgroundColor: "{colors.primary-200}"
+    textColor: "{colors.primary-500}"
 
-  # Terracotta accent CTA — warm secondary action, used sparingly for tertiary actions or affiliate/upsell modules.
-  button-terracotta:
-    backgroundColor: "{colors.secondary-400}"
-    textColor: "{colors.primary-900}"
-    typography: "{typography.button-label}"
-    rounded: "{rounded.full}"
-    padding: 14px 32px
-    height: 52px
-  button-terracotta-hover:
-    backgroundColor: "{colors.secondary-500}"
-    textColor: "{colors.white}"
-
-  # Outline / ghost CTA — for low-priority actions on beige surfaces. Forest stroke, transparent fill.
+  # Outline button — forest stroke + text on transparent fill. For tertiary actions on beige.
   button-outline:
     backgroundColor: transparent
     textColor: "{colors.primary-700}"
@@ -322,60 +313,124 @@ components:
   button-outline-hover:
     backgroundColor: "{colors.primary-700}"
     textColor: "{colors.tertiary-300}"
-
-  # Outline variant on dark sections (forest backgrounds) — gold stroke on transparent fill.
-  button-outline-dark:
-    backgroundColor: transparent
+  button-outline-active:
+    backgroundColor: "{colors.primary-800}"
     textColor: "{colors.tertiary-300}"
+  button-outline-disabled:
+    backgroundColor: transparent
+    textColor: "{colors.neutral-400}"
+
+  # Ghost button — transparent fill, no stroke. Inline links-as-buttons, very low-priority actions, in-nav CTAs.
+  button-ghost:
+    backgroundColor: transparent
+    textColor: "{colors.primary-700}"
     typography: "{typography.button-label}"
     rounded: "{rounded.full}"
-    padding: 14px 30px
+    padding: 14px 20px
     height: 52px
-  button-outline-dark-hover:
-    backgroundColor: "{colors.tertiary-300}"
-    textColor: "{colors.primary-700}"
+  button-ghost-hover:
+    backgroundColor: "{colors.primary-50}"
+    textColor: "{colors.primary-800}"
+  button-ghost-active:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-900}"
+  button-ghost-disabled:
+    backgroundColor: transparent
+    textColor: "{colors.neutral-400}"
 
-  # Cards — white "spotlight" surface lifted off the beige page, plus a dark forest variant for inverse modules.
+  # Inverse button — white pill with forest text. For use on dark forest sections / `card-inverse` / hero bands where a gold or forest button would not read.
+  button-inverse:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.primary-700}"
+    typography: "{typography.button-label}"
+    rounded: "{rounded.full}"
+    padding: 14px 32px
+    height: 52px
+  button-inverse-hover:
+    backgroundColor: "{colors.neutral-100}"
+    textColor: "{colors.primary-800}"
+  button-inverse-active:
+    backgroundColor: "{colors.neutral-200}"
+    textColor: "{colors.primary-900}"
+  button-inverse-disabled:
+    backgroundColor: "{colors.primary-800}"
+    textColor: "{colors.primary-500}"
+
+  # Cards — white default on beige, off-white elevated, gold-tinted feature, deep-forest inverse.
   card:
     backgroundColor: "{colors.white}"
     textColor: "{colors.neutral-900}"
     rounded: "{rounded.lg}"
     padding: 32px
-  card-beige:
+
+  card-elevated:
     backgroundColor: "{colors.neutral-50}"
     textColor: "{colors.neutral-900}"
     rounded: "{rounded.lg}"
     padding: 32px
-  card-forest:
+
+  card-feature:
+    backgroundColor: "{colors.tertiary-50}"
+    textColor: "{colors.primary-900}"
+    rounded: "{rounded.lg}"
+    padding: 32px
+
+  card-inverse:
     backgroundColor: "{colors.primary-700}"
     textColor: "{colors.neutral-50}"
     rounded: "{rounded.lg}"
     padding: 32px
-  card-spotlight:
-    backgroundColor: "{colors.white}"
-    textColor: "{colors.neutral-900}"
-    rounded: "{rounded.xl}"
-    padding: 40px
 
-  # Section backgrounds — first-class surface tokens for the beige/forest alternation pattern.
-  section-beige:
-    backgroundColor: "{colors.neutral-100}"
-    textColor: "{colors.neutral-900}"
-    padding: 96px 0
-  section-forest:
-    backgroundColor: "{colors.primary-700}"
-    textColor: "{colors.neutral-50}"
-    padding: 96px 0
-  section-spotlight:
-    backgroundColor: "{colors.white}"
-    textColor: "{colors.neutral-900}"
-    padding: 96px 0
-  section-gold-tint:
-    backgroundColor: "{colors.tertiary-50}"
-    textColor: "{colors.primary-900}"
-    padding: 96px 0
+  # Badges — pill labels. Neutral base + forest-emphasis primary + four status variants.
+  badge:
+    backgroundColor: "{colors.neutral-200}"
+    textColor: "{colors.neutral-800}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+    height: 24px
 
-  # Inputs — pill-leaning radius (md) on white over beige page; explicit dark variant for forest sections.
+  badge-primary:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-800}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+    height: 24px
+
+  badge-success:
+    backgroundColor: "{colors.success-100}"
+    textColor: "{colors.success-800}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+    height: 24px
+
+  badge-warning:
+    backgroundColor: "{colors.warning-100}"
+    textColor: "{colors.warning-800}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+    height: 24px
+
+  badge-error:
+    backgroundColor: "{colors.error-100}"
+    textColor: "{colors.error-800}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+    height: 24px
+
+  badge-info:
+    backgroundColor: "{colors.info-100}"
+    textColor: "{colors.info-800}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.full}"
+    padding: 4px 12px
+    height: 24px
+
+  # Inputs — pill-leaning radius (md) on white over beige page; forest inverse for forest sections; error uses a 2px error-600 border (see §7 prose).
   input:
     backgroundColor: "{colors.white}"
     textColor: "{colors.neutral-900}"
@@ -386,36 +441,36 @@ components:
   input-focus:
     backgroundColor: "{colors.white}"
     textColor: "{colors.neutral-900}"
-  input-dark:
+  input-disabled:
+    backgroundColor: "{colors.neutral-100}"
+    textColor: "{colors.neutral-500}"
+  input-error:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.neutral-900}"
+  input-inverse:
     backgroundColor: "{colors.primary-800}"
     textColor: "{colors.neutral-50}"
-    typography: "{typography.body-md}"
-    rounded: "{rounded.md}"
-    padding: 14px 16px
-    height: 52px
 
-  # Tag / badge — pill, used for "8-week intensive", course modules, etc.
-  tag:
-    backgroundColor: "{colors.tertiary-100}"
-    textColor: "{colors.primary-800}"
-    typography: "{typography.label-sm}"
-    rounded: "{rounded.full}"
-    padding: 6px 14px
-
-  # Eyebrow label — uppercase tracked label that sits above headlines on beige/spotlight sections.
-  eyebrow:
-    textColor: "{colors.secondary-600}"
-    typography: "{typography.overline}"
-
-  # Highlighted keyword span — Caveat script applied to emphasized words inside a headline.
-  highlight-keyword:
-    textColor: "{colors.secondary-500}"
-    typography: "{typography.accent-script}"
-
-  # Nav bar — sits on beige page, transparent over hero, solid-beige when scrolled.
+  # Nav — beige bar at rest (transparent over hero, solid-beige when scrolled); deep-forest inverse for forest-section sticky nav.
   nav:
     backgroundColor: "{colors.neutral-100}"
     textColor: "{colors.primary-700}"
+    typography: "{typography.label-md}"
+    height: 80px
+    padding: 0 32px
+  nav-link:
+    backgroundColor: transparent
+    textColor: "{colors.primary-700}"
+    typography: "{typography.label-md}"
+    padding: 8px 12px
+  nav-link-active:
+    backgroundColor: transparent
+    textColor: "{colors.primary-900}"
+    typography: "{typography.label-md}"
+    padding: 8px 12px
+  nav-inverse:
+    backgroundColor: "{colors.primary-700}"
+    textColor: "{colors.neutral-50}"
     typography: "{typography.label-md}"
     height: 80px
     padding: 0 32px
@@ -682,7 +737,7 @@ Driven Entrepreneur lives at the **soft-rounded** end of the spectrum. The brand
 | `rounded.none`  | 0px      | Section dividers, image-strip elements |
 | `rounded.sm`    | 4px      | Tooltips, micro-tags within data displays |
 | `rounded.md`    | 10px     | Inputs, dropdowns, small cards within composites |
-| `rounded.lg`    | 16px     | Standard cards (card, card-beige, card-forest) |
+| `rounded.lg`    | 16px     | Standard cards (`card`, `card-elevated`, `card-feature`, `card-inverse`) |
 | `rounded.xl`    | 24px     | Spotlight cards, hero modules, modal containers |
 | `rounded.full`  | 9999px   | **All buttons, all tags, all chips, avatar masks** |
 
@@ -698,67 +753,95 @@ Driven Entrepreneur lives at the **soft-rounded** end of the spectrum. The brand
 
 ## 7. Component Stylings
 
-> All component definitions live in the front matter `components` block. The specs below explain the design intent; the YAML is the contract.
+> All component definitions live in the front matter `components` block. The specs below explain the design intent; the YAML is the contract. Brand-specific patterns outside the canonical taxonomy live in the **Prose recipes** subsections below — they are never added to the front matter as tokens (CONTEXT.md Meta-rule 5).
 
 ### Buttons
 
-The button system has one canonical primary, plus four supporting variants. **All buttons are pill-shaped (`rounded.full`).**
+Five canonical roles, each with `default / hover / active / disabled`. **All buttons are pill-shaped (`rounded.full`)** and 52px tall.
 
-#### Primary — Solar Gold pill (`button-primary`)
-- **Background**: `tertiary-300` (`#FFD50B`)
-- **Text**: `primary-700` (`#154847`)
-- **Padding**: 14px 32px • **Height**: 52px • **Radius**: `full`
-- **Hover**: background flips to `primary-700` deep forest, text flips to `tertiary-300` yellow — a color inversion, not a darken
-- **Pressed**: background `primary-800`, text yellow
-- **Disabled**: background `tertiary-100`, text `neutral-600`
+| Variant            | Background      | Text          | Padding   | Use |
+|--------------------|-----------------|---------------|-----------|-----|
+| `button-primary`   | `tertiary-300`  | `primary-700` | 14px 32px | **The** brand button — gold-pill conversion CTA. Hero, primary form submit, headline moment. |
+| `button-secondary` | `primary-700`   | `white`       | 14px 32px | Workaday non-headline button — "Continue", "Save", secondary form actions. Used when gold primary would compete. |
+| `button-outline`   | transparent     | `primary-700` | 14px 30px | Tertiary actions on beige — "skip", "see all modules", footer-as-buttons. |
+| `button-ghost`     | transparent     | `primary-700` | 14px 20px | Very low-priority — inline links-as-buttons, nav CTAs, "back" affordances. No stroke. |
+| `button-inverse`   | `white`         | `primary-700` | 14px 32px | Light treatment for dark forest sections / `card-inverse` / hero bands. |
 
-This is **the** brand button. The color inversion on hover is the signature interaction — it reads as the brand confidently reasserting its identity color when the user engages.
+The signature interaction is **`button-primary`'s color-inversion hover** — bg flips to `primary-700` deep forest and text flips to `tertiary-300` yellow. Read as the brand confidently reasserting its identity color when the user engages. The forest hover used on `button-secondary` / `button-outline` adds a small `tertiary-300` text shift on hover as a subtler yellow nudge.
 
-#### Forest CTA — Deep Forest pill (`button-forest`)
-- **Background**: `primary-700` • **Text**: `white`
-- Used when the primary yellow would compete visually — gold-tinted sections, hero modules where gold is already in play as a decorative accent.
-- **Hover**: background `primary-800`, text shifts to `tertiary-300` (small yellow nudge as feedback).
+#### Prose recipes — brand-specific button patterns
 
-#### Terracotta accent (`button-terracotta`)
-- **Background**: `secondary-400` • **Text**: `primary-900`
-- For warm secondary actions — affiliate links, bonus reveals, "learn more" on terracotta-tinted modules. Use sparingly; this is not a primary action color.
-
-#### Outline (`button-outline`, on beige) / (`button-outline-dark`, on forest)
-- Transparent fill, `primary-700` or `tertiary-300` stroke + text respectively, pill shape.
-- For tertiary actions — "skip", "see all modules", footer links presented as buttons.
-- Hover: background fills to the stroke color, text flips.
+- **Terracotta accent CTA** — `secondary-400` background, `primary-900` text, pill shape (`rounded.full`), 52px height. Hover deepens to `secondary-500` with white text. For warm secondary actions: affiliate links, bonus reveals, "learn more" on terracotta-tinted modules. Use sparingly — this is not a primary action color and isn't a canonical role.
+- **Outline on forest sections** — Adapt `button-outline` for `card-inverse` / `section-forest` backgrounds: transparent fill with `tertiary-300` gold stroke and text. Hover fills to `tertiary-300` gold with `primary-700` text. Same dimensions as `button-outline`; the inverse-surface adaptation is a styling override, not a separate token (CONTEXT.md: "Links inside [nav-inverse] auto-adapt").
 
 ### Cards & Containers
 
-| Variant            | Background          | Text             | Radius      | Shadow      | Use |
-|--------------------|---------------------|------------------|-------------|-------------|-----|
-| `card`             | `white`             | `neutral-900`    | `lg` (16px) | `sm`        | Default card on beige page |
-| `card-beige`       | `neutral-50`        | `neutral-900`    | `lg`        | `xs`        | Secondary card; lighter lift than white |
-| `card-forest`      | `primary-700`       | `neutral-50`     | `lg`        | none (border) | Card on forest section; 1px `primary-800` border |
-| `card-spotlight`   | `white`             | `neutral-900`    | `xl` (24px) | `2xl`       | Hero spotlight card — one per page max |
+Four canonical roles. Cards do not have states (`hover`/`active`/`disabled`); clickable card patterns are documented as prose recipes.
 
-### Section Backgrounds
+| Variant          | Background       | Text          | Radius      | Shadow / Border | Use |
+|------------------|------------------|---------------|-------------|-----------------|-----|
+| `card`           | `white`          | `neutral-900` | `lg` (16px) | `sm` shadow or 1px `neutral-300` border (not both) | Default card on the beige page. |
+| `card-elevated`  | `neutral-50`     | `neutral-900` | `lg`        | `md` shadow at rest | More prominent variant — lifts off the beige with a subtle off-white tonal step plus a slightly deeper shadow. For cards on tinted bands or competing with surrounding content. |
+| `card-feature`   | `tertiary-50`    | `primary-900` | `lg`        | none            | Tinted-emphasis card — "Why X" benefit blocks, offer reveals, bonus modules. Gold tint is brand-aligned and matches `section-gold-tint`. |
+| `card-inverse`   | `primary-700`    | `neutral-50`  | `lg`        | 1px `primary-800` border (no shadow) | Card on forest sections, or a dark card on the beige page. Border-only separation per the brand's shadow-on-dark prohibition. |
 
-First-class component tokens because section-rhythm IS the brand:
+#### Prose recipes — brand-specific card patterns
 
-- **`section-beige`** (`neutral-100`) — default. Most sections.
-- **`section-forest`** (`primary-700`) — every 2nd or 3rd section, plus footer.
-- **`section-spotlight`** (`white`) — the rare "stop and read this" module.
-- **`section-gold-tint`** (`tertiary-50`) — bonus modules, offer reveals.
+- **Spotlight card** — `card`-shaped but `rounded.xl` (24px), `2xl` shadow, 40px padding (vs the default 32px), `white` background. Reserved for **one** card per page maximum — the hero spotlight for a flagship testimonial, the headline product CTA, or the offer-reveal moment. Drops to `rounded.lg` and `lg` shadow at md and below. This is the brand's single permitted dramatic-elevation moment; overuse erodes the brand's restraint.
+
+- **Section backgrounds (beige / forest / spotlight / gold-tint)** — Section-rhythm is a brand signature, but section surfaces are page-layout patterns, not component tokens (Meta-rule 5). Apply them as wrappers using the surface aliases:
+    - `surface` → `neutral-100` beige — **default page**, most sections, 96px top/bottom padding.
+    - `surface-dark` → `primary-700` forest — every 2nd or 3rd section, plus footer.
+    - `surface-spotlight` → `white` — the rare "stop and read this" module.
+    - `surface-gold-tint` → `tertiary-50` — bonus modules, offer reveals.
+
+  The intentional rhythm — beige → forest → beige → spotlight — is the brand's structural signature; plan it before writing components.
+
+### Badges
+
+Six canonical roles. Pill (`rounded.full`), `label-sm` typography, 4px/12px padding, 24px height. Status tones map to the standardized semantic palette.
+
+| Variant          | Background       | Text          | Use |
+|------------------|------------------|---------------|-----|
+| `badge`          | `neutral-200`    | `neutral-800` | Base / neutral. Default muted label. |
+| `badge-primary`  | `primary-100`    | `primary-800` | Forest-tinted brand label — high-emphasis non-status label. |
+| `badge-success`  | `success-100`    | `success-800` | Tailwind green — system success state. |
+| `badge-warning`  | `warning-100`    | `warning-800` | Tailwind yellow — system warning. |
+| `badge-error`    | `error-100`      | `error-800`   | Tailwind red — system error. |
+| `badge-info`     | `info-100`       | `info-800`    | Tailwind blue — system info. |
+
+#### Prose recipes — brand-specific badge patterns
+
+- **Gold module tag** — `tertiary-100` background, `primary-800` text, `label-sm`, pill, 6px/14px padding. For "8-week intensive," course module labels, structured-content tags where the gold accent reads as the brand's attention currency. Distinct from `badge-primary` (forest-tinted brand emphasis) and `badge-warning` (system yellow). One per row maximum; this is a salient label, not running metadata.
+- **Brand-cohesive scarcity callouts** — For scarcity / urgency badges that need brand alignment (instead of system `warning`), use a `tertiary-300` background with `primary-900` text at `label-sm`. Reserved for headline-adjacent moments only.
 
 ### Inputs & Forms
 
-- **`input`**: white background, `neutral-300` border, `rounded.md` (10px), 14px/16px padding, 52px height. Focus ring uses `info-500` 3px outer ring.
-- **`input-dark`**: `primary-800` background with `neutral-50` text — used on forest signup modules.
+Five canonical roles. Inputs share `52px` height with CTAs for tidy form alignment.
+
+| Variant          | Background        | Text          | Radius      | Notes |
+|------------------|-------------------|---------------|-------------|-------|
+| `input`          | `white`           | `neutral-900` | `md` (10px) | 1px `neutral-300` border at rest. |
+| `input-focus`    | `white`           | `neutral-900` | `md`        | 3px `info-500` (`#3B82F6`) outer focus ring + `primary-700` border. |
+| `input-disabled` | `neutral-100`     | `neutral-500` | `md`        | 1px `neutral-200` border; placeholder fades to `neutral-400`. |
+| `input-error`    | `white`           | `neutral-900` | `md`        | **2px `error-600` border**, helper text in `error-700` below the input. |
+| `input-inverse`  | `primary-800`     | `neutral-50`  | `md`        | For forest signup modules / hero bands; placeholder in `neutral-300`, focus ring stays `info-500`. |
+
+- Labels use `label-md` above the input — never inside as floating labels. This brand reads as premium, not Material Design.
 - Inputs and CTAs share `52px` height for tidy form alignment.
-- Labels use `label-md` above the input (never inside as floating labels — this brand reads as premium, not Material Design).
 
 ### Navigation
 
-- Transparent over the hero, solidifies to `neutral-100` (`section-beige`) on scroll.
-- Logo on the left, links centered or right-aligned at desktop, primary `button-primary` CTA on the far right.
-- Mobile: hamburger left, logo center, no CTA in collapsed bar (CTA shows in the slide-out menu).
-- Nav height: 80px desktop, 64px mobile.
+Four canonical roles. The bar itself, the links inside, the active state of those links, and the inverse-surface variant.
+
+| Variant           | Background         | Text          | Notes |
+|-------------------|--------------------|---------------|-------|
+| `nav`             | `neutral-100`      | `primary-700` | 80px desktop / 64px mobile. Transparent over hero, solidifies to `neutral-100` on scroll. |
+| `nav-link`        | transparent        | `primary-700` | `label-md`, 8px/12px padding. Hover deepens to `primary-600`. |
+| `nav-link-active` | transparent        | `primary-900` | Current-page state. The brand also pairs a 2px `secondary-500` terracotta underline mark with the active link as an editorial gesture (styling override, not a separate token). |
+| `nav-inverse`     | `primary-700`      | `neutral-50`  | Forest-section sticky nav / footer-anchored nav. Active link inside flips to `tertiary-300` gold to pop against the dark. |
+
+Layout: logo on the left, links centered or right-aligned at desktop, primary `button-primary` CTA on the far right. Mobile: hamburger left, logo center, no CTA in collapsed bar (CTA shows in the slide-out menu).
 
 ### Image Treatment
 
@@ -775,8 +858,7 @@ The Difference Between [Driven] and Just Busy
        (Albert Sans 600)  (Caveat 600, secondary-500)
 ```
 
-Specs:
-- The keyword wrap: `<span class="highlight-keyword">…</span>`
+Specs (prose recipe — not a front-matter component token; this is a typography pattern applied as a `<span class="highlight-keyword">` or similar inline wrapper):
 - Albert Sans `headline-lg` at 48px → Caveat at 64px for visual parity (Caveat's optical size runs small)
 - Color: `secondary-500` (`#AB5C3C`) by default, occasionally `tertiary-300` for high-contrast moments on forest sections
 - One keyword per headline. Two is loud. Three breaks the brand.
@@ -808,8 +890,9 @@ Specs:
 6. **Don't pair white CTAs with white pages.** This brand doesn't have a white-on-white pattern; if you need a low-volume CTA on white, use `button-outline` with a `primary-700` stroke.
 7. **Don't use `warning-500` Tailwind yellow** for brand-aligned scarcity/urgency callouts — use `tertiary-300` gold or `tertiary-50` tinted background. The Tailwind warning yellow reads as system UI, not Robert.
 8. **Don't shadow the dark forest sections.** Use borders or tonal-layer separation (`primary-800` on `primary-700`).
-9. **Don't stack two yellow CTAs vertically.** If two actions need to share a column, one is gold (`button-primary`) and the other is forest (`button-forest`) or outline.
+9. **Don't stack two yellow CTAs vertically.** If two actions need to share a column, one is gold (`button-primary`) and the other is forest (`button-secondary`) or outline.
 10. **Don't add a fourth brand color.** Three is the system. New accents come from extending the existing palettes via numbered steps.
+11. **Don't invent brand-named tokens** like `button-forest`, `card-beige`, `tag`, or `section-gold-tint`. Per CONTEXT.md Meta-rule 1, component tokens are role-based (`button-primary`, `card-feature`, `badge`, `card-inverse`), not color-named. Brand-specific patterns — terracotta accent CTAs, outline-on-forest, the spotlight card, section backgrounds, the gold module tag, the highlight-keyword span — live in §7 as **prose recipes**, never as front-matter tokens.
 
 ---
 
@@ -878,11 +961,13 @@ Specs:
 
 ### Example Component Prompts
 
-1. **"Build a hero section using the `section-forest` background, a `display` headline in `neutral-50` white with one keyword wrapped in `highlight-keyword` (Caveat, `tertiary-300` gold), `body-lg` subhead in `neutral-200`, and a `button-primary` pill CTA (`tertiary-300` background, `primary-700` text, `rounded.full`)."**
-2. **"Create a 3-up testimonial grid on `section-beige` using the `card` component (white background, `rounded.lg` 16px, `sm` shadow, 32px padding). Each card has a 56px circular avatar, `headline-sm` quote, and `caption` attribution in `neutral-600`."**
-3. **"Build a course-modules list using `card-forest` (background `primary-700`, text `neutral-50`, `rounded.lg`, 1px `primary-800` border, no shadow). Each module has an `overline` eyebrow ('MODULE 01'), `headline-sm` title, and `body-md` description."**
-4. **"Add an offer-reveal block using `section-gold-tint` (`tertiary-50` bg), `headline-lg` headline in `primary-900`, a single `button-primary` solar-gold CTA, and a `pull-quote` Caveat line below the CTA in `secondary-600` terracotta."**
-5. **"Style the email signup form: `input` component (white bg, `neutral-300` border, `rounded.md`, 52px height) plus `button-primary` CTA on the right, both 52px tall, with a 12px gap. Add a `label-sm` privacy line below in `neutral-500`."**
+1. **"Build a hero section on the forest section background (`surface-dark` = `primary-700` — apply as a layout wrapper per §7 'Section backgrounds' prose recipe), a `display` headline in `neutral-50` white with one keyword styled via the highlight-keyword prose recipe (Caveat at `tertiary-300` gold), `body-lg` subhead in `neutral-200`, and a `button-primary` pill CTA (`tertiary-300` background, `primary-700` text, `rounded.full`)."**
+2. **"Create a 3-up testimonial grid on the beige page (`surface` = `neutral-100` — default background) using the `card` component (white background, `rounded.lg` 16px, `sm` shadow, 32px padding). Each card has a 56px circular avatar, `headline-sm` quote, and `caption` attribution in `neutral-600`."**
+3. **"Build a course-modules list using `card-inverse` (background `primary-700`, text `neutral-50`, `rounded.lg`, 1px `primary-800` border, no shadow). Each module has an `overline` eyebrow ('MODULE 01'), `headline-sm` title, and `body-md` description."**
+4. **"Add an offer-reveal block using `card-feature` (`tertiary-50` gold-tint bg, `primary-900` text, `rounded.lg`, 32px padding), `headline-lg` headline, a single `button-primary` solar-gold CTA, and a `pull-quote` Caveat line below the CTA in `secondary-600` terracotta. Wrap the section in `surface-gold-tint` for a full-bleed gold-tinted band per the section-backgrounds prose recipe."**
+5. **"Style the email signup form: `input` component (white bg, `neutral-300` border, `rounded.md`, 52px height) plus `button-primary` CTA on the right, both 52px tall, with a 12px gap. Add a `label-sm` privacy line below in `neutral-500`. For the validation-error state, swap the input to `input-error` (2px `error-600` border with `error-700` helper text)."**
+6. **"Build a sticky nav using the `nav` token (`neutral-100` bg, `primary-700` text, 80px) with `nav-link` items and a single active link styled via `nav-link-active` (`primary-900` text plus 2px `secondary-500` terracotta underline). For the forest-section variant, swap to `nav-inverse` (`primary-700` bg, `neutral-50` links) and let the active link inside flip to `tertiary-300` gold."**
+7. **"Add a dark testimonial band: wrap in `surface-dark` (`primary-700`), place a `card-inverse` testimonial with a `button-inverse` 'Read more' CTA, and pair an `input-inverse` newsletter capture (`primary-800` bg, `neutral-50` text) with a `button-primary` gold submit pill."**
 
 ### Iteration Guide
 

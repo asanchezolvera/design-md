@@ -23,6 +23,9 @@ Driven Entrepreneur is the personal-knowledge brand of Shark Tank investor Rober
 - Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#154847, secondary=#D58261, tertiary=#FFD50B, surface=#F4F4F0, text=#1D1D16, focus=#3B82F6 (full 11-step OKLCH palettes, surfaces, borders, and gradients in [./DESIGN.md](./DESIGN.md))
 - Spacing scale: 8/12/16/24/32/48/64/96/128
 
+## Component Tokens
+Driven Entrepreneur conforms to the canonical taxonomies in [../../CONTEXT.md](../../CONTEXT.md): `button-{primary, secondary, outline, ghost, inverse}`, `card{-elevated, -feature, -inverse}`, `badge{-primary, -success, -warning, -error, -info}`, `input{-focus, -disabled, -error, -inverse}`, `nav{-link, -link-active, -inverse}`. Note that the brand's `button-primary` is Solar Gold (the conversion CTA) and `button-secondary` is Deep Forest (the workhorse non-headline button) — gold is the action, forest is the identity. Brand-specific variants (terracotta accent CTA, outline-on-forest adaptation, spotlight card, section backgrounds, gold module tag, the highlight-keyword Caveat span) live as **prose recipes** in DESIGN.md §7, never as new front-matter tokens.
+
 ## Accessibility
 WCAG 2.2 AA, keyboard-first interactions, visible focus states using `#3B82F6` focus ring, minimum 44px touch targets
 
@@ -32,18 +35,18 @@ mentor-led, earned, considered, premium, warm, library-quiet, confident, restrai
 ## Rules: Do
 - default the page to `neutral-100` beige (`#F4F4F0`), never white
 - pill every CTA with `rounded.full` and a 52px height
-- pair `tertiary-300` gold backgrounds with `primary-700` deep-forest text
-- alternate `section-beige` and `section-forest` down the page as the structural signature
+- pair `tertiary-300` gold backgrounds with `primary-700` deep-forest text — the canonical CTA contrast
+- alternate beige and forest section backgrounds down the page as the brand's structural signature
 - use Caveat surgically — one keyword per headline in `secondary-500` terracotta
 - keep section padding at 96px minimum, push to 128px for hero modules
 
 ## Rules: Don't
+- avoid inventing brand-named tokens (`button-forest`, `button-terracotta`, `card-beige`, `card-forest`, `tag`, `section-forest`, `section-gold-tint`) — component tokens are role-based per CONTEXT.md Meta-rule 1; brand-color variants and pattern blocks live as prose recipes in DESIGN.md §7
 - avoid pure black text — use `neutral-900` (`#1D1D16`) or `primary-700` instead
 - avoid square-cornered buttons; pill or it isn't a Driven Entrepreneur button
 - avoid running Caveat as body copy or full headlines
 - avoid gradient washes across primary, secondary, or tertiary palettes
 - avoid Tailwind `warning-500` for scarcity callouts — reach for `tertiary-300` gold
-- avoid shadows on forest sections; use a 1px `primary-800` border instead
 
 ## Expected Behavior
 - Follow the foundations first, then component consistency.
