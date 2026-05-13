@@ -23,6 +23,9 @@ Gundry MD occupies the intersection of clinical authority and approachable vital
 - Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#2945B8, secondary=#C2E329, tertiary=#FFA082, surface=#FFFFFF, text=#111827, focus=#3B82F6 (full 11-step OKLCH palettes, surfaces, borders, and gradients in [./DESIGN.md](./DESIGN.md))
 - Spacing scale: 6/8/12/16/20/24/28/32
 
+## Component Tokens
+Gundry MD conforms to the canonical taxonomies in [../../CONTEXT.md](../../CONTEXT.md): `button-{primary, secondary, outline, ghost, inverse}`, `card{-elevated, -feature, -inverse}`, `badge{-primary, -success, -warning, -error, -info}`, `input{-focus, -disabled, -error, -inverse}`, `nav{-link, -link-active, -inverse}`. Brand-specific variants (neutral utility button, supplement-facts card, Dr. Gundry quote block, trust badge bar, lime promo badge, coral feature badge, modal container, textarea) live as **prose recipes** in DESIGN.md §7, never as new front-matter tokens.
+
 ## Accessibility
 WCAG 2.2 AA, keyboard-first interactions, visible focus states using `#3B82F6` focus ring, minimum 44px touch targets
 
@@ -38,6 +41,7 @@ authoritative, editorial, energetic, approachable, confident, modern, scannable,
 - reserve uppercase for `button-label` and `overline` tokens only
 
 ## Rules: Don't
+- avoid inventing brand-named tokens (`button-cobalt`, `card-coral`, `badge-lime`) — component tokens are role-based per CONTEXT.md Meta-rule 1; brand-color variants live as prose recipes in DESIGN.md §7
 - avoid secondary-400 lime for body text — fails WCAG contrast; use secondary-700 or darker
 - avoid Lora in body paragraphs, UI labels, or buttons — Lora is headings and pull quotes only
 - avoid square or slightly rounded buttons — the pill shape is system-wide and non-negotiable
