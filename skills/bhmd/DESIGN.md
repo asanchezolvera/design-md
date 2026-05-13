@@ -276,28 +276,9 @@ components:
   button-secondary-active:
     backgroundColor: "{colors.secondary-500}"
     textColor: "{colors.neutral-50}"
-
-  button-light:
-    backgroundColor: "{colors.white}"
-    textColor: "{colors.primary-800}"
-    typography: "{typography.label-md}"
-    rounded: "{rounded.full}"
-    padding: 14px 32px
-    height: 48px
-  button-light-hover:
-    backgroundColor: "{colors.neutral-100}"
-    textColor: "{colors.primary-900}"
-
-  button-dark:
-    backgroundColor: "{colors.neutral-900}"
-    textColor: "{colors.neutral-50}"
-    typography: "{typography.label-md}"
-    rounded: "{rounded.full}"
-    padding: 14px 32px
-    height: 48px
-  button-dark-hover:
-    backgroundColor: "{colors.neutral-950}"
-    textColor: "{colors.neutral-50}"
+  button-secondary-disabled:
+    backgroundColor: "{colors.secondary-100}"
+    textColor: "{colors.secondary-400}"
 
   button-outline:
     backgroundColor: "{colors.white}"
@@ -309,9 +290,54 @@ components:
   button-outline-hover:
     backgroundColor: "{colors.primary-50}"
     textColor: "{colors.primary-900}"
+  button-outline-active:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-900}"
+  button-outline-disabled:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.neutral-400}"
+
+  button-ghost:
+    backgroundColor: transparent
+    textColor: "{colors.primary-800}"
+    typography: "{typography.label-md}"
+    rounded: "{rounded.full}"
+    padding: 14px 20px
+  button-ghost-hover:
+    backgroundColor: "{colors.primary-50}"
+    textColor: "{colors.primary-900}"
+  button-ghost-active:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-900}"
+  button-ghost-disabled:
+    backgroundColor: transparent
+    textColor: "{colors.neutral-400}"
+
+  button-inverse:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.primary-800}"
+    typography: "{typography.label-md}"
+    rounded: "{rounded.full}"
+    padding: 14px 32px
+    height: 48px
+  button-inverse-hover:
+    backgroundColor: "{colors.neutral-100}"
+    textColor: "{colors.primary-900}"
+  button-inverse-active:
+    backgroundColor: "{colors.neutral-200}"
+    textColor: "{colors.primary-900}"
+  button-inverse-disabled:
+    backgroundColor: "{colors.neutral-200}"
+    textColor: "{colors.neutral-500}"
 
   card:
     backgroundColor: "{colors.white}"
+    textColor: "{colors.neutral-900}"
+    rounded: "{rounded.md}"
+    padding: 32px
+
+  card-elevated:
+    backgroundColor: "{colors.neutral-50}"
     textColor: "{colors.neutral-900}"
     rounded: "{rounded.md}"
     padding: 32px
@@ -322,11 +348,53 @@ components:
     rounded: "{rounded.md}"
     padding: 48px
 
-  card-dark:
+  card-inverse:
     backgroundColor: "{colors.primary-800}"
     textColor: "{colors.neutral-50}"
     rounded: "{rounded.md}"
     padding: 48px
+
+  badge:
+    backgroundColor: "{colors.neutral-100}"
+    textColor: "{colors.neutral-800}"
+    typography: "{typography.overline}"
+    rounded: "{rounded.full}"
+    padding: 6px 12px
+
+  badge-primary:
+    backgroundColor: "{colors.primary-100}"
+    textColor: "{colors.primary-900}"
+    typography: "{typography.overline}"
+    rounded: "{rounded.full}"
+    padding: 6px 12px
+
+  badge-success:
+    backgroundColor: "{colors.success-100}"
+    textColor: "{colors.success-800}"
+    typography: "{typography.overline}"
+    rounded: "{rounded.full}"
+    padding: 6px 12px
+
+  badge-warning:
+    backgroundColor: "{colors.warning-100}"
+    textColor: "{colors.warning-800}"
+    typography: "{typography.overline}"
+    rounded: "{rounded.full}"
+    padding: 6px 12px
+
+  badge-error:
+    backgroundColor: "{colors.error-100}"
+    textColor: "{colors.error-800}"
+    typography: "{typography.overline}"
+    rounded: "{rounded.full}"
+    padding: 6px 12px
+
+  badge-info:
+    backgroundColor: "{colors.info-100}"
+    textColor: "{colors.info-800}"
+    typography: "{typography.overline}"
+    rounded: "{rounded.full}"
+    padding: 6px 12px
 
   input:
     backgroundColor: "{colors.white}"
@@ -341,33 +409,35 @@ components:
   input-disabled:
     backgroundColor: "{colors.neutral-100}"
     textColor: "{colors.neutral-600}"
+  input-error:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.neutral-900}"
+  input-inverse:
+    backgroundColor: "{colors.primary-900}"
+    textColor: "{colors.neutral-50}"
 
-  navigation:
+  nav:
     backgroundColor: "{colors.white}"
     textColor: "{colors.primary-800}"
     typography: "{typography.label-md}"
     padding: 24px 48px
     height: 80px
-
-  badge:
-    backgroundColor: "{colors.secondary-100}"
-    textColor: "{colors.secondary-900}"
-    typography: "{typography.overline}"
-    rounded: "{rounded.full}"
-    padding: 6px 12px
-
-  badge-primary:
-    backgroundColor: "{colors.primary-100}"
-    textColor: "{colors.primary-900}"
-    typography: "{typography.overline}"
-    rounded: "{rounded.full}"
-    padding: 6px 12px
-
-  modal:
-    backgroundColor: "{colors.white}"
+  nav-link:
+    backgroundColor: transparent
     textColor: "{colors.neutral-900}"
-    rounded: "{rounded.md}"
-    padding: 48px
+    typography: "{typography.label-md}"
+    padding: 8px 12px
+  nav-link-active:
+    backgroundColor: transparent
+    textColor: "{colors.primary-800}"
+    typography: "{typography.label-md}"
+    padding: 8px 12px
+  nav-inverse:
+    backgroundColor: "{colors.primary-800}"
+    textColor: "{colors.neutral-50}"
+    typography: "{typography.label-md}"
+    padding: 24px 48px
+    height: 80px
 ---
 
 # Beverly Hills MD
@@ -687,56 +757,71 @@ When separation is needed without shadow, prefer:
 
 ## 7. Component Stylings
 
-Every component below is mirrored in the front matter `components` block using token references. The prose specs are the human-readable explanation; the YAML is the contract.
+The prose specs below explain the *why*; the front matter's `components` block holds the machine-readable definitions. Both must agree. Component tokens follow the canonical taxonomies in [CONTEXT.md](../../CONTEXT.md); brand-specific patterns outside those taxonomies are documented as **prose recipes** in this section.
 
 ### Buttons
 
-Five variants. All share `rounded.full` (pill) corners, `label-md` typography, 48px height, and 14px × 32px padding — wider than the SaaS norm to give buttons editorial weight. The pill shape is a deliberate softening note inside the system's otherwise architectural geometry.
+Five canonical variants. All share `rounded.full` (pill) corners, `label-md` typography, 48px height, and 14px × 32px padding (the `button-ghost` variant pulls horizontal padding back to 20px) — wider than the SaaS norm to give buttons editorial weight. The pill shape is a deliberate softening note inside the system's otherwise architectural geometry.
 
-| Variant            | Background                         | Text                               | Hover Background                   | Active Background                  | Personality                                                              |
-| ------------------ | ---------------------------------- | ---------------------------------- | ---------------------------------- | ---------------------------------- | ------------------------------------------------------------------------ |
-| `button-primary`   | `{colors.primary-800}` `#233354`   | `{colors.neutral-50}` `#F9FAFB`    | `{colors.primary-900}` `#1B222F`   | `{colors.primary-950}` `#0B0F18`   | The default CTA. Deep, declarative, magazine-masthead authority.         |
-| `button-secondary` | `{colors.secondary-300}` `#EAAB9F` | `{colors.secondary-900}` `#301B17` | `{colors.secondary-400}` `#C1887D` | `{colors.secondary-500}` `#9C6359` | Romantic, skin-toned. For warmer brand moments — newsletters, lifestyle. |
-| `button-light`     | `{colors.white}` `#FFFFFF`         | `{colors.primary-800}` `#233354`   | `{colors.neutral-100}` `#F3F4F6`   | —                                  | For dark/photographic backgrounds. White-on-image legibility.            |
-| `button-dark`      | `{colors.neutral-900}` `#111827`   | `{colors.neutral-50}` `#F9FAFB`    | `{colors.neutral-950}` `#030712`   | —                                  | For non-brand-anchored CTAs (utility actions, secondary site sections).  |
-| `button-outline`   | `{colors.white}` `#FFFFFF`         | `{colors.primary-800}` `#233354`   | `{colors.primary-50}` `#F4F7FC`    | —                                  | The quietest button. 1px navy border. For tertiary actions.              |
+| Variant            | Background                         | Text                               | Hover Background                   | Active Background                  | Personality                                                                                  |
+| ------------------ | ---------------------------------- | ---------------------------------- | ---------------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------- |
+| `button-primary`   | `{colors.primary-800}` `#233354`   | `{colors.neutral-50}` `#F9FAFB`    | `{colors.primary-900}` `#1B222F`   | `{colors.primary-950}` `#0B0F18`   | The conversion CTA. Deep navy, declarative, magazine-masthead authority.                     |
+| `button-secondary` | `{colors.secondary-300}` `#EAAB9F` | `{colors.secondary-900}` `#301B17` | `{colors.secondary-400}` `#C1887D` | `{colors.secondary-500}` `#9C6359` | The workaday button. Romantic, skin-toned. For non-headline actions — "Save," "Continue."    |
+| `button-outline`   | `{colors.white}` `#FFFFFF`         | `{colors.primary-800}` `#233354`   | `{colors.primary-50}` `#F4F7FC`    | `{colors.primary-100}` `#E4EAF4`   | The quietest filled button. 1px navy border. For tertiary actions sitting near a primary CTA. |
+| `button-ghost`     | transparent                        | `{colors.primary-800}` `#233354`   | `{colors.primary-50}` `#F4F7FC`    | `{colors.primary-100}` `#E4EAF4`   | Transparent. For inline links-as-buttons, low-emphasis nav items, tertiary actions.          |
+| `button-inverse`   | `{colors.white}` `#FFFFFF`         | `{colors.primary-800}` `#233354`   | `{colors.neutral-100}` `#F3F4F6`   | `{colors.neutral-200}` `#E5E7EB`   | The light treatment for dark surfaces — white on navy hero bands, dark photography.          |
 
-Disabled state: `button-primary-disabled` uses `primary-200` background with `primary-700` text — readable but unmistakably inactive.
+Disabled state: `button-primary-disabled` uses `primary-200` background with `primary-700` text — readable but unmistakably inactive. The other variants follow the same logic (muted background, low-contrast text) — see the front matter for exact tokens.
+
+#### Prose recipes (brand-specific button patterns)
+
+- **Neutral utility button** — when a non-brand-anchored CTA is needed (utility actions, secondary site sections, account/settings UI), render a `button-primary`-shaped element with `neutral-900` (`#111827`) background and `neutral-50` text. Hover deepens to `neutral-950`. Same typography, radius, padding, and 48px height. Use sparingly: when both `button-primary` (navy) and a near-black utility CTA appear in the same view, the editorial restraint reads cluttered. Reserve for chrome and account screens where the navy would feel out of place.
 
 ### Cards & Containers
 
-Three card variants, all with tight radii and zero default shadow.
+Four canonical card variants, all with tight radii and zero default shadow.
 
-| Variant        | Background                       | Text                             | Padding | Border                                                |
-| -------------- | -------------------------------- | -------------------------------- | ------- | ----------------------------------------------------- |
-| `card`         | `{colors.white}` `#FFFFFF`       | `{colors.neutral-900}` `#111827` | 32px    | `1px solid {colors.neutral-200}` (`#E5E7EB`) hairline |
-| `card-feature` | `{colors.tertiary-50}` `#EDF5F8` | `{colors.primary-800}` `#233354` | 48px    | None — tonal separation from the page bg              |
-| `card-dark`    | `{colors.primary-800}` `#233354` | `{colors.neutral-50}` `#F9FAFB`  | 48px    | None                                                  |
+| Variant         | Background                       | Text                             | Padding | Treatment                                                                |
+| --------------- | -------------------------------- | -------------------------------- | ------- | ------------------------------------------------------------------------ |
+| `card`          | `{colors.white}` `#FFFFFF`       | `{colors.neutral-900}` `#111827` | 32px    | `1px solid {colors.neutral-200}` (`#E5E7EB`) hairline. No shadow.        |
+| `card-elevated` | `{colors.neutral-50}` `#F9FAFB`  | `{colors.neutral-900}` `#111827` | 32px    | Tonal lift via off-white background. Optional `xs` shadow on tinted bands. |
+| `card-feature`  | `{colors.tertiary-50}` `#EDF5F8` | `{colors.primary-800}` `#233354` | 48px    | None — tonal separation from the page bg.                                |
+| `card-inverse`  | `{colors.primary-800}` `#233354` | `{colors.neutral-50}` `#F9FAFB`  | 48px    | None.                                                                    |
 
-All cards use `rounded.md` (4px). For a dark card on a light page, no border — the tonal contrast is the separation. For a light card on a light page, the hairline border (or `tertiary-50` background) does the work shadow usually would.
+All cards use `rounded.md` (4px). For a dark card on a light page, no border — the tonal contrast is the separation. For a light card on a light page, the hairline border (or a `tertiary-50` background) does the work shadow usually would. `card-elevated` exists for cards sitting on tinted section bands (`tertiary-50`, `secondary-50`) where pure white needs slight differentiation but the brand still rejects floaty shadows; the off-white background and an optional `xs` shadow handle it.
+
+#### Prose recipes (brand-specific card patterns)
+
+- **Editorial pull-quote card** — for long-form content (founder stories, ingredient deep-dives), render a `card`-shaped element with `body-serif` typography (Playfair Display 18px italic), `primary-800` text, a 1px navy left border (`primary-800`), and 24px left padding. No quotation marks — the typographic shift is the only signal needed.
 
 ### Inputs & Forms
 
-| Spec           | Value                                        |
-| -------------- | -------------------------------------------- |
-| Background     | `{colors.white}` `#FFFFFF`                   |
-| Text           | `{colors.neutral-900}` `#111827`             |
-| Placeholder    | `{colors.neutral-500}` `#6B7280`             |
-| Border         | `1px solid {colors.neutral-300}` (`#D1D5DB`) |
-| Border (focus) | `2px solid {colors.primary-800}` (`#233354`) |
-| Focus ring     | `0 0 0 3px {colors.info-500}` at 20% opacity |
-| Radius         | `rounded.sm` (2px)                           |
-| Padding        | 14px × 16px                                  |
-| Height         | 48px                                         |
-| Typography     | `body-md` (Libre Franklin 16px)              |
+| Spec           | Value                                                      |
+| -------------- | ---------------------------------------------------------- |
+| Background     | `{colors.white}` `#FFFFFF`                                 |
+| Text           | `{colors.neutral-900}` `#111827`                           |
+| Placeholder    | `{colors.neutral-500}` `#6B7280`                           |
+| Border         | `1px solid {colors.neutral-300}` (`#D1D5DB`)               |
+| Border (focus) | `2px solid {colors.primary-800}` (`#233354`)               |
+| Focus ring     | `0 0 0 3px {colors.info-500}` at 20% opacity               |
+| Radius         | `rounded.sm` (2px)                                         |
+| Padding        | 14px × 16px                                                |
+| Height         | 48px                                                       |
+| Typography     | `body-md` (Libre Franklin 16px)                            |
 
-Disabled inputs use `neutral-100` background with `neutral-600` text. Error inputs add a `2px solid {colors.error-600}` border with `error-600` helper text below.
+- **`input-focus`** — border swaps to `2px solid {colors.primary-800}` with the `info-500` focus ring at 20% opacity.
+- **`input-disabled`** — `neutral-100` background, `neutral-600` text.
+- **`input-error`** — same white background and `neutral-900` text as default, with a `2px solid {colors.error-600}` border and an `error-600` helper-text line below at `caption` typography.
+- **`input-inverse`** — for inputs sitting inside a `nav-inverse` bar or a `card-inverse` dark hero band. `primary-900` background, `neutral-50` text, 1px `primary-700` border. Focus brightens border to `neutral-50`.
 
 ### Navigation
 
-The site nav stays understated to keep the brand voice editorial. White background, 80px tall on desktop, with 48px horizontal padding. Logo left, nav links centered or right-aligned, primary CTA right-aligned. Nav links use `label-md` (Libre Franklin 14px, weight 500, +0.02em tracking). Hover state: text color shifts from `neutral-900` to `primary-800` — no underline animation, no chip background. The brand whispers; the nav whispers.
+The site nav stays understated to keep the brand voice editorial.
 
-A 1px hairline border at `neutral-200` separates the nav from the page content. Sticky nav uses the same treatment, no shadow added on scroll.
+- **`nav`** — the bar/container. White background, `primary-800` text, 80px tall on desktop, 24px / 48px padding. Logo left, nav links centered or right-aligned, primary CTA right-aligned. A 1px hairline border at `neutral-200` separates the nav from the page content. Sticky nav uses the same treatment — no shadow added on scroll.
+- **`nav-link`** — link styling inside the nav. `label-md` typography (Libre Franklin 14px, weight 500, +0.02em tracking), `neutral-900` text on light nav (auto-adapts to `neutral-50` inside `nav-inverse`), transparent background, 8px / 12px padding. Hover dims to `primary-800` — no underline animation, no chip background.
+- **`nav-link-active`** — active / current-page link. Same metrics as `nav-link`, but text swaps to `primary-800` and a 1px `primary-800` bottom border sits under the label.
+- **`nav-inverse`** — `primary-800` navy background, `neutral-50` text, same dimensions as `nav`. For dark-themed marketing pages or sections where the full-screen mobile nav overlay drops in. Links inside auto-adapt: text reads `neutral-50` instead of `neutral-900`; active state stays `primary-800`-anchored but renders as `secondary-300` blush so it pops against the navy.
 
 ### Image Treatment
 
@@ -750,11 +835,15 @@ Editorial photography is the visual hero. Default treatment:
 
 ### Distinctive Components
 
-**Editorial Pull-Quote.** Used in long-form content (founder stories, ingredient deep-dives). Playfair Display at `body-serif` (18px, italicized via the body-serif treatment), color `primary-800`, with a 1px navy left border (`primary-800`) and 24px left padding. No quotation marks — the typographic shift is the only signal needed.
+- **`badge`** (base) — `neutral-100` background with `neutral-800` text. The default low-emphasis label.
+- **`badge-primary`** — `primary-100` background with `primary-900` text. The high-emphasis brand label, signaling editorial / "from the editor" emphasis.
+- **`badge-success` / `badge-warning` / `badge-error` / `badge-info`** — Tailwind-derived status badges (green / yellow / red / blue at the 100/800 tone pair). For system feedback in account screens and forms — "In stock," "Low stock," "Out of stock," informational notices. Use sparingly on marketing surfaces; the editorial palette prefers blush and tertiary tones to red/green status colors.
 
-**Eyebrow Label.** A small typographic motif used above many headlines. `overline` token, uppercase, `secondary-500` or `neutral-500`, with a 24px bottom margin. The single most-used "branding" element across editorial pages.
+#### Prose recipes (brand-specific badge patterns)
 
-**Badge.** Pill-shaped (`rounded.full`), `secondary-100` background with `secondary-900` text, `overline` typography. For "New," "Bestseller," "Limited Edition" labels on product cards. Use sparingly — cluttering products with badges contradicts the restraint.
+- **Blush product badge** — for "New," "Bestseller," "Limited Edition" labels on product cards, render a badge-shaped element (`rounded.full`, 6px / 12px padding, `overline` typography) with `secondary-100` (`#F6E5E2`) background and `secondary-900` (`#301B17`) text. The romantic blush counterpart to the `badge` neutral default. Use sparingly — cluttering products with badges contradicts the restraint.
+- **Eyebrow label** — a small typographic motif used above many headlines. `overline` token, uppercase, `secondary-500` or `neutral-500`, with a 24px bottom margin. The single most-used "branding" element across editorial pages. This is a typographic pattern, not a component — render as `<p class="overline">` rather than reaching for a badge variant.
+- **Modal container** — for modal dialogs, popovers, and command palettes, render a `card`-shaped container with white background, `neutral-900` text, `rounded.md` (4px) corners, and 48px padding. Pair with an `xl` shadow (the upper limit for the brand) for depth; this is one of the rare moments the editorial discipline allows visible lift. No `2xl` shadow — that reads too "lifestyle app." Backdrop uses `primary-950` at 40% opacity.
 
 ## 8. Do's and Don'ts
 
@@ -773,6 +862,7 @@ Editorial photography is the visual hero. Default treatment:
 
 ### Don't
 
+- Don't invent brand-named tokens (`button-navy`, `card-blush`, `badge-mist`). Per [CONTEXT.md](../../CONTEXT.md) Meta-rule 1, component tokens are role-based, not color-named. Brand-specific patterns that fall outside the canonical taxonomy live as **prose recipes** in §7 (e.g., the neutral utility button, blush product badge, modal container), never as new front-matter tokens.
 - Don't apply `rounded.full` to containers (cards, modals, inputs, image frames). The pill shape is reserved for interactive controls (buttons, badges, avatars) — using it on containers breaks the editorial discipline.
 - Don't reach for `2xl` shadow — it reads as "lifestyle app," not luxury.
 - Don't use Playfair Display in body copy at sizes under 18px. The high-contrast strokes don't render well below 16px and read as "bad font choice."
@@ -862,7 +952,9 @@ This section equips AI coding tools (Claude, Cursor, GitHub Copilot, etc.) to im
 
 4. **"Build a form input matching the `input` spec — `{colors.white}` (`#FFFFFF`) background, `{colors.neutral-900}` text, 1px solid `{colors.neutral-300}` border, `{rounded.sm}` (2px) corners, 14px × 16px padding, 48px height, `{typography.body-md}` (Libre Franklin 16px). On focus, swap the border to 2px solid `{colors.primary-800}` and add a focus ring of `0 0 0 3px {colors.info-500}` at 20% opacity. Disabled state uses `{colors.neutral-100}` background with `{colors.neutral-600}` text."**
 
-5. **"Build the site navigation. 80px tall, `{colors.white}` (`#FFFFFF`) background, 48px horizontal padding, with a 1px hairline bottom border in `{colors.neutral-200}`. Logo on the left, nav links centered using `{typography.label-md}` (Libre Franklin 14px / weight 500 / 0.02em tracking) in `{colors.neutral-900}`, primary CTA on the right using the `button-primary` spec. Nav link hover state shifts text color to `{colors.primary-800}` — no underline, no background chip. Below `lg` (1024px), nav collapses to a hamburger that opens a full-screen overlay with `{colors.primary-800}` background and `{colors.neutral-50}` text."**
+5. **"Build the site navigation using the `nav` spec — 80px tall, `{colors.white}` (`#FFFFFF`) background, 48px horizontal padding, with a 1px hairline bottom border in `{colors.neutral-200}`. Logo on the left, nav links centered using the `nav-link` spec (`{typography.label-md}` Libre Franklin 14px / weight 500 / 0.02em tracking, `{colors.neutral-900}` text), and a primary CTA on the right using `button-primary`. The current page uses the `nav-link-active` spec (text shifts to `{colors.primary-800}` with a 1px `{colors.primary-800}` bottom border). Below `lg` (1024px), nav collapses to a hamburger that opens a full-screen overlay using the `nav-inverse` spec — `{colors.primary-800}` background, `{colors.neutral-50}` text."**
+
+6. **"Build a dark hero band using `card-inverse` — `{colors.primary-800}` (`#233354`) background, `{colors.neutral-50}` text, `{rounded.md}` (4px) corners, 48px padding, no shadow. CTAs inside use the `button-inverse` spec (`{colors.white}` background, `{colors.primary-800}` text) — `button-primary` would lose contrast against the navy and read muddy."**
 
 ### Iteration Guide
 

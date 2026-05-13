@@ -23,6 +23,9 @@ Beverly Hills MD inhabits the intersection of clinical authority and editorial l
 - Color palette: primary, secondary, tertiary, neutral, semantic | Tokens: primary=#233354, secondary=#EAAB9F, tertiary=#EDF5F8, surface=#FFFFFF, text=#111827, focus=#3B82F6 (full 11-step OKLCH palettes, surfaces, borders, and gradients in [./DESIGN.md](./DESIGN.md))
 - Spacing scale: 4/8/16/24/32/48/64/96/128
 
+## Component Tokens
+Beverly Hills MD conforms to the canonical taxonomies in [../../CONTEXT.md](../../CONTEXT.md): `button-{primary, secondary, outline, ghost, inverse}`, `card{-elevated, -feature, -inverse}`, `badge{-primary, -success, -warning, -error, -info}`, `input{-focus, -disabled, -error, -inverse}`, `nav{-link, -link-active, -inverse}`. Brand-specific variants (neutral utility button, editorial pull-quote card, blush product badge, eyebrow label, modal container) live as **prose recipes** in DESIGN.md §7, never as new front-matter tokens.
+
 ## Accessibility
 WCAG 2.2 AA, keyboard-first interactions, visible focus states using `#3B82F6` focus ring, minimum 44px touch targets
 
@@ -32,18 +35,18 @@ editorial, restrained, confident, magazine-paced, romantic, refined, declarative
 ## Rules: Do
 - treat whitespace as a brand asset; add vertical space when in doubt
 - use Playfair Display at 40px+ for every editorial moment
-- pair primary-800 navy with secondary-300 blush as the signature tonal pairing
-- apply rounded.full (pill) to buttons and rounded.sm (2px) to inputs and containers
-- default to no shadow; reach for 2xs or xs only when tonal contrast can't separate
+- pair `primary-800` (#233354) navy with `secondary-300` (#EAAB9F) blush as the signature tonal pairing
+- apply `rounded.full` (pill) to buttons and `rounded.sm` (2px) to inputs and containers
+- default to no shadow; reach for `2xs` or `xs` only when tonal contrast can't separate
 - keep Playfair Display at weight 500 across the headline scale
 
 ## Rules: Don't
-- avoid rounded.full on containers (cards, modals, inputs, image frames)
-- avoid the 2xl shadow — it reads as "lifestyle app," not luxury
-- avoid Playfair Display in body copy under 18px
+- avoid inventing brand-named tokens (`button-navy`, `card-blush`, `badge-mist`) — component tokens are role-based per CONTEXT.md Meta-rule 1; brand-color variants live as prose recipes in DESIGN.md §7
+- avoid `rounded.full` on containers (cards, modals, inputs, image frames) — pill shape is reserved for interactive controls
+- avoid the `2xl` shadow — it reads as "lifestyle app," not luxury
+- avoid Playfair Display in body copy under 18px or at weights 700+
 - avoid vibrant gradients, color-mesh backgrounds, or diagonal washes
 - avoid mixing Playfair into UI labels or buttons — UI stays Libre Franklin
-- avoid bold weight (700+) on body copy and Playfair headlines
 
 ## Expected Behavior
 - Follow the foundations first, then component consistency.
