@@ -20,30 +20,35 @@ Comprehensive design system documentation for all Golden Hippo brands. Each bran
 ```
 design-md/
 ├── README.md
-└── brands/
+└── skills/
     ├── index.json                  # Registry of all brands (slug → DESIGN/SKILL paths)
+    ├── activated-you/              # ActivatedYou
+    │   ├── DESIGN.md
+    │   └── SKILL.md
     ├── bhmd/                       # Beverly Hills MD
     │   ├── DESIGN.md
-    │   ├── SKILL.md                # AI-agent-loadable brand skill
-    │   └── assets/
-    ├── gundry-md/                  # Gundry MD
-    │   └── DESIGN.md
-    ├── terra-mare/                 # Terra Mare
-    │   └── DESIGN.md
+    │   └── SKILL.md
     ├── debt-clear-usa/             # DebtClear USA
     │   ├── DESIGN.md
-    │   └── assets/
-    ├── power-life/                 # Power Life
-    │   └── DESIGN.md
-    ├── roundhouse-provisions/      # Roundhouse Provisions
-    │   └── DESIGN.md
+    │   └── SKILL.md
     ├── driven-entrepreneur/        # Driven Entrepreneur
-    │   └── DESIGN.md
-    └── activated-you/              # ActivatedYou
-        └── DESIGN.md
+    │   ├── DESIGN.md
+    │   └── SKILL.md
+    ├── gundry-md/                  # Gundry MD
+    │   ├── DESIGN.md
+    │   └── SKILL.md
+    ├── power-life/                 # Power Life
+    │   ├── DESIGN.md
+    │   └── SKILL.md
+    ├── roundhouse-provisions/      # Roundhouse Provisions
+    │   ├── DESIGN.md
+    │   └── SKILL.md
+    └── terra-mare/                 # Terra Mare
+        ├── DESIGN.md
+        └── SKILL.md
 ```
 
-Each brand is registered in [`brands/index.json`](brands/index.json) with its slug, display name, and the canonical paths to its `DESIGN.md` and `SKILL.md`. New brands should be added to the registry when their DESIGN.md is created.
+Each brand lives in its own subdirectory under [`skills/`](skills/) and contains both a `DESIGN.md` (full spec) and a `SKILL.md` (AI-agent-loadable summary). All brands are registered in [`skills/index.json`](skills/index.json) with their slug, display name, and canonical paths. New brands should be added to the registry when their DESIGN.md is created.
 
 ## Brand Skills
 
@@ -52,7 +57,7 @@ Each completed brand can be paired with a `SKILL.md` — a ~100-line, AI-agent-l
 Generate or refresh a skill with the `generate-brand-skill` skill:
 
 - Pass a brand slug (e.g. `bhmd`) to process a single brand.
-- Pass no arguments to regenerate skills for every brand listed in `brands/index.json`.
+- Pass no arguments to regenerate skills for every brand listed in `skills/index.json`.
 
 ## Document Structure
 
