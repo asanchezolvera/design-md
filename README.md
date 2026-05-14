@@ -85,3 +85,7 @@ The following are standardized across all brands and appear identically in each 
 - **Minimum touch targets** — 44px for tappable elements
 
 Brand-specific decisions live in the primary color palettes, font families, border-radius defaults, and whitespace philosophy.
+
+## Conformance
+
+Every brand `DESIGN.md` must conform to the canonical taxonomies defined in [`CONTEXT.md`](CONTEXT.md) — the shared vocabulary, meta-rules, and required component-token roles that all brands share. The `generate-brand-skill` skill enforces this contract: it runs `scripts/validate-design.mjs` against the target `DESIGN.md` before writing `SKILL.md`, and aborts with the violation list on any non-conformance, so no brand can drift back out of conformance via routine regeneration. Brand-specific patterns that fall outside the canonical taxonomy belong in the prose sections of `DESIGN.md` as prose recipes, not as new front-matter tokens.
