@@ -1,4 +1,6 @@
-.claude
+.claude/*
+!.claude/skills/
 .DS_Store
+scripts/progress.txt
 
 docs/
